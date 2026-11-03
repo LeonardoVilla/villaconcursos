@@ -10,3 +10,27 @@
 @media(max-width:650px){.login-page{grid-template-columns:1fr}.login-story{padding:30px 25px}.login-story>.brand{font-size:29px}.login-story-content{margin:38px 0 20px}.login-story h1{font-size:36px;letter-spacing:-1.3px;margin:19px 0}.login-story-content>p{font-size:12px}.login-benefits{display:none}.login-profiles{margin-top:24px;gap:9px}.login-story>small{display:none}.login-form{padding:38px 25px 65px}.login-box{max-width:420px}.login-box h2{font-size:29px}.login-box>p{font-size:12px;margin-bottom:22px}.login-bottom{bottom:20px}.topbar{flex-wrap:wrap;height:auto;min-height:75px;gap:8px;padding-top:10px;padding-bottom:10px}.header-actions{flex-wrap:wrap;justify-content:flex-end;gap:7px}.account-menu{padding-left:8px}.account-menu>span{max-width:80px;font-size:9px}.account-menu button{font-size:9px}.profile-switch button{padding:7px}.breadcrumb{display:none}}
 
 .contest-select{display:flex;align-items:center;gap:8px;color:#526a5e;font-size:11px;font-weight:700}.contest-select select{color:#234c38;font-weight:600;max-width:100%}.topbar{flex-wrap:wrap;height:auto;min-height:82px;padding-top:10px;padding-bottom:10px}
+.practice-card { max-width: 1050px; }
+.practice-modes, .practice-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.practice-modes button, .practice-actions button:not(.primary) { padding: 9px 13px; border: 1px solid #d5dfd9; border-radius: 8px; background: white; color: #234c38; }
+.practice-modes button[aria-pressed=true] { background: #dcebe1; border-color: #42765a; font-weight: 700; }
+.practice-field { display: grid; gap: 6px; width: min(100%, 340px); margin: 14px 0; font-weight: 700; }
+.practice-field input, .practice-field select { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #bfcfc4; background: white; color: #234c38; }
+.practice-topics, .practice-options { margin: 16px 0; padding: 12px; border: 1px solid #d5dfd9; border-radius: 8px; min-width: 0; }
+.practice-options legend, .practice-topics legend { font-weight: 700; max-width: 100%; padding: 0 6px; }
+.practice-grid, .study-resources { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 9px; }
+.practice-grid label, .practice-options label { display: flex; align-items: flex-start; gap: 8px; padding: 8px; }
+.practice-options label { border-radius: 6px; cursor: pointer; }
+.practice-options .correct-choice { background: #e0efe5; }
+.practice-score { font-weight: 800; font-size: 1.35rem; }
+.practice-review details, .study-resources article { margin: 10px 0; padding: 12px; border: 1px solid #d5dfd9; border-radius: 8px; }
+.study-resources article h3 { margin: 6px 0; }
+.study-resources article a { display: inline; color: #234c38; }
+.practice-review summary { cursor: pointer; }
+@media (max-width: 640px) {
+  .sidebar nav { overflow-x: auto; justify-content: flex-start; }
+  .sidebar .nav-item { min-width: 54px; }
+}
+.essay-field { display: grid; gap: 8px; font-weight: 700; }
+.essay-field textarea { width: 100%; resize: vertical; padding: 10px; border: 1px solid #bfcfc4; border-radius: 8px; font: inherit; font-weight: 400; }
+.essay-response { white-space: pre-wrap; overflow-wrap: anywhere; }

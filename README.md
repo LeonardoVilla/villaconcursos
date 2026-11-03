@@ -42,8 +42,9 @@ A publicação requer autenticação na sua conta Vercel. Documentação: https:
 - Checklist do Anexo III, por perfil, incluindo as matérias gerais e os transversais de Direito.
 - Marcações, notas por tópico e quatro sessões diárias de 30 minutos.
 - Cronômetro, plano até 13/12/2026 e arquivos oficiais fornecidos pelo usuário.
-- Quatro áudios gravados de TI, disponíveis para download e reprodução pelo player nativo. Os áudios duram aproximadamente 5 a 6 minutos.
-- Dois roteiros introdutórios de Direito lidos pela voz do navegador. O suporte e a continuidade em segundo plano dependem do aparelho. Não são aulas completas de Direito.
+- Oito faixas em MP3 com narração neural em português do Brasil para TI e Direito. As faixas podem ser baixadas para ouvir offline.
+- Biblioteca de materiais por edital e cargo, com indicações de estudo e links oficiais das bancas.
+- Quiz com correção imediata, simulado por tópicos e simulado completo com 70 questões objetivas, pontuação por banca e proposta de discursiva para autoavaliação. As questões são autorais e o banco inicial cobre parte dos tópicos de cada edital.
 - Exportação e importação manual de backup dos dois perfis.
 
 ## Persistência e limites
@@ -63,7 +64,7 @@ As fontes tipográficas externas têm alternativas locais: a interface continua 
 - `app/data.json`: tópicos e roteiros de TI.
 - `app/page.tsx`: interface, plano, perfis e persistência.
 - `app/globals.css`: interface responsiva.
-- `public/audio`: arquivos WAV gerados com voz local em português.
+- `public/audio`: faixas MP3 narradas e arquivos WAV das primeiras versões.
 - `public/fontes`: edital, retificações e cronograma fornecidos.
 
 ## Fontes técnicas
