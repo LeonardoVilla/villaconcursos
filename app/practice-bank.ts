@@ -5,6 +5,7 @@ export type Question = {
   prompt: string;
   options: string[];
   explanation: string;
+  exhibit?: string;
 };
 
 const questions: Question[] = [];
@@ -241,6 +242,56 @@ Qual medida é mais sensível a um valor extremo entre média e mediana?|Média 
 `);
 
 export { questions };
+
+const appliedItems: Omit<Question, 'id'>[] = [
+  {
+    groups: ['ti2','ti4','cmc-ti'],
+    topic: 'Banco de dados e análise',
+    prompt: 'Uma equipe precisa listar as unidades que registraram mais de um chamado aberto. Considere os dados e a consulta abaixo. Qual resultado a consulta retorna?',
+    exhibit: "unidade | situacao\nNorte   | aberto\nNorte   | fechado\nSul     | aberto\nSul     | aberto\n\nSELECT unidade, COUNT(*) AS total\nFROM chamados\nWHERE situacao = 'aberto'\nGROUP BY unidade\nHAVING COUNT(*) > 1;",
+    options: ['Sul, com total 2.', 'Norte e Sul, cada uma com total 2.', 'Norte, com total 2.', 'Norte e Sul, cada uma com total 1.', 'Sul, com total 3.'],
+    explanation: 'WHERE elimina o chamado fechado antes da agregação. Norte fica com um chamado e é excluída por HAVING. Sul fica com dois.',
+  },
+  {
+    groups: ['cmc-ti'],
+    topic: 'Redes e suporte',
+    prompt: 'Uma estação recebe as configurações abaixo. Ela acessa um servidor interno pelo endereço IP, mas falha ao acessar o mesmo servidor pelo nome. Qual verificação deve ser priorizada?',
+    exhibit: 'Endereço IPv4: 192.168.20.31/24\nGateway:       192.168.20.1\nServidor:      192.168.20.55\nDNS:           192.168.20.10',
+    options: ['Consultar o registro do servidor no DNS configurado.', 'Trocar o gateway por 192.168.20.55.', 'Alterar a máscara para /32.', 'Substituir o endereço da estação pelo endereço do servidor.', 'Desativar o protocolo TCP.'],
+    explanation: 'O acesso por IP funciona. A falha pelo nome indica que a resolução DNS deve ser investigada antes de alterar a rede.',
+  },
+  {
+    groups: ['ti4','cmc-ti'],
+    topic: 'Algoritmos e sistemas',
+    prompt: 'Um algoritmo conta as ocorrências de um código em uma lista. Considere o pseudocódigo a seguir e assinale a saída produzida.',
+    exhibit: 'codigos ← [4, 7, 4, 4, 2]\ntotal ← 0\npara cada codigo em codigos:\n    se codigo = 4:\n        total ← total + 1\nimprima total',
+    options: ['3','1','2','4','5'],
+    explanation: 'A condição é verdadeira no primeiro, no terceiro e no quarto elementos. O contador é incrementado três vezes.',
+  },
+  {
+    groups: ['dir1','cmc-jur'],
+    topic: 'Licitações e contratos',
+    prompt: 'Durante a preparação de uma contratação, a equipe encontra vários fornecedores e consegue definir padrões de desempenho por especificações usuais de mercado. O objeto é um serviço comum, sem as exceções legais. Nos termos da Lei nº 14.133/2021, assinale a modalidade apropriada.',
+    options: ['Pregão.', 'Concurso.', 'Leilão.', 'Diálogo competitivo.', 'Convite.'],
+    explanation: 'A existência de padrões objetivamente definidos para serviço comum orienta o uso do pregão, observadas as regras dos arts. 6º e 29.',
+  },
+  {
+    groups: ['dir3'],
+    topic: 'Direito processual civil',
+    prompt: 'Em processo civil, o juiz identifica de ofício um fundamento jurídico que pode determinar o desfecho. As partes ainda não tiveram oportunidade de se manifestar sobre esse fundamento. Considerando o art. 10 do CPC, qual providência deve adotar?',
+    options: ['Dar às partes oportunidade de se manifestar antes de decidir.', 'Decidir de imediato, pois a matéria é cognoscível de ofício.', 'Ouvir apenas a parte que seria beneficiada pela decisão.', 'Determinar a extinção automática do processo.', 'Transferir a apreciação do fundamento para a fase recursal.'],
+    explanation: 'A vedação à decisão surpresa alcança também matérias sobre as quais o juiz pode decidir de ofício.',
+  },
+  {
+    groups: ['cmc-jur'],
+    topic: 'Municípios e orçamento público',
+    prompt: 'Uma equipe municipal precisa identificar, respectivamente, o instrumento de planejamento plurianual, a lei que orienta a elaboração do orçamento anual e a lei que estima as receitas e fixa as despesas do exercício. Qual sequência atende ao pedido?',
+    options: ['PPA, LDO e LOA.', 'LDO, LOA e PPA.', 'LOA, PPA e LDO.', 'PPA, LOA e LDO.', 'LOA, LDO e PPA.'],
+    explanation: 'O PPA define diretrizes e metas plurianuais. A LDO orienta a elaboração da LOA, que estima receitas e fixa despesas.',
+  },
+];
+
+questions.push(...appliedItems.map((question, index) => ({...question, id: 'aplicada-' + index})));
 
 add('leg', 'Legislação estadual de Mato Grosso', `
 Qual norma institui o Código de Ética Funcional do servidor civil estadual?|Lei Complementar nº 112/2002|Lei Complementar nº 38/1995|Lei Complementar nº 04/1990|Lei nº 14.133/2021|Lei nº 13.709/2018|A LC nº 112/2002 trata da ética funcional do servidor civil de Mato Grosso.

@@ -34,3 +34,4 @@
 .essay-field { display: grid; gap: 8px; font-weight: 700; }
 .essay-field textarea { width: 100%; resize: vertical; padding: 10px; border: 1px solid #bfcfc4; border-radius: 8px; font: inherit; font-weight: 400; }
 .essay-response { white-space: pre-wrap; overflow-wrap: anywhere; }
+.practice-exhibit { max-width: 100%; overflow-x: auto; padding: 12px; background: #eef4ef; border-radius: 8px; line-height: 1.5; }

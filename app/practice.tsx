@@ -174,6 +174,7 @@ export default function Practice({ camara, groups }: Props) {
       {items.map(({question}, number) => <details key={question.id}>
         <summary>{number + 1}. {answers[question.id] === 0 ? 'Acerto' : answers[question.id] === undefined ? 'Em branco' : 'Erro'} · {question.topic}</summary>
         <p>{question.prompt}</p>
+        {question.exhibit && <pre className="practice-exhibit">{question.exhibit}</pre>}
         <p><strong>Sua resposta</strong> {question.options[answers[question.id]] ?? 'Em branco'}</p>
         <p><strong>Gabarito</strong> {question.options[0]}</p>
         <p>{question.explanation}</p>
@@ -205,6 +206,7 @@ export default function Practice({ camara, groups }: Props) {
     <h2>Questão {index + 1} de {items.length}</h2>
     <fieldset className="practice-options">
       <legend>{current.question.prompt}</legend>
+      {current.question.exhibit && <pre className="practice-exhibit">{current.question.exhibit}</pre>}
       {current.order.map((choice, letter) => <label key={choice} className={showCorrection && choice === 0 ? 'correct-choice' : ''}>
         <input type="radio" name="practice-answer" checked={chosen === choice} disabled={showCorrection}
           onChange={() => setAnswers(previous => ({...previous, [current.question.id]:choice}))}/>
