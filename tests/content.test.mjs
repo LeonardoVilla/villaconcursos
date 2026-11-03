@@ -2,6 +2,17 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 const data=JSON.parse(readFileSync(new URL('../app/data.json',import.meta.url),'utf8'));
+test('Câmara tem conteúdo de nível superior para TI e Analista Legislativo',()=>{
+ const groups=JSON.parse(readFileSync(new URL('../app/camara-data.json',import.meta.url),'utf8'));
+ const ids=groups.flatMap(g=>g.topics.map(t=>t.id));
+ assert.equal(ids.length,new Set(ids).size);
+ assert.ok(ids.every(id=>id.startsWith('cmc-')));
+ const topics=category=>groups.filter(g=>g.category===category).flatMap(g=>g.topics.map(t=>t.text)).join(' ');
+ for(const term of ['Raciocínio lógico','Regimento Interno','609/2026'])assert.ok(topics('comum').includes(term),term);
+ for(const term of ['APIs REST','27001','14.133/2021'])assert.ok(topics('ti').includes(term),term);
+ for(const term of ['DIREITO ADMINISTRATIVO','DIREITO CONSTITUCIONAL','PPA'])assert.ok(topics('direito').includes(term),term);
+ assert.equal(readFileSync(new URL('../public/fontes/camara-edital.pdf',import.meta.url)).toString('ascii',0,4),'%PDF');
+});
 test('O programa mantém matérias gerais, cinco eixos de TI e todas as áreas jurídicas',()=>{
  assert.equal(data.groups.filter(g=>g.category==='ti').length,5);
  assert.equal(data.groups.filter(g=>g.category==='direito').length,5);

@@ -1,0 +1,534 @@
+[
+  {
+    "id": "cmc-port",
+    "title": "Língua Portuguesa",
+    "category": "comum",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-port-1",
+        "text": "1. Leitura e interpretação de textos de variados gêneros discursivos."
+      },
+      {
+        "id": "cmc-port-2",
+        "text": "2. As condições de produção de um texto e as marcas composicionais de gêneros textuais diversos."
+      },
+      {
+        "id": "cmc-port-3",
+        "text": "3. Linguagem e adequação social: 3.1. Variedades linguísticas e seus determinantes sociais, regionais, históricos e individuais. 3.2. Registros formal e informal da linguagem."
+      },
+      {
+        "id": "cmc-port-4",
+        "text": "4. Aspectos linguísticos na construção do texto: 4.1. Fonética: prosódia, ortografia. 4.2. Morfologia: formação, c lassificação e flexão das palavras. 4.3. Sintaxe: concordâncias verbal e nominal, regências verbal e nominal, colocação pronominal, emprego de nomes, pronomes, conjunções, advérbios, modos e tempos verbais. 4.4. Semântica: polissemia, paronímia, homonímia, denotação e conotação."
+      },
+      {
+        "id": "cmc-port-5",
+        "text": "5. Textualidade: coesão, coerência, intertextualidade, argumentação."
+      },
+      {
+        "id": "cmc-port-6",
+        "text": "6. Pontuação."
+      },
+      {
+        "id": "cmc-port-7",
+        "text": "7. Tipos de discurso: direto e indireto."
+      }
+    ]
+  },
+  {
+    "id": "cmc-logica",
+    "title": "Raciocínio Lógico e Matemático",
+    "category": "comum",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-logica-1",
+        "text": "1. Operações com conjuntos."
+      },
+      {
+        "id": "cmc-logica-2",
+        "text": "2. Raciocínio lógico numérico: problemas envolvendo operações com números reais e raciocínio sequencial."
+      },
+      {
+        "id": "cmc-logica-3",
+        "text": "3. Conceito de proposição: valores lógicos das proposições; conectivos, negação e tabela - verdade. Tautologias. Condição necessária e suficiente."
+      },
+      {
+        "id": "cmc-logica-4",
+        "text": "4. Argumentação lógica, estruturas lógicas e d iagramas lógicos."
+      },
+      {
+        "id": "cmc-logica-5",
+        "text": "5. Equivalências e implicações lógicas."
+      },
+      {
+        "id": "cmc-logica-6",
+        "text": "6. Quantificadores universal e existencial."
+      },
+      {
+        "id": "cmc-logica-7",
+        "text": "7. Problemas de Contagem: Princípio Aditivo e Princípio Multiplicativo. Arranjos, combinações e permutações."
+      },
+      {
+        "id": "cmc-logica-8",
+        "text": "8. Noções de Probabilidade."
+      }
+    ]
+  },
+  {
+    "id": "cmc-info",
+    "title": "Noções de Informática",
+    "category": "comum",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-info-1",
+        "text": "1. Microinformática: conceitos, hardware, software, dispositivos de entrada, saída e armazenamento."
+      },
+      {
+        "id": "cmc-info-2",
+        "text": "2. Sistemas operacionais: conceitos, recursos e uso do Windows 10 e 11 e de distribuições Linux."
+      },
+      {
+        "id": "cmc-info-3",
+        "text": "3. Pacotes de escritório: Microsoft Office/Microsoft 3 65 (Word, Excel e PowerPoint) e LibreOffice 7 ou superior (Writer, Calc e Impress): conceitos, recursos, atalhos de teclado e uso."
+      },
+      {
+        "id": "cmc-info-4",
+        "text": "4. Redes de computadores e internet: conceitos, protocolos, arquitetura TCP/IP, navegadores (Microsoft Edge, Mozilla Firefox e Google Chrome), correio eletrônico e ferramentas de colaboração."
+      },
+      {
+        "id": "cmc-info-5",
+        "text": "5. Computação em nuvem, armazenamento e serviços online. Redes sociais e comunicação digital."
+      },
+      {
+        "id": "cmc-info-6",
+        "text": "6. Segurança da informação: conceitos, ameaças (vírus, malware, phishing e engenharia social), backup, firewall, antivírus e autenticação em dois fatores."
+      },
+      {
+        "id": "cmc-info-7",
+        "text": "7. Noções da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais)."
+      }
+    ]
+  },
+  {
+    "id": "cmc-mt",
+    "title": "História e Geografia de Mato Grosso",
+    "category": "comum",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-mt-0",
+        "text": "História de Mato Grosso: Período Colonial"
+      },
+      {
+        "id": "cmc-mt-1",
+        "text": "1. Os bandeirantes: es cravidão indígena e exploração do ouro;"
+      },
+      {
+        "id": "cmc-mt-2",
+        "text": "2. A fundação de Cuiabá: Tensões políticas entre os fundadores e a administração colonial;"
+      },
+      {
+        "id": "cmc-mt-3",
+        "text": "3. A fundação de Vila Bela da Santíssima Trindade e a criação da Capitania de Mato Grosso;"
+      },
+      {
+        "id": "cmc-mt-4",
+        "text": "4. A escravidão negra em Mato Grosso. Período Imperial. Período Imperial"
+      },
+      {
+        "id": "cmc-mt-5",
+        "text": "1. A crise da mineração e as alternativas econômicas da Província."
+      },
+      {
+        "id": "cmc-mt-6",
+        "text": "2. A Rusga;"
+      },
+      {
+        "id": "cmc-mt-7",
+        "text": "3. Os quilombos em Mato Grosso."
+      },
+      {
+        "id": "cmc-mt-8",
+        "text": "4. Os Presidentes de Província e suas realizações."
+      },
+      {
+        "id": "cmc-mt-9",
+        "text": "5. A Guerra da Tríplice Aliança contra o Paraguai e a participação de Mato Grosso."
+      },
+      {
+        "id": "cmc-mt-10",
+        "text": "6. A economia de Mato Grosso após a Guerra da Tríplice Aliança contra o Paraguai."
+      },
+      {
+        "id": "cmc-mt-11",
+        "text": "7. O fim do Império em Mato Grosso. Período Republicano"
+      },
+      {
+        "id": "cmc-mt-12",
+        "text": "1. O coronelismo em Mato Grosso."
+      },
+      {
+        "id": "cmc-mt-13",
+        "text": "2. Economia de Mato Grosso na Primeira República: usinas de açúcar e criação de gado."
+      },
+      {
+        "id": "cmc-mt-14",
+        "text": "3. Relações de trabalho em Mato Grosso na Primeira República."
+      },
+      {
+        "id": "cmc-mt-15",
+        "text": "4. Mato Grosso durante a Era Vargas: política e economia."
+      },
+      {
+        "id": "cmc-mt-16",
+        "text": "5. Política fundiária e as tensões sociais no campo."
+      },
+      {
+        "id": "cmc-mt-17",
+        "text": "6. Os governadores estaduais e suas realizações."
+      },
+      {
+        "id": "cmc-mt-18",
+        "text": "7. Tó picos relevantes e atuais de política, economia, sociedade, educação, tecnologia, energia, relações internacionais, desenvolvimento sustentável, segurança, ecologia e suas vinculações históricas. Geografia de Mato Grosso:"
+      },
+      {
+        "id": "cmc-mt-19",
+        "text": "1. Mato Grosso e a região Centro-Oeste."
+      },
+      {
+        "id": "cmc-mt-20",
+        "text": "2. Geopolítica de Mato Grosso."
+      },
+      {
+        "id": "cmc-mt-21",
+        "text": "3. Ocupação do território."
+      },
+      {
+        "id": "cmc-mt-22",
+        "text": "4. Aspectos físicos e domínios naturais do espaço mato -grossense."
+      },
+      {
+        "id": "cmc-mt-23",
+        "text": "5. Aspectos político -administrativos."
+      },
+      {
+        "id": "cmc-mt-24",
+        "text": "6. Aspectos socioeconômicos de Mato Grosso."
+      },
+      {
+        "id": "cmc-mt-25",
+        "text": "7. Formação étnica."
+      },
+      {
+        "id": "cmc-mt-26",
+        "text": "8. Programas governamentais e fronteira agrícola mato-grossense."
+      },
+      {
+        "id": "cmc-mt-27",
+        "text": "9.A economia do Estado no contexto nacional."
+      },
+      {
+        "id": "cmc-mt-28",
+        "text": "10. A urbanização do Estado."
+      }
+    ]
+  },
+  {
+    "id": "cmc-etica",
+    "title": "Noções de Ética e Filosofia",
+    "category": "comum",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-etica-1",
+        "text": "1. Fundamentos da Filosofia."
+      },
+      {
+        "id": "cmc-etica-2",
+        "text": "2. Filosofia moral: Ética ou filosofia moral."
+      },
+      {
+        "id": "cmc-etica-3",
+        "text": "3. Consciência crítica e filosofia."
+      },
+      {
+        "id": "cmc-etica-4",
+        "text": "4. A relação entre os valores éticos ou morais e a cultura."
+      },
+      {
+        "id": "cmc-etica-5",
+        "text": "5. Juízos de fato ou de realidade e juízos de valor."
+      },
+      {
+        "id": "cmc-etica-6",
+        "text": "6. Ética e cidadania."
+      },
+      {
+        "id": "cmc-etica-7",
+        "text": "7. Racionalismo ético."
+      },
+      {
+        "id": "cmc-etica-8",
+        "text": "8. Ética e liberdade."
+      }
+    ]
+  },
+  {
+    "id": "cmc-rel",
+    "title": "Relações Interpessoais",
+    "category": "comum",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-rel-1",
+        "text": "1. Relações Humanas/interpessoal."
+      },
+      {
+        "id": "cmc-rel-2",
+        "text": "2. Comunicaçã o Interpessoal."
+      },
+      {
+        "id": "cmc-rel-3",
+        "text": "3. Característica de um bom atendimento."
+      },
+      {
+        "id": "cmc-rel-4",
+        "text": "4. Postura Profissional."
+      },
+      {
+        "id": "cmc-rel-5",
+        "text": "5. Integração."
+      },
+      {
+        "id": "cmc-rel-6",
+        "text": "6. Empatia."
+      },
+      {
+        "id": "cmc-rel-7",
+        "text": "7. Capacidade de ouvir."
+      },
+      {
+        "id": "cmc-rel-8",
+        "text": "8. Argumentação Flexível."
+      }
+    ]
+  },
+  {
+    "id": "cmc-adm",
+    "title": "Noções de Administração Pública",
+    "category": "comum",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-adm-1",
+        "text": "1. Estado, governo e administração pública: conceitos, elementos, poderes e organização; natureza, fins e princípios."
+      },
+      {
+        "id": "cmc-adm-2",
+        "text": "2. Organização administrativa do Estado."
+      },
+      {
+        "id": "cmc-adm-3",
+        "text": "3. Administração direta e indireta."
+      },
+      {
+        "id": "cmc-adm-4",
+        "text": "4. Agentes públicos: espécies e classificação, poderes, deveres e prerrogativas cargo, emprego e função públicos."
+      },
+      {
+        "id": "cmc-adm-5",
+        "text": "5. Poderes a dministrativos."
+      },
+      {
+        "id": "cmc-adm-6",
+        "text": "6. Atos administrativos: conceitos, requisitos, atributos, classificação, espécies e invalidação.7. Controle e responsabilização da administração: controle administrativo, controle judicial, controle legislativo, responsabilidade civil."
+      }
+    ]
+  },
+  {
+    "id": "cmc-leg",
+    "title": "Legislação (para todos os cargos de nível superior)",
+    "category": "comum",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-leg-1",
+        "text": "1. Lei Orgânica do Município de Cuiabá-MT."
+      },
+      {
+        "id": "cmc-leg-2",
+        "text": "2. Regimento Interno da Câmara Municipal de Cuiabá (Resolução nº 08, de 15 de dezembro de 2016)."
+      },
+      {
+        "id": "cmc-leg-3",
+        "text": "3. Lei Complementar nº 93, de 23 de junho de 2003 (Estatuto dos Servidores)."
+      },
+      {
+        "id": "cmc-leg-4",
+        "text": "4. Lei Complementar nº 235, de 3 de junho de 2011 (Plano de Cargos, Carreiras e Vencimentos da Câmara Municipal), com as alterações da Lei Complementar nº 609/2026."
+      }
+    ]
+  },
+  {
+    "id": "cmc-jur",
+    "title": "Direito e Administração Pública",
+    "category": "direito",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-jur-0",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Princípios da Administração Pública (expressos e implícitos)."
+      },
+      {
+        "id": "cmc-jur-1",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Da Administração Pública: direta e indireta."
+      },
+      {
+        "id": "cmc-jur-2",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Atos administrativos."
+      },
+      {
+        "id": "cmc-jur-3",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Poderes Administrativos."
+      },
+      {
+        "id": "cmc-jur-4",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Contratos administrativos."
+      },
+      {
+        "id": "cmc-jur-5",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Licitação (Lei nº 14.133/2021)."
+      },
+      {
+        "id": "cmc-jur-6",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Processo Administrativo."
+      },
+      {
+        "id": "cmc-jur-7",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Agentes Públicos."
+      },
+      {
+        "id": "cmc-jur-8",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Serviços públicos."
+      },
+      {
+        "id": "cmc-jur-9",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Controle da Administração Pública."
+      },
+      {
+        "id": "cmc-jur-10",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Improbidade Administrativa."
+      },
+      {
+        "id": "cmc-jur-11",
+        "text": "NOÇÕES DE DIREITO ADMINISTRATIVO: Bens Públicos."
+      },
+      {
+        "id": "cmc-jur-12",
+        "text": "NOÇÕES DE DIREITO CONSTITUCIONAL: Direitos e garantias fundamentais."
+      },
+      {
+        "id": "cmc-jur-13",
+        "text": "NOÇÕES DE DIREITO CONSTITUCIONAL: Organização do Estado: dos Municípios."
+      },
+      {
+        "id": "cmc-jur-14",
+        "text": "NOÇÕES DE ADMINISTRAÇÃO PÚBLICA: Organização Govern amental Brasileira; Princípios da administração pública; Paradigmas da administração pública e reformas administrativas: administração pública burocrática; estado do bem-estar social; a nova gestão pública e new public management; princípios; fundamentos d e governança pública."
+      },
+      {
+        "id": "cmc-jur-15",
+        "text": "Políticas Públicas: formulação e avaliação de políticas públicas; Estado e políticas públicas; o processo de política pública; arranjos institucionais e política pública."
+      },
+      {
+        "id": "cmc-jur-16",
+        "text": "Planejamento público: planos; programas de governo; processo or çamentário; Plano Plurianual - PPA; Lei de Diretrizes Orçamentárias - LDO; Lei Orçamentária Anual - LOA."
+      },
+      {
+        "id": "cmc-jur-17",
+        "text": "Flexibilização da ação estatal: parcerias público-privadas; consórcios; terceirização; redes e parcerias com organizações da sociedade civil."
+      },
+      {
+        "id": "cmc-jur-18",
+        "text": "Mudanças institucionais: conselhos; organizações sociais; organizações da sociedade civil de interesse público (OSCIP); agência reguladora; agência executiva; centralização versus descentralização."
+      },
+      {
+        "id": "cmc-jur-19",
+        "text": "Governança: princípios da governança; fundamentos e governança pública; governabilidade; accountability."
+      },
+      {
+        "id": "cmc-jur-20",
+        "text": "Estratégia em Organizações Públicas: conceitos centrais em planejamento; cinco tipos de estratégia; processo estratégico; estrategistas e gerentes; transformação e mudança estratégica."
+      },
+      {
+        "id": "cmc-jur-21",
+        "text": "Gestão por resultados no setor pú blico: metodologias de gestão; avaliação de programas e projetos públicos; indicadores de desempenho."
+      }
+    ]
+  },
+  {
+    "id": "cmc-ti",
+    "title": "Analista Legislativo - Tecnologia da Informação",
+    "category": "ti",
+    "source": "Edital nº 001/2026-CMC · Anexo V",
+    "topics": [
+      {
+        "id": "cmc-ti-1",
+        "text": "1. Fundamentos de computação, arquitetura de computadores e sistemas de informação."
+      },
+      {
+        "id": "cmc-ti-2",
+        "text": "2. Lógica de programação, algoritmos, estruturas de dados e programação orientada a objetos."
+      },
+      {
+        "id": "cmc-ti-3",
+        "text": "3. Engenharia de software: análise e modelagem de sistemas, levantamento de requisitos, documentação, testes, manutenção e metodologias ágeis."
+      },
+      {
+        "id": "cmc-ti-4",
+        "text": "3. Desenvolvimento de aplicações web e API s: HTML, CSS, JavaScript, serviços web e APIs REST."
+      },
+      {
+        "id": "cmc-ti-5",
+        "text": "4. Banco de dados: modelagem relacional, SQL, administração, integridade, disponibilidade, backup e recuperação."
+      },
+      {
+        "id": "cmc-ti-6",
+        "text": "5. Redes de computadores: modelos OSI e TCP/IP, protocolos de comunicação, endereçamento IP , equipamentos de rede, cabeamento estruturado, serviços de rede e administração de ambientes cliente -servidor."
+      },
+      {
+        "id": "cmc-ti-7",
+        "text": "6. Sistemas operacionais Windows e Linux: instalação, configuração, administração, gerenciamento de usuários, permissões, serviços e rotinas de backup."
+      },
+      {
+        "id": "cmc-ti-8",
+        "text": "7. Segurança da informação: políticas de segurança, gestão de identidades e acessos, criptografia, certificados digitais, firewall, monitoramento, análise de vulnerabilidades, testes de intrusão, resposta a incidentes e ABNT NBR ISO/IEC 27001 e 27002."
+      },
+      {
+        "id": "cmc-ti-9",
+        "text": "8. Governança e gestão de TI: planejamento estratégico, Plano Diretor de TI, gestão de serviços, gestão de projetos, gestão de riscos, indicadores e boas práticas de governança."
+      },
+      {
+        "id": "cmc-ti-10",
+        "text": "9. Controle de versões, integração contínua, entrega contínua e conteineri zação de aplicações."
+      },
+      {
+        "id": "cmc-ti-11",
+        "text": "10. Análise de dados, visualização de informações e ferramentas de Business Intelligence."
+      },
+      {
+        "id": "cmc-ti-12",
+        "text": "11. Contratação e gestão de soluções de tecnologia da informação na Administração Pública, incluindo a Lei nº 14.133/2021."
+      },
+      {
+        "id": "cmc-ti-13",
+        "text": "12. Lei nº 13.709/2018 (LGPD), Lei nº 12.527/2011 (Lei de Acesso à Informação) e segurança de dados na Administração Pública."
+      },
+      {
+        "id": "cmc-ti-14",
+        "text": "13. Suporte técnico, atendimento a usuários, treinamento e documentação técnica."
+      }
+    ]
+  }
+]

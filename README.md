@@ -1,5 +1,7 @@
 # Trilha SEMA — TI e Direito
 
+O seletor de concurso alterna entre **SEMA-MT 2026** e **Câmara de Cuiabá 2026**. Cada concurso tem edital, plano, pílulas e progresso próprios, com as áreas de TI e Direito. Na Câmara, Direito corresponde à preparação para Analista Legislativo, sem especialidade jurídica no edital. As marcações da SEMA permanecem na chave original do navegador; backups antigos continuam sendo reconhecidos como SEMA-MT.
+
 Aplicativo em Next.js e React para o concurso SEMA-MT 2026, preparado para publicar na Vercel. Dois perfis locais: TI (Perfil 2) e Direito (Perfil 5). Não usa serviços pagos, chaves de API ou banco de dados.
 
 O login opcional com Google está implementado. Para criar as credenciais OAuth e ativá-lo na Vercel, siga `LOGIN-GOOGLE.md`. A ativação exige credenciais próprias do Google e um segredo de sessão. Até a configuração ser concluída e `AUTH_ENABLED=true`, o app mantém o acesso anterior. O login não sincroniza o progresso em nuvem.
