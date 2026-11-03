@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { questions, type Question } from './practice-bank';
 import { materials } from './study-materials';
+import { readings } from './study-readings';
 
 type Group = { id: string; title: string; category: string };
 type Mode = 'quick' | 'custom' | 'full';
@@ -19,20 +20,29 @@ function shuffle<T>(items: T[]) {
   return copy;
 }
 
-export function StudyLibrary({ groups, camara }: Props) {
-  const [group, setGroup] = useState('');
+export function StudyLibrary({ groups, camara, initialGroup = '' }: Props & { initialGroup?: string }) {
+  const [group, setGroup] = useState(initialGroup);
   const eligible = new Set(groups.map(item => item.id));
   const available = materials.filter(item => item.groups.split(' ').some(id => eligible.has(id)));
   const selected = available.filter(item => !group || item.groups.split(' ').includes(group));
+  const lessons = readings.filter(item => item.groups.split(' ').some(id => group ? id === group : eligible.has(id)));
   return <section className="card practice-card">
     <h2>Materiais do edital</h2>
-    <p className="subtext">Leituras e cursos selecionados para as matérias deste cargo.</p>
+    <p className="subtext">Leia os textos de revisão aqui no app e use as referências para aprofundar o estudo.</p>
     <label className="practice-field">Matéria
       <select value={group} onChange={event => setGroup(event.target.value)}>
         <option value="">Todas as matérias</option>
         {groups.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
       </select>
     </label>
+    <div className="practice-review">
+      {lessons.map(lesson => <details key={lesson.title} open={Boolean(group)}>
+        <summary>{lesson.title}</summary>
+        {lesson.text.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+      </details>)}
+    </div>
+    {!lessons.length && <p>Esta matéria ainda está sem texto de revisão.</p>}
+    <h3>Referências complementares</h3>
     {!selected.length && <p>Use o edital como referência para esta matéria. Ainda não há material complementar selecionado.</p>}
     <div className="study-resources">
       {selected.map(item => <article key={item.url}>
