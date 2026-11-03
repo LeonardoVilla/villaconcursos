@@ -5,6 +5,33 @@ import { ArrowUpRight } from 'lucide-react';
 import { questions, type Question } from './practice-bank';
 import { materials } from './study-materials';
 import { readings } from './study-readings';
+import { mtGeography, mtTimeline } from './mt-lessons';
+import { readingExercises } from './reading-exercises';
+
+function MatoGrossoLesson() {
+  return <>
+    <nav className="reading-jumps" aria-label="Seções da leitura de Mato Grosso">
+      <a href="#mt-historia">Linha do tempo</a>
+      <a href="#mt-geografia">Geografia</a>
+      <a href="#mt-revisao">Revisão</a>
+    </nav>
+    <h3 id="mt-historia">História de Mato Grosso</h3>
+    <ol className="mt-timeline">
+      {mtTimeline.map(event => <li key={event.date}>
+        <span className="mt-date">{event.date}</span>
+        <h4>{event.title}</h4>
+        <p>{event.text}</p>
+      </li>)}
+    </ol>
+    <p className="reading-sources"><a href="https://www.mtprev.mt.gov.br/-/10074659-conheca-a-historia-de-mato-grosso-desde-o-periodo-colonial" target="_blank" rel="noreferrer">História de Mato Grosso · MT Prev</a> · <a href="https://www.historia.uff.br/impressoesrebeldes/revolta/rusga/" target="_blank" rel="noreferrer">A Rusga · UFF</a> · <a href="https://legis.senado.leg.br/norma/540736" target="_blank" rel="noreferrer">Divisão estadual · Senado</a></p>
+    <h3 id="mt-geografia">Geografia de Mato Grosso</h3>
+    {mtGeography.map(section => <section key={section.title}>
+      <h4>{section.title}</h4>
+      <p>{section.text}</p>
+    </section>)}
+    <p className="reading-sources"><a href="https://www.ibge.gov.br/cidades-e-estados/mt.html" target="_blank" rel="noreferrer">Indicadores de Mato Grosso · IBGE</a> · <a href="https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1181763/1/MatoGrosso.pdf" target="_blank" rel="noreferrer">Território e biomas · Embrapa</a></p>
+  </>;
+}
 
 type Group = { id: string; title: string; category: string };
 type Mode = 'quick' | 'custom' | 'full';
@@ -36,11 +63,28 @@ export function StudyLibrary({ groups, camara, initialGroup = '' }: Props & { in
         {groups.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
       </select>
     </label>
-    <div className="practice-review">
-      {lessons.map(lesson => <details key={lesson.title} open={Boolean(activeGroup)}>
-        <summary>{lesson.title}</summary>
-        {lesson.text.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
-      </details>)}
+    <div className="reading-list">
+      {lessons.map(lesson => {
+        const isMatoGrosso = lesson.groups === 'mt cmc-mt';
+        const exercise = readingExercises[lesson.title];
+        return <details className="reading-lesson" key={lesson.title} open={Boolean(activeGroup)}>
+          <summary>{lesson.title}</summary>
+          <article className="reading-body">
+            {isMatoGrosso ? <MatoGrossoLesson/> : <>
+              <h3>Conceitos e exemplos</h3>
+              {lesson.text.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+            </>}
+            {exercise && <section className="reading-exercise" id={isMatoGrosso ? 'mt-revisao' : undefined}>
+              <h3>Pratique o que leu</h3>
+              <p>{exercise.question}</p>
+              <details>
+                <summary>Ver resolução comentada</summary>
+                <p>{exercise.answer}</p>
+              </details>
+            </section>}
+          </article>
+        </details>;
+      })}
     </div>
     {!lessons.length && <p>Esta matéria ainda está sem texto de revisão.</p>}
     <h3>Referências complementares</h3>
