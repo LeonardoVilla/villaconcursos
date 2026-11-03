@@ -1,0 +1,974 @@
+{
+  "groups": [
+    {
+      "id": "port",
+      "title": "Língua Portuguesa",
+      "category": "comum",
+      "topics": [
+        {
+          "id": "port-1",
+          "text": "1. Compreensão e interpretação de textos."
+        },
+        {
+          "id": "port-2",
+          "text": "2. Argumentação e persuasão."
+        },
+        {
+          "id": "port-3",
+          "text": "3. Comunicação assertiva: linguagem simples, concisa e objetiva."
+        },
+        {
+          "id": "port-4",
+          "text": "4. Organização textual."
+        },
+        {
+          "id": "port-5",
+          "text": "5. Coesão e coerência."
+        },
+        {
+          "id": "port-6",
+          "text": "6. Tipologia textual."
+        },
+        {
+          "id": "port-7",
+          "text": "7. Ortografia oficial."
+        },
+        {
+          "id": "port-8",
+          "text": "8. Acentuação gráfica."
+        },
+        {
+          "id": "port-9",
+          "text": "9. Emprego do sinal indicativo de crase."
+        },
+        {
+          "id": "port-10",
+          "text": "10. Sintaxe da oração e do período."
+        },
+        {
+          "id": "port-11",
+          "text": "11. Pontuação."
+        },
+        {
+          "id": "port-12",
+          "text": "12. Concordância nominal e verbal."
+        },
+        {
+          "id": "port-13",
+          "text": "13. Regência nominal e verbal."
+        },
+        {
+          "id": "port-14",
+          "text": "14. Significação das palavras."
+        },
+        {
+          "id": "port-15",
+          "text": "15. Colocação do pronome átono."
+        },
+        {
+          "id": "port-16",
+          "text": "16. Redação oficial: escrita de textos formais e Manual de Redação da Presidência da República (disponível no sítio do Planalto, na internet)."
+        },
+        {
+          "id": "port-17",
+          "text": "17. Novo Acordo Ortográfico."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "mt",
+      "title": "Geografia e História de Mato Grosso",
+      "category": "comum",
+      "topics": [
+        {
+          "id": "mt-1",
+          "text": "a) Geografia de Mato Grosso:"
+        },
+        {
+          "id": "mt-2",
+          "text": "1. Produção do espaço regional mato-grossense."
+        },
+        {
+          "id": "mt-3",
+          "text": "2. Aspectos naturais: clima, solo, relevo, vegetaç ão, hidrografia e suas relações com o uso da biodiversidade."
+        },
+        {
+          "id": "mt-4",
+          "text": "3. Políticas de gestão ambiental."
+        },
+        {
+          "id": "mt-5",
+          "text": "4. Características econômicas do espaço industrial."
+        },
+        {
+          "id": "mt-6",
+          "text": "5. Geografia da população: dinâmica e estrutura, processos migratórios, distribuição de renda, indicadores de qualidade de vida e questões sociais."
+        },
+        {
+          "id": "mt-7",
+          "text": "6. Processo de urbanização."
+        },
+        {
+          "id": "mt-8",
+          "text": "7. Dinâmica de ocupação do espaço agrário: inserção nacional e internacional. b) História de Mato Grosso:"
+        },
+        {
+          "id": "mt-9",
+          "text": "1. Expansão e conquista dos sertões da América (séculos XVI a XVIII); 1.1 Povos indígenas e a ocupação do continente americano antes da chegada dos colonizadores portugueses; 1.2 Espaços de missão: catequese e uso de mão de obra indígena (século XVII); 1.3 Bandeiras: expansão territorial, escravização indígena e exploração do ouro (sécu lo XVIII)."
+        },
+        {
+          "id": "mt-10",
+          "text": "2. Colonização e povoamento (séculos XVIII e XIX) ; 2.1 Cuiabá (de Arraial a Vila); 2.2 A Vila Bela da Santíssima Trindade ; 2.3 A mineração do ouro e a mão de obra africana e indígena ; 2.4 Da decadência da mineração à ascensão da pecuária no sécu lo XIX."
+        },
+        {
+          "id": "mt-11",
+          "text": "3. Mato Grosso entre Império e República (século XIX-XX); 3.1 Crise e transição no processo de independência (a Rusga); 3.2 A guerra da Tríplice Aliança (1864 -1870) e seus efeitos; 3.3 O Estado Novo e a marcha para o Oeste; 3.4 A ditadura civil -militar, o desmembramento do estado e o surgimento do MS (1977) ; 3.5 Política fundiária e as tensões sociais no campo."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "etica",
+      "title": "Ética e Filosofia",
+      "category": "comum",
+      "topics": [
+        {
+          "id": "etica-1",
+          "text": "1. A Filosofia como busca racional pela verdade e reflexão crítica sobre a realidade; o estudo do conhecimento: conhecimento empírico, conhecimento científico e conhecimento filosófico; correntes epistemológicas: racionalismo, empirismo, criticismo; desafios contemporâneos: a pós -verdade e o impacto da inteligência artificial."
+        },
+        {
+          "id": "etica-2",
+          "text": "2. Questões relacionadas ao conceito e as me didas de enfrentamento ao assédio moral e sexual; atitudes éticas, respeito, valores e virtudes."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "atual",
+      "title": "Atualidades",
+      "category": "comum",
+      "topics": [
+        {
+          "id": "atual-1",
+          "text": "Questões atuais dos contextos político, econômico, artístico-cultural e socioambiental do Brasil e de Mato Grosso."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "leg",
+      "title": "Legislação específica",
+      "category": "comum",
+      "topics": [
+        {
+          "id": "leg-1",
+          "text": "1. Lei Complementar Estadual nº 112/2002, que Institui o Código de Ética Funcional do Servidor Público Civil do Estado de Mato Grosso."
+        },
+        {
+          "id": "leg-2",
+          "text": "2. Lei Complementar nº 04/1990, que dispõe sobre o Estatuto dos Servidores Públicos da Administração Direta, das Autarqu ias e das Fundações Públicas Estaduais do Mato Grosso."
+        },
+        {
+          "id": "leg-3",
+          "text": "3. Código Estadual do Meio Ambiente. Lei Complementar nº 38/1995."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "ti0",
+      "title": "Segurança da Informação e Privacidade",
+      "category": "ti",
+      "topics": [
+        {
+          "id": "ti0-1.1",
+          "text": "1.1 Segurança Cibernética. LGPD (Lei Geral de Proteção de Dados Pessoais) e GDPR. Zero Trust Architecture. Conceitos de Firewall, IDS/IPS e WAF. Análise de Vulnerabilidades e Testes de Penetração (Pentesting)."
+        },
+        {
+          "id": "ti0-1.2",
+          "text": "1.2 Criptografia. Tipos de criptografia: simétrica e assimétrica. Funções hash. Certificados digitais. PKI (Infraestrutura de Chave Pública)."
+        },
+        {
+          "id": "ti0-1.3",
+          "text": "1.3 Gestão de Riscos e Continuidade de Negócios (BCP/DRP)."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Perfil 2"
+    },
+    {
+      "id": "ti1",
+      "title": "Desenvolvimento de Software e Metodologias",
+      "category": "ti",
+      "topics": [
+        {
+          "id": "ti1-2.1",
+          "text": "2.1 Dev Ops e DevSecOps. Cultura e princípios (CAMS). CI/CD (Integração Contínua e Entrega Contínua). Ferramentas: Git, Docker e Kubernetes."
+        },
+        {
+          "id": "ti1-2.2",
+          "text": "2.2 Arquitetura de Software. Microsserviços vs. Arquitetura Monolítica. SOA (Service-Oriented Architecture). APIs (REST e S OAP). Padrões de Projeto de Software."
+        },
+        {
+          "id": "ti1-2.3",
+          "text": "2.3 Metodologias Ágeis. Scrum e Kanban. Práticas de eXtreme Programming (XP)."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Perfil 2"
+    },
+    {
+      "id": "ti2",
+      "title": "Inteligência Artificial (IA) e Dados",
+      "category": "ti",
+      "topics": [
+        {
+          "id": "ti2-3.1",
+          "text": "3.1 Inteligência Artificial e Machine Learning. Aprendizado supervisionado, não supervisionado e po r reforço. Deep Learning (redes neurais). Processamento de Linguagem Natural (NLP). Visão Computacional."
+        },
+        {
+          "id": "ti2-3.2",
+          "text": "3.2 Big Data e Analytics. Os “Vs” do Big Data (Volume, Velocidade, Variedade, etc.). Sistemas NoSQL. Hadoop."
+        },
+        {
+          "id": "ti2-3.3",
+          "text": "3.3 Business Intelligence (BI). ETL (Extra ct, Transform, Load). Modelagem de dados: dimensional, estrela e floco de neve."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Perfil 2"
+    },
+    {
+      "id": "ti3",
+      "title": "Tecnologias Emergentes e Gestão",
+      "category": "ti",
+      "topics": [
+        {
+          "id": "ti3-4.1",
+          "text": "4.1 Internet das Coisas (IoT). Arquitetura: sensores, gateway e nuvem. Edge Computing."
+        },
+        {
+          "id": "ti3-4.2",
+          "text": "4.2 Blockchain e Criptoativos. Conceito de ledger distribuído. Mecanismos de consenso."
+        },
+        {
+          "id": "ti3-4.3",
+          "text": "4.3 Gestão de Serviços de TI (ITSM). ITIL (Information Technology Infrastructure Library). Gerenciamento de incidentes, problemas, mudanças e configurações."
+        },
+        {
+          "id": "ti3-4.4",
+          "text": "4.4 Governança de TI. COBIT (Control Objectives for Information and Related Technologies). Alinhamento estratégico de TI com o negócio."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Perfil 2"
+    },
+    {
+      "id": "ti4",
+      "title": "Fundamentos Essenciais e Lógica",
+      "category": "ti",
+      "topics": [
+        {
+          "id": "ti4-5.1",
+          "text": "5.1 Estrutura de Dados e Algoritmos. Algoritmos de busca e ordenação (ex.: Bubble Sort, Quick Sort). Estruturas de dados: listas, pilhas, filas, árvores (AVL, B+), tabelas hash. Análise de complexidade de algoritmos (notação O(n))."
+        },
+        {
+          "id": "ti4-5.2",
+          "text": "5.2 Sistemas Operacionais. Gerenciamento de processos, memória e escalonamento. Fundamentos de Linux (comandos básicos). Windows Server: Active Directory, DNS e DHCP. Sistem as de arquivos."
+        },
+        {
+          "id": "ti4-5.3",
+          "text": "5.3 Lógica de Programação e Linguagens. Programação Orientada a Objetos (POO): encapsulamento, herança e polimorfismo. Linguagens com maior incidência em concursos: Python e Java. Sintaxe. Estruturas de controle."
+        },
+        {
+          "id": "ti4-5.4",
+          "text": "5.4 Banco de Dados. Modelagem de dados: Modelo Entidade -Relacionamento e normalização. Linguagem SQL: DDL, DML e DCL. Transações e propriedades ACID."
+        },
+        {
+          "id": "ti4-5.5",
+          "text": "5.5 Experiência do Usuário (UX/UI). Design Centrado no Usuário (UCD). Usabilidade e acessibilidade. Prototipação e testes."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Perfil 2"
+    },
+    {
+      "id": "trans0",
+      "title": "Administração e Gestão Pública",
+      "category": "transversal",
+      "topics": [
+        {
+          "id": "trans0-1",
+          "text": "1.2 Planejamento, organização, direção e controle."
+        },
+        {
+          "id": "trans0-2",
+          "text": "1.3 Gestão de pessoas: recrutamento, seleção, treinamento, motivação e liderança."
+        },
+        {
+          "id": "trans0-3",
+          "text": "1.4 Administração de materiais, patrimônio e serviços."
+        },
+        {
+          "id": "trans0-4",
+          "text": "1.5 Gestão pública: princípios constitucionais, eficiência, trans parência e inovação."
+        },
+        {
+          "id": "trans0-5",
+          "text": "1.6 Licitações e Contratos Administrativos: Lei nº 14.133/2021 e suas alterações."
+        },
+        {
+          "id": "trans0-6",
+          "text": "1.7 Lei Estadual nº 7.692/2002 – Regula o processo administrativo no âmbito da Administração Pública Estadual."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Transversais de Direito"
+    },
+    {
+      "id": "trans1",
+      "title": "Poluição e Controle Ambiental",
+      "category": "transversal",
+      "topics": [
+        {
+          "id": "trans1-1",
+          "text": "2.1 Polu ição atmosférica : fontes e controle. Resolução CONAMA nº 506/2024 (Padrões de qualidade do ar)."
+        },
+        {
+          "id": "trans1-2",
+          "text": "2.2 Poluição hídrica: monitoramento físico-químico e biológico."
+        },
+        {
+          "id": "trans1-3",
+          "text": "2.3 Efluentes domésticos e industriais."
+        },
+        {
+          "id": "trans1-4",
+          "text": "2.4 Resolução CONAMA nº 430/2011 (Descarte de efluentes) ."
+        },
+        {
+          "id": "trans1-5",
+          "text": "2.5 Poluição do solo e resíduos sólidos."
+        },
+        {
+          "id": "trans1-6",
+          "text": "2.6 Resolução CONAMA nº 420/2009 (Critérios e valores orientadores de qualidade do solo)."
+        },
+        {
+          "id": "trans1-7",
+          "text": "2.7 Indicadores ambientais e monitoramento."
+        },
+        {
+          "id": "trans1-8",
+          "text": "2.8 Investigação, caracterização e gerenciamento de áreas impactadas."
+        },
+        {
+          "id": "trans1-9",
+          "text": "2.9 Co nceitos e técnicas de gerenciamento, manejo e remediação de áreas impactadas."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Transversais de Direito"
+    },
+    {
+      "id": "trans2",
+      "title": "Economia e Desenvolvimento",
+      "category": "transversal",
+      "topics": [
+        {
+          "id": "trans2-1",
+          "text": "3.1 Distribuição de renda e PIB, inflação, desemprego, política fiscal e monetária."
+        },
+        {
+          "id": "trans2-2",
+          "text": "3.2 Indicadores sociais e econômicos."
+        },
+        {
+          "id": "trans2-3",
+          "text": "3.3 Desenvolvimento econômico e social: conceitos e políticas públicas."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Transversais de Direito"
+    },
+    {
+      "id": "trans3",
+      "title": "Estatística e Métodos de Pesquisa",
+      "category": "transversal",
+      "topics": [
+        {
+          "id": "trans3-1",
+          "text": "4.1 Estatística descritiva: médias, variância, gráficos e tabelas."
+        },
+        {
+          "id": "trans3-2",
+          "text": "4.2 Probabilidade e distribuições básicas."
+        },
+        {
+          "id": "trans3-3",
+          "text": "4.3 Inferência estatística: amostragem, testes de hipóteses. 4 .4 Pesquisa qualitativa e quantitativa em ciências sociais."
+        },
+        {
+          "id": "trans3-4",
+          "text": "4.5 Aplicações em planejamento e avaliação de políticas públicas."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Transversais de Direito"
+    },
+    {
+      "id": "trans4",
+      "title": "Marcos normativos do sistema de direitos humanos",
+      "category": "transversal",
+      "topics": [
+        {
+          "id": "trans4-1",
+          "text": "5.1 Normas e acordos internacionais: Declaração Universal dos Direitos Humanos (1948); Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais (1966)."
+        },
+        {
+          "id": "trans4-2",
+          "text": "5.2 Impactos das políticas de assimilação e dominação. Licenciamento Ambiental de empreendimentos que afetam comunidades quilombolas. Comunidades quilombolas: Formação, organização e contexto atual. História e cultura dos Povos Indígenas no Brasil. Processos históricos de colonização, resistência e contato com sociedades não indígenas. Preservação ambiental e cultural das terras indígenas. Questão indígena e os desafios co ntemporâneos. Impactos da urbanização, modernização e globalização. Saúde, educação, trabalho e condições de vida das populações indígenas."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Transversais de Direito"
+    },
+    {
+      "id": "trans5",
+      "title": "Projetos, Programas e Políticas Públicas",
+      "category": "transversal",
+      "topics": [
+        {
+          "id": "trans5-1",
+          "text": "6.1 Ciclo de políticas públicas: formulação, implementação, monitoramento e avaliação."
+        },
+        {
+          "id": "trans5-2",
+          "text": "6.2 Gestão de projetos e programas sociais."
+        },
+        {
+          "id": "trans5-3",
+          "text": "6.3 Indicadores de desempenho e impacto."
+        },
+        {
+          "id": "trans5-4",
+          "text": "6.4 Participação social e controle democrático."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Transversais de Direito"
+    },
+    {
+      "id": "trans6",
+      "title": "Clima, Sustentabilidade e Responsabilidade Socioambiental e Climática",
+      "category": "transversal",
+      "topics": [
+        {
+          "id": "trans6-1",
+          "text": "7.1. Lei Federal nº 6.938/1981, que institui a Política Nacional do Meio Ambiente (PNMA)."
+        },
+        {
+          "id": "trans6-2",
+          "text": "7.2. Lei Federal n° 12.187/2009, que institui a Política Nacional sobre Mudança do Clima (PNMC)."
+        },
+        {
+          "id": "trans6-3",
+          "text": "7.3. Lei Complementar n° 582, de 13 de janeiro de 2017, que institui a Política Estadual de Mudanças Cli máticas."
+        },
+        {
+          "id": "trans6-4",
+          "text": "7.4. Lei Federal nº 12.651/2012, Código Florestal Brasileiro."
+        },
+        {
+          "id": "trans6-5",
+          "text": "7.5. Lei Federal nº 9.433/1997, que institui a Política Nacional de Recursos Hídricos e cria o Sistema Nacional d e Gerenciamento de Recursos Hídricos. Política Estadual de Recursos Hídr icos Lei 11.088 de 10/10/2020 e suas alterações."
+        },
+        {
+          "id": "trans6-6",
+          "text": "7.6. Conceitos de sustentabilidade, responsabilidade social e ambiental."
+        },
+        {
+          "id": "trans6-7",
+          "text": "7.7. Desenvolvimento sustentável, responsabilidade socioambiental, consumo consciente e economia circular."
+        },
+        {
+          "id": "trans6-8",
+          "text": "7.8. Impactos socioambientais de empreendimentos."
+        },
+        {
+          "id": "trans6-9",
+          "text": "7.9. Agenda 2030 e Objetivos de Desenvolvimento Sustentável."
+        },
+        {
+          "id": "trans6-10",
+          "text": "7.10. Legislação ambiental: Sisnama, processo de licenciamento."
+        },
+        {
+          "id": "trans6-11",
+          "text": "7.11. Políticas públicas ambientais: instrumentos de comando e controle, instrumentos fiscais, instrumentos públicos de mercado, eficácia dos instrumentos;"
+        },
+        {
+          "id": "trans6-12",
+          "text": "7.12. Responsabilidade socioambiental."
+        },
+        {
+          "id": "trans6-13",
+          "text": "7.13. Conceitos dos principais indicadores sociais e ambientais."
+        },
+        {
+          "id": "trans6-14",
+          "text": "7.14. Lei Complementar nº 592/2017 – Dispõe sobre o Programa de Regularização Ambiental (PRA), disciplin a o Cadastro Ambiental Rural (CAR), a Regularização Ambiental dos Imóveis Rurais e o Licenciamento Ambiental das atividades poluidoras ou utilizadoras de recursos naturais no âmbito do Estado de Mato Grosso."
+        },
+        {
+          "id": "trans6-15",
+          "text": "7.15. Lei Complementar nº 140/2011 – Estabelece normas de cooperação entre União, Estados, Distrito Federal e Municípios nas ações administrativas relativas à proteção ambiental e altera a Lei nº 6.938/1981."
+        },
+        {
+          "id": "trans6-16",
+          "text": "7.16. Lei Federal nº 15.190/2025 – Dispõe sobre o licenciamento ambiental; regulamenta o inciso IV do §1º do art. 225 da Constituição Federal; altera as Leis nº 9.605/1998, 9.985/2000 e 6.938/1981; e revoga dispositivos das Leis nº 7.661/1988 e 11.428/2006."
+        },
+        {
+          "id": "trans6-17",
+          "text": "7.17. Lei Federal nº 14.944/2024 – Institui a Política Nacional de Manejo Integrado do Fogo e altera as Leis nº 7.735/1989, 12.651/2012 (Código Florestal) e 9.605/1998 (Lei dos Crimes Ambientais)."
+        },
+        {
+          "id": "trans6-18",
+          "text": "7.18. Decreto Estadual nº 1.031/2017 – Regulamenta a LC nº 592/2017 quanto ao PRA, ao Sistema Mato -grossense de Cadastro Ambiental (SIMCAR) e aos procedi mentos de inscrição e análise do CAR."
+        },
+        {
+          "id": "trans6-19",
+          "text": "7.19. Decreto Estadual nº 697/2020 – Regulamenta o procedimento de licenciamento ambiental no âmbito da SEMA/MT."
+        },
+        {
+          "id": "trans6-20",
+          "text": "7.20. Lei Complementar nº 233/2005 – Dispõe sobre a Política Florestal do Estado de Mato Grosso."
+        },
+        {
+          "id": "trans6-21",
+          "text": "7.21. Decreto Estadual nº 1.268/2022 – Regulamenta os procedimentos de lançamento e cobrança das taxas decorrentes da prestação de serviços públicos e/ou exercício do poder de polícia ambiental, bem como define empreendimentos e atividades passíveis de licenciamen to."
+        },
+        {
+          "id": "trans6-22",
+          "text": "7.22. Resolução CONSEMA nº 74/2025 – Define atividades e empreendimentos de impacto ambiental local e estabelece normas gerais de cooperação técnica entre SEMA e Prefeituras Municipais."
+        },
+        {
+          "id": "trans6-23",
+          "text": "7.23 Política Estadual de Educação Ambiental de Mato Grosso, instituída pela Lei nº 10.903/2019 (e regulamentada pelo Decreto nº 938/2024."
+        },
+        {
+          "id": "trans6-24",
+          "text": "7.24 Política Estadual de Recursos Hídricos Lei 11.088 de 10/10/2020 e suas alterações."
+        },
+        {
+          "id": "trans6-25",
+          "text": "7.25 Administração e a Conservação das Águas Subterrâneas - Lei Estadual nº 9.612/2011."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Transversais de Direito"
+    },
+    {
+      "id": "trans7",
+      "title": "Lei Estadual nº 7.692/2002",
+      "category": "transversal",
+      "topics": [
+        {
+          "id": "trans7-0",
+          "text": "- Regula o processo administrativo no âmbito da Administração Pública Estadual."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III • Transversais de Direito"
+    },
+    {
+      "id": "dir0",
+      "title": "Direito Constitucional",
+      "category": "direito",
+      "topics": [
+        {
+          "id": "dir0-1",
+          "text": "1. Constituição. Conceito. Objeto e Elementos. Poder Constituinte. 1.1. Hermenêutica Constitucional."
+        },
+        {
+          "id": "dir0-2",
+          "text": "2. Controle de Constitucionalidade. Ação Direta de Inconstitucionalidade. Ação Declaratória de Constitucionalidade. Arguição de Descumprimento de Preceito Fundamental."
+        },
+        {
+          "id": "dir0-3",
+          "text": "3. Organização político -administrativa brasileira: bens e competências."
+        },
+        {
+          "id": "dir0-4",
+          "text": "4. Poder Legislativo. Organização. Funcionamento."
+        },
+        {
+          "id": "dir0-5",
+          "text": "5. Poder Judiciário. Jurisdição. Organização. Órgãos e Competência."
+        },
+        {
+          "id": "dir0-6",
+          "text": "6. Administração Pública. Disposições gerais. Direta e Indireta. Servidores públicos."
+        },
+        {
+          "id": "dir0-7",
+          "text": "7. Ministério Público. Advocacia. Defensoria Pública."
+        },
+        {
+          "id": "dir0-8",
+          "text": "8. Direitos e Garantias Fundamentais. Direitos e Deveres Individuais, Difusos e Coletivos. Direitos Sociais."
+        },
+        {
+          "id": "dir0-9",
+          "text": "9. Educação."
+        },
+        {
+          "id": "dir0-10",
+          "text": "10. Ciência e Tecnologia."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "dir1",
+      "title": "Direito Administrativo",
+      "category": "direito",
+      "topics": [
+        {
+          "id": "dir1-1",
+          "text": "1. Direito Administrativo. Conceito e objeto."
+        },
+        {
+          "id": "dir1-2",
+          "text": "2. Ato administrativo: conceito, classific ação, atributos, elementos, espécies, discricionariedade, vinculação, revogação e anulação. Mérito do ato administrativo."
+        },
+        {
+          "id": "dir1-3",
+          "text": "3. Administração Pública Direta e Indireta. Autarquias e Fundações públicas. Relacionamento Fundações Públicas e Fundações Privadas."
+        },
+        {
+          "id": "dir1-4",
+          "text": "4. Serviço Público: conceito, classificação, regulamentação, formas e competência de prestação. Concessão e autorização dos serviços públicos."
+        },
+        {
+          "id": "dir1-5",
+          "text": "5. Poderes da Administração: hierárquico, disciplinar, regulamentar e de polícia."
+        },
+        {
+          "id": "dir1-6",
+          "text": "6. Responsabilidade civil do Est ado: Fundamentos. Responsabilidade por ato do servidor. Ação regressiva."
+        },
+        {
+          "id": "dir1-7",
+          "text": "7. Processo Administrativo. Conceito, requisitos, objetivos, fases, princípios."
+        },
+        {
+          "id": "dir1-8",
+          "text": "8. Licitações e Contratos Administrativos: modalidades, regras e nulidades. 8.1 Lei nº 14.133/2021 e suas alterações."
+        },
+        {
+          "id": "dir1-9",
+          "text": "9. Bens Públicos. Regime jurídico dos bens públicos. Classificação dos bens públicos: concessão, permissão e autorização de uso de bens públicos. Alienação de bens públicos."
+        },
+        {
+          "id": "dir1-10",
+          "text": "10. Servidores Públicos: Classificação. Regime jurídico dos servido res públicos federal e estadual. Conceito de cargo, emprego, função pública, provimento e vacância. Acumulação de cargos, empregos públicos e funções públicas. Direitos e vantagens dos servidores públicos. Estabilidade."
+        },
+        {
+          "id": "dir1-11",
+          "text": "11. Organização administrativa: noções gerais."
+        },
+        {
+          "id": "dir1-12",
+          "text": "12. Improbidade administrativa. 13 Lei Estadual nº 7.692/2002 – que regula o processo administrativo no âmbito da Administração Pública Estadual."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "dir2",
+      "title": "Direito Civil",
+      "category": "direito",
+      "topics": [
+        {
+          "id": "dir2-1",
+          "text": "1. Lei. Eficácia espacial e temporal e princípio da irretroatividade da lei. Revogaç ão, derrogação e abrogação."
+        },
+        {
+          "id": "dir2-2",
+          "text": "2. Pessoas Naturais: modalidades, modificações e direitos. Pessoas Jurídicas: de direito público e privado."
+        },
+        {
+          "id": "dir2-3",
+          "text": "3. Fatos jurídicos. Negócios e atos jurídicos. Definições, espécies, pressupostos de validade, prova, defeitos e invali dades. Modalidades dos negócios jurídicos. Atos ilícitos. Boa -fé objetiva e subjetiva."
+        },
+        {
+          "id": "dir2-4",
+          "text": "4. Prazos: prescrição e decadência."
+        },
+        {
+          "id": "dir2-5",
+          "text": "5. Bens e suas classificações."
+        },
+        {
+          "id": "dir2-6",
+          "text": "6. Obrigações: conceito, modalidades e transmissão. Cláusula penal. Adimplemento, extinção e inadimple mento."
+        },
+        {
+          "id": "dir2-7",
+          "text": "7. Contratos em geral. Disposições gerais e extinção. Espécies de contrato: compra e venda, doação, empréstimo – comodato e mútuo, prestação de serviço, empreitada, locação, depósito, mandato e transação."
+        },
+        {
+          "id": "dir2-8",
+          "text": "8. Registros Públicos. 9 Fundações: pública e privadas. Legislação."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "dir3",
+      "title": "Direito Processual Civil",
+      "category": "direito",
+      "topics": [
+        {
+          "id": "dir3-1",
+          "text": "1. Das normas processuais civis e sua aplicação. Os princípios informadores do processo civil."
+        },
+        {
+          "id": "dir3-2",
+          "text": "2. Da jurisdição. Ação (conceito, natureza jurídica, classificação). Limites da jurisdição nacional e cooperaçã o internacional. Da organização do Judiciário. Equivalentes jurisdicionais. Métodos Adequados de Solução dos Conflitos: conciliação, negociação, mediação e arbitragem pública e privada."
+        },
+        {
+          "id": "dir3-3",
+          "text": "3. Da competência (disposições gerais, modificação da competência e da incompetência). Da cooperação nacional e internacional. Da competência da justiça federal. Competência internacional."
+        },
+        {
+          "id": "dir3-4",
+          "text": "4. Dos sujeitos do processo. Das partes e dos seus procuradores. Do litisconsórcio. Da intervenção de terceiros. Do juiz e dos auxiliares da justiça. Do Ministério Público, da Advocacia Pública e Privada e da Defensoria Pública."
+        },
+        {
+          "id": "dir3-5",
+          "text": "5. Dos atos processuais. Da forma, do tempo e do lugar dos atos processuais. Da comunicação dos atos processuais. Das nulidades. Da distribuição e do registro. Citação. Intimação."
+        },
+        {
+          "id": "dir3-6",
+          "text": "6. Da tutela provisória. Tutelas de urgência e da evidência."
+        },
+        {
+          "id": "dir3-7",
+          "text": "7. Da formação, da suspensão e da extinção do processo. Flexibilização procedimental. Convenções processuais."
+        },
+        {
+          "id": "dir3-8",
+          "text": "8. Do processo de conhecimento. Do procedimento comum. Disposições gerais. Petição inicial. Da improcedência liminar do pedido. Litispendência, conexão e continência. Da audiência de conciliação e mediação. Da contestação e da reconvenção. Da revelia e do julgamento conforme o estado do processo. Da audiência de instrução e julgamento. Das provas. Da sentença e da coisa julgada."
+        },
+        {
+          "id": "dir3-9",
+          "text": "9. Do cumprimento de sentença. Cumprimento provisório. Cumprimento definitivo de sentença (obrigação de pagar quantia certa, obrigação de fazer, não fazer e de entregar coisa). Cumprimento de sentenç a e a fazenda pública. Impugnação. A inexigibilidade das sentenças judiciais."
+        },
+        {
+          "id": "dir3-10",
+          "text": "10. Dos procedimentos especiais no CPC. Ação de consignação em pagamento. Ação de exigir contas. Ações possessórias. Ação de divisão e da demarcação de terras particulares. Ação discriminatória. Embargos de terceiro. Ações de direito de família de competência da Justiça Federal. Oposição. Habilitação. Ação Monitória. Homologação do penhor legal. Restauração de autos. Procedimentos especiais de jurisdição voluntária. Notificação e interpelação. Alienação judicial. Dos procedimentos especiais em legislação extravagante: mandado de segurança individual e coletivo, suspensão de liminar e de segurança, habeas data e mandado de injunção, alienação fiduciária de bens móveis e imóveis."
+        },
+        {
+          "id": "dir3-11",
+          "text": "11. Do processo de execução. Da execução em geral. Das diversas espécies de execução. Desconsideração da personalidade jurídica na execução. Da execução para entrega de coisa. Da execução das obrigações de fazer ou de não fazer. Da execução por quantia certa. Da execução contra a Fazenda Pública. Da execução fiscal. Dos embargos à execução. Extinção do processo de execução. Exceção de pré -executividade. Prescrição intercorrente."
+        },
+        {
+          "id": "dir3-12",
+          "text": "12. Do precedente. Da ordem dos processos no tribunal. Incidente de assunção de co mpetência. Incidente de Resolução de Demandas Repetitivas. Incidente de arguição de inconstitucionalidade. Conflito de competência. Homologação de decisão estrangeira e da concessão do exequatur à carta rogatória. Ação rescisória. Reclamação."
+        },
+        {
+          "id": "dir3-13",
+          "text": "13. Recursos. Disposições gerais. Apelação. Agravo de instrumento. Agravo interno. Embargos de declaração. Recursos para o Supremo Tribunal Federal e para o Superior Tribunal de Justiça (recurso ordinário, recurso extraordinário e recurso especial). Recursos repetitivo s. Repercussão geral. Agravo em recurso especial e em recurso extraordinário. Agravo interno. Embargos de divergência."
+        },
+        {
+          "id": "dir3-14",
+          "text": "14. Dos juizados especiais. Princípios informadores. Juizados Especiais Federais: competência, procedimento e recursos."
+        },
+        {
+          "id": "dir3-15",
+          "text": "15. Ações coletivas. Inquérito civil. Legitimidade ativa. Competência. Coisa julgada. Execução e cumprimento de sentença. Regras procedimentais aplicáveis. Termo de Ajustamento de Conduta e singularidades na conciliação nas ações coletivas. Recomendações exaradas por membros do Ministério Público."
+        },
+        {
+          "id": "dir3-16",
+          "text": "16. O CPC e o direito intertemporal."
+        },
+        {
+          "id": "dir3-17",
+          "text": "17. Ação de desapropriação."
+        },
+        {
+          "id": "dir3-18",
+          "text": "18. Ação civil pública."
+        },
+        {
+          "id": "dir3-19",
+          "text": "19. Mandado de segurança, individual e coletivo."
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    },
+    {
+      "id": "dir4",
+      "title": "Direito Ambiental",
+      "category": "direito",
+      "topics": [
+        {
+          "id": "dir4-1",
+          "text": "1. Fundamentos Constitucionais: Constituição Federal de 1988 – art. 225 (direito ao meio ambiente ecologicamente equilibrado). Competências da União, Estados e Municípios (arts. 23, 24 e 30). Função social da propriedade (arts. 5º, XXIII; 170, III; 186)."
+        },
+        {
+          "id": "dir4-2",
+          "text": "2. Política Nacional do Meio Ambiente – Lei nº 6.938/1981, sua regulamentaç ão Decreto nº 99.274/1990 e suas alterações.3. Código Estadual do Meio Ambiente de Mato Grosso – Lei Complementar n. 38/1995 e suas alterações."
+        },
+        {
+          "id": "dir4-3",
+          "text": "4. Normas de cooperação entre a União, os Estados, o Distrito Federal e os Municípios nas ações administrativas relativas ao meio ambiente – Lei Complementar 140/2011."
+        },
+        {
+          "id": "dir4-4",
+          "text": "5. Tipologias de empreendimentos e atividades cujo licenciamento ambiental será de competência da União – Decreto Federal Nº 8.437/2015."
+        },
+        {
+          "id": "dir4-5",
+          "text": "6. Lei de Crimes Ambientais – Lei Federal nº 9.605/1998 e suas alterações."
+        },
+        {
+          "id": "dir4-6",
+          "text": "7. Infrações e sanções administrativas ao meio ambiente – Decreto Federal nº 6.514/2008."
+        },
+        {
+          "id": "dir4-7",
+          "text": "8. Processo administrativo estadual de apuração das infrações administrativas por condutas e atividades lesivas ao meio ambiente – Decreto Estadual nº 1.436/2022."
+        },
+        {
+          "id": "dir4-8",
+          "text": "9. Conciliação Ambiental no âmbito da SEMA – Núcleo de Conciliação Ambiental (NUCAM -MT) – Instrução Normativa, nº 02/2023."
+        },
+        {
+          "id": "dir4-9",
+          "text": "10. Política Nacional de Recursos Hídricos – Lei Federal nº 9.433/1997 e suas alterações. Política Estadual de Recursos Hídricos Lei 11.088 de 10/10/2020 e suas alterações"
+        },
+        {
+          "id": "dir4-10",
+          "text": "11. Política Nacional de Segurança de Barragens – Lei nº 12.334/2010, sua regulamentação Decreto 11.310/2022 e suas alterações."
+        },
+        {
+          "id": "dir4-11",
+          "text": "12. Código Florestal Brasileiro – Lei nº 12.651/2012 e suas alterações."
+        },
+        {
+          "id": "dir4-12",
+          "text": "13. Siste ma Nacional de Unidades de Conservação – SNUC – Lei Federal nº 9.985/2000 e suas alterações."
+        },
+        {
+          "id": "dir4-13",
+          "text": "14. Sistema Estadual de Unidade de Conservação –SEUC – Lei Estadual nº 9.502/2011."
+        },
+        {
+          "id": "dir4-14",
+          "text": "15. Política Nacional de Resíduos Sólidos – Lei Federal nº 12.305/2010, Decreto nº 10.936/2022 e suas alterações."
+        },
+        {
+          "id": "dir4-15",
+          "text": "16. Resolução CONAMA 001/86 e suas alterações (EIA/RIMA). 17 Resolução CONAMA 237/97 (Licenciamento Ambiental)."
+        },
+        {
+          "id": "dir4-16",
+          "text": "18. Resolução CONAMA Nº 009/1987 (Audiências Públicas)."
+        },
+        {
+          "id": "dir4-17",
+          "text": "19. Biodiversidade e Patrimônio Genético: Lei nº 13.123/2015, sua regulamentação Decreto nº 8.772/2016 e alterações."
+        },
+        {
+          "id": "dir4-18",
+          "text": "20. Proteção à Fauna – Lei Federal nº 5.197/1967 e suas alterações."
+        },
+        {
+          "id": "dir4-19",
+          "text": "21. Política Estadual dos Serviços Ambientais de Mato Grosso – Lei Estadual nº 12.829/2025."
+        },
+        {
+          "id": "dir4-20",
+          "text": "22. Política da Pesca no Estado de Mato Grosso – Lei Estadual nº 9.096/2009 e suas alterações."
+        },
+        {
+          "id": "dir4-21",
+          "text": "23. Política Estadual de Gestão e Proteção à Bacia do Alto Paraguai no Estado de Mato Grosso – Lei Estadual nº 8.830/2008, regulamentada pelo Decreto nº 774/2024."
+        },
+        {
+          "id": "dir4-22",
+          "text": "24. Política Nacional de Pagamen to por Serviços Ambientais -PSA – Lei Federal nº 14.119/2021 e suas alterações"
+        },
+        {
+          "id": "dir4-23",
+          "text": "25. Câmara de Compensação Ambiental de Mato Grosso – Decreto Estadual nº 2.594/2014."
+        },
+        {
+          "id": "dir4-24",
+          "text": "26. Política Nacional sobre Mudança do Clima – Lei Federal nº 12.187/2009 e suas alterações."
+        },
+        {
+          "id": "dir4-25",
+          "text": "27. Fundo Nacional sobre Mudança do Clima – Lei Federal nº 12.114/2009 e suas alterações."
+        },
+        {
+          "id": "dir4-26",
+          "text": "28. Consolidação de atos normativos sobre o Fundo Nacional sobre Mudança do Clima e a Política Nacional sobre Mudança do Clima – Decreto Federal nº 9.578/2018."
+        },
+        {
+          "id": "dir4-27",
+          "text": "29. Po lítica Estadual de Mudanças Climáticas de Mato Grosso – Lei Complementar nº 582/2017."
+        },
+        {
+          "id": "dir4-28",
+          "text": "30. Política Estadual de Educação Ambiental de Mato Grosso, instituída pela Lei nº 10.903/2019 (e regulamentada pelo Decreto nº 938/2024"
+        },
+        {
+          "id": "dir4-29",
+          "text": "31. Diretrizes Nacionais de Saneamento Básico – Lei Federal nº 11.445/ 2007 e suas alterações."
+        },
+        {
+          "id": "dir4-30",
+          "text": "32. Marco regulatório do Saneamento – Lei Federal nº 14.026/2020."
+        },
+        {
+          "id": "dir4-31",
+          "text": "33. Normas Complementares e Internacionais: Convenção de Estocolmo sobre Poluentes Orgânicos Persistentes – Decreto nº 5.47 2/2005. Acordo de Paris sobre a Convenção Quadro das Nações Unidas sobre Mudança do Clima – Decreto nº 9.073/2017. Convenção sobre Zonas Úmidas de Importância Internacional, especialmente como Habitat de Aves Aquáticas, conhecida como Convenção de Ramsar – Decreto nº 1.905/1996. Convenção sobre Diversidade Biológica – Decreto nº 2.519/1998."
+        },
+        {
+          "id": "dir4-32",
+          "text": "34. Lei de Acesso à Informação – Lei Federal nº 12.527/2011 e suas alterações."
+        },
+        {
+          "id": "dir4-33",
+          "text": "35. Lei Geral de Proteção de Dados Pessoais –LGPD – Lei nº 13.709/2018 e suas alterações. 36.Lei Estadual nº 7.692/2002- Regula o processo administrativo no âmbito da Administração Pública Estadual. 37.Política Estadual de Recursos Hídricos Lei 11.088 de 10/10/2020 e suas alterações."
+        },
+        {
+          "id": "dir4-34",
+          "text": "38. Administração e a Conservação das Águas Subterrâneas - Lei Estadual nº 9.612/2011"
+        }
+      ],
+      "source": "Edital consolidado • Anexo III"
+    }
+  ],
+  "pills": [
+    {
+      "stem": "01-poo",
+      "title": "Orientação a objetos: três conceitos para separar",
+      "text": "Esta é sua primeira pílula para o concurso da SEMA de Mato Grosso. O tema é orientação a objetos. Apenas escute. Não precisa anotar nem responder em voz alta.\n\nImagine um sistema de licenciamento. Ele tem usuários, requerimentos e documentos. Uma classe descreve atributos e comportamentos. Um objeto é uma instância dessa classe. A classe é a definição; o objeto é uma ocorrência concreta, com seu próprio estado.\n\nPrimeiro ponto de atenção: encapsulamento. Encapsular é reunir estado e comportamento e controlar o acesso ao estado. Imagine um requerimento que só pode ser aprovado depois de validado. Se qualquer parte do programa puder alterar seu estado diretamente, essa regra fica vulnerável. Um método pode controlar a transição. Ter métodos de leitura e escrita não garante, sozinho, um bom encapsulamento. A regra precisa ser preservada.\n\nSegundo ponto: herança. Uma classe pode especializar outra. Uma licença ambiental pode ser modelada como um tipo de documento. A relação deve fazer sentido como especialização. Para representar que um requerimento possui documentos, composição costuma expressar melhor essa relação. Herança representa ser um tipo de algo; composição representa ter ou usar outra coisa.\n\nTerceiro ponto: polimorfismo. Diferentes tipos podem oferecer respostas próprias à mesma operação prevista por um contrato comum. Um relatório em PDF e um relatório em HTML podem implementar uma operação de exportação. O código cliente trabalha com o contrato, enquanto a implementação depende do objeto concreto.\n\nAgora uma distinção frequente. Sobrecarga é oferecer operações com o mesmo nome e diferentes assinaturas, conforme as regras da linguagem. Sobrescrita é redefinir, em um subtipo, um comportamento herdado que pode ser sobrescrito. Em Java, mudar apenas o tipo de retorno não basta para sobrecarregar um método. Também não transfira automaticamente as regras de Java para Python: as linguagens têm mecanismos diferentes.\n\nFaça uma revisão mental. Qual conceito protege regras sobre o estado interno? Encapsulamento. Qual representa especialização entre tipos? Herança. Qual permite usar implementações diferentes por um contrato comum? Polimorfismo.\n\nMais uma situação. Um serviço recebe um objeto que segue o contrato de notificação. Esse objeto pode enviar por correio eletrônico ou por mensagem. O serviço não precisa escolher a implementação em cada chamada. Esse é um exemplo de uso de polimorfismo.\n\nGuarde três frases: encapsulamento controla acesso e preserva regras. Herança expressa especialização. Polimorfismo permite variar o comportamento por um contrato comum. Na questão da prova, procure a relação descrita, em vez de decidir só pela presença de uma palavra conhecida.",
+      "profile": "ti",
+      "duration": "5–6 min"
+    },
+    {
+      "stem": "02-algoritmos",
+      "title": "Algoritmos: estruturas e complexidade",
+      "text": "Nesta pílula, vamos organizar estruturas de dados e complexidade. São tópicos previstos para o perfil de tecnologia da informação. Apenas acompanhe a explicação.\n\nComece por duas imagens. Uma pilha de pratos e uma fila de atendimento. Na pilha, o último elemento colocado é o primeiro a sair. É a disciplina chamada LIFO. Na fila, o primeiro elemento colocado é o primeiro a sair. É a disciplina FIFO. Uma pilha pode apoiar o controle de chamadas de funções. Uma fila pode organizar tarefas aguardando atendimento.\n\nUma lista representa uma sequência de elementos. Mas lista é um conceito que admite implementações diferentes. Um vetor e uma lista encadeada têm custos diferentes para acesso e atualização. Atenção à frase: inserir em uma lista encadeada é sempre constante. Essa afirmação esquece que pode ser necessário localizar a posição. A alteração dos elos pode ser constante quando o ponto de inserção já é conhecido; a procura por ele pode exigir percorrer a estrutura.\n\nAgora pense em busca. A busca linear pode examinar os elementos um por um. No pior caso, seu custo cresce linearmente com a quantidade de elementos. A busca binária divide o intervalo de procura em partes menores. Ela exige que os dados estejam ordenados segundo o critério de busca. Em um vetor ordenado, o número de etapas cresce de forma logarítmica.\n\nComplexidade descreve como o custo cresce com o tamanho da entrada. Ordem constante não significa que uma operação leve zero tempo. Ordem linear não significa um segundo por elemento. Estamos comparando crescimento, sob um modelo de análise.\n\nSe um algoritmo percorre todos os elementos uma vez, seu trabalho pode ser linear. Se, para cada elemento, percorre novamente todos os elementos, pode ser quadrático. Mas não decore que dois laços sempre significam custo quadrático. Dois laços consecutivos de tamanho linear continuam tendo crescimento linear. Laços aninhados precisam ser analisados conforme seus limites.\n\nSobre ordenação: o Quick Sort tem custo médio da ordem de n vezes logaritmo de n e pode chegar a custo quadrático no pior caso. A escolha do pivô e os dados influenciam o comportamento. No Bubble Sort, é importante verificar a implementação: uma versão com detecção de ausência de trocas pode ter melhor caso linear.\n\nUma tabela hash usa uma função para associar chaves a posições. Colisões podem ocorrer e precisam de tratamento. Operações podem ter custo médio constante sob condições apropriadas, mas isso não é garantia de custo constante no pior caso.\n\nRevisão final. Pilha: último a entrar, primeiro a sair. Fila: primeiro a entrar, primeiro a sair. Busca binária: ordenação e redução do intervalo. Tabela hash: colisões possíveis. Na prova, observe sempre se a pergunta trata de melhor caso, caso médio ou pior caso.",
+      "profile": "ti",
+      "duration": "5–6 min"
+    },
+    {
+      "stem": "03-banco-de-dados",
+      "title": "Banco de dados: a sequência de uma transação",
+      "text": "Nesta pílula, acompanhe a sequência de uma transação em banco de dados. Imagine uma transferência entre duas contas. O sistema precisa registrar um débito e um crédito, respeitando as regras do negócio.\n\nPrimeiro, a transação começa. Depois, executa suas operações. Ao final, pode confirmar as alterações com commit ou desfazê-las com rollback. Essa é uma visão simplificada do fluxo. As garantias são descritas pelas propriedades ACID: atomicidade, consistência, isolamento e durabilidade.\n\nAtomicidade significa que a transação é tratada como uma unidade. Se o débito for realizado, mas o crédito falhar, não queremos confirmar apenas metade da transferência. O conjunto deve ser concluído ou desfeito, de acordo com os mecanismos do banco.\n\nConsistência significa preservar as regras e restrições aplicáveis ao banco. Uma transação correta leva um estado válido a outro estado válido. Atenção: não confunda essa propriedade com a ideia de todas as réplicas de um sistema distribuído mostrarem imediatamente o mesmo valor. São usos diferentes da palavra consistência.\n\nIsolamento trata da interação entre transações concorrentes. A impressão de execução completamente separada depende do nível de isolamento e das garantias oferecidas. Não suponha que todo nível impeça qualquer anomalia. Leituras sujas, leituras não repetíveis e fantasmas são fenômenos que precisam ser relacionados ao nível e à implementação.\n\nDurabilidade significa que, depois da confirmação, as alterações devem persistir segundo as garantias do sistema, inclusive diante das falhas cobertas por seu mecanismo de recuperação. Commit confirma. Rollback desfaz operações da transação que ainda podem ser revertidas. Nenhum desses comandos substitui uma política de cópias de segurança.\n\nAgora, algumas distinções sobre comandos SQL. DDL define estruturas: criar e alterar tabelas são exemplos. DML manipula dados: inserir, atualizar e excluir são exemplos. DCL controla permissões: conceder e revogar acesso são exemplos. Alguns materiais separam consultas em uma categoria chamada DQL. Observe a classificação adotada no enunciado.\n\nOutro ponto de atenção: chave primária identifica uma linha e não admite valor nulo. Uma chave estrangeira estabelece uma referência e ajuda a preservar a integridade referencial. Ela não é, por definição, uma coluna que precise ter valores exclusivos. Várias linhas podem referenciar a mesma linha de outra tabela.\n\nPor fim, normalização procura reduzir redundâncias e anomalias a partir das dependências entre atributos. Não significa eliminar qualquer repetição nem garantir que toda consulta será mais rápida.\n\nRetome a sequência: começar, executar, confirmar ou desfazer. Retome as quatro garantias: unidade da operação, preservação das regras, controle da concorrência e persistência após a confirmação. Quando a questão descrever uma falha, pergunte qual dessas garantias está em jogo.",
+      "profile": "ti",
+      "duration": "5–6 min"
+    },
+    {
+      "stem": "04-devops",
+      "title": "Do código à produção: arquitetura e DevOps",
+      "text": "Nesta pílula, vamos percorrer o caminho do código até a produção e separar conceitos de arquitetura e DevOps.\n\nUma pessoa altera o código e registra a mudança no controle de versão. A integração contínua incentiva integrar mudanças com frequência e verificar essas integrações automaticamente. A esteira pode compilar, executar testes e produzir um artefato. Ter um repositório Git, sozinho, não significa praticar integração contínua.\n\nDepois vem uma distinção importante: entrega contínua e implantação contínua. Na entrega contínua, o software é mantido em condições de ser disponibilizado, e a entrada em produção pode depender de uma decisão ou aprovação. Na implantação contínua, mudanças que passam pelas verificações são implantadas automaticamente em produção. As duas expressões podem aparecer abreviadas como CD. Leia o nome completo e o contexto da questão.\n\nDevSecOps integra segurança ao trabalho de desenvolvimento e operações. Isso pode incluir análise de código, verificação de dependências, proteção de segredos e controles na esteira. Não se resume a uma ferramenta nem a um teste feito apenas no fim. A segurança precisa acompanhar o ciclo de vida.\n\nNesse caminho, separe três ferramentas. Git é um sistema de controle de versão. Docker oferece ferramentas para construir e executar aplicações em contêineres. Kubernetes orquestra cargas de trabalho em contêineres. Orquestrar envolve manter o estado desejado, gerenciar execução e apoiar recursos como escalabilidade e recuperação. Kubernetes não substitui o controle de versão.\n\nUma imagem de contêiner serve como base para criar contêineres. Um contêiner é uma instância em execução, ou que pode estar parada, criada a partir de uma imagem. Contêineres não são simplesmente máquinas virtuais menores: o modelo de isolamento e o compartilhamento do núcleo do sistema precisam ser considerados.\n\nAgora a arquitetura. Em uma aplicação monolítica, funcionalidades podem estar reunidas em uma unidade de implantação. Isso não impede uma boa organização interna. Em microsserviços, o sistema é dividido em serviços com responsabilidades e fronteiras definidas, que podem ter implantação independente. Essa escolha também acrescenta desafios de comunicação, observabilidade e consistência de dados. Microsserviços não garantem desempenho ou simplicidade por si só.\n\nPara comunicação, não confunda REST e SOAP. REST é um estilo arquitetural. SOAP é um protocolo de mensagens baseado em XML. Usar HTTP e retornar JSON não é suficiente, sozinho, para demonstrar que uma interface atende às restrições do estilo REST.\n\nRevisão final. Git versiona. Uma esteira verifica e prepara a mudança. Entrega contínua mantém o software pronto para disponibilização. Implantação contínua automatiza a chegada a produção. Docker trabalha com imagens e contêineres. Kubernetes orquestra. DevSecOps integra segurança ao processo. Na prova, identifique a responsabilidade de cada conceito antes de escolher a alternativa.",
+      "profile": "ti",
+      "duration": "5–6 min"
+    }
+  ]
+}

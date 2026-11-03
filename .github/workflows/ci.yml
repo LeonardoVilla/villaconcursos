@@ -1,0 +1,31 @@
+name: Validar aplicativo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: Testes e build Next.js
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Instalar dependências fixadas
+        run: npm ci
+      - name: Testar conteúdo e arquivos
+        run: npm test
+      - name: Compilar e verificar TypeScript
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'
