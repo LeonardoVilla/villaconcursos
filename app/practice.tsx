@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { questions, type Question } from './practice-bank';
 import { materials } from './study-materials';
+import { topicLessons } from './topic-lessons';
 import { readings } from './study-readings';
 import { mtGeography, mtTimeline } from './mt-lessons';
 import { readingExercises } from './reading-exercises';
@@ -33,7 +34,7 @@ function MatoGrossoLesson() {
   </>;
 }
 
-type Group = { id: string; title: string; category: string };
+type Group = { id: string; title: string; category: string; topics: { id: string; text: string }[] };
 type Mode = 'quick' | 'custom' | 'full';
 type Item = { question: Question; order: number[]; section: string; weight: number };
 type Props = { camara: boolean; groups: Group[] };
@@ -54,6 +55,9 @@ export function StudyLibrary({ groups, camara, initialGroup = '' }: Props & { in
   const available = materials.filter(item => item.groups.split(' ').some(id => eligible.has(id)));
   const selected = available.filter(item => !activeGroup || item.groups.split(' ').includes(activeGroup));
   const lessons = readings.filter(item => item.groups.split(' ').some(id => activeGroup ? id === activeGroup : eligible.has(id)));
+  const syllabus = groups.filter(item => !activeGroup || item.id === activeGroup);
+  const topics = syllabus.flatMap(item => item.topics);
+  const writtenCount = topics.filter(topic => topicLessons[topic.id]).length;
   return <section className="card practice-card">
     <h2>Materiais do edital</h2>
     <p className="subtext">Leia os textos de revisão aqui no app e use as referências para aprofundar o estudo.</p>
@@ -63,6 +67,35 @@ export function StudyLibrary({ groups, camara, initialGroup = '' }: Props & { in
         {groups.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
       </select>
     </label>
+    <h3>Aulas por tópico do edital</h3>
+    <p className="subtext">{writtenCount} de {topics.length} itens com aula vinculada. Os textos de revisão gerais aparecem abaixo.</p>
+    <div className="reading-list">
+      {syllabus.map(item => <details className="reading-lesson" key={item.id} open={item.id === activeGroup}>
+        <summary>{item.title} · {item.topics.filter(topic => topicLessons[topic.id]).length}/{item.topics.length}</summary>
+        <div className="reading-body">
+          {item.topics.map(topic => {
+            const lesson = topicLessons[topic.id];
+            return <details className="reading-lesson" key={topic.id}>
+              <summary>{topic.text}</summary>
+              <div className="reading-body">
+                {lesson ? <>
+                  {lesson.sections.map(section => <section key={section.title}><h3>{section.title}</h3><p>{section.text}</p></section>)}
+                  <section className="reading-exercise">
+                    <h3>Questão de revisão</h3>
+                    <p>{lesson.question}</p>
+                    <details><summary>Ver resolução comentada</summary><p>{lesson.answer}</p></details>
+                  </section>
+                  <ul className="reading-sources">
+                    {lesson.sources.map(source => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}
+                  </ul>
+                </> : <p>Aula detalhada pendente para este item.</p>}
+              </div>
+            </details>;
+          })}
+        </div>
+      </details>)}
+    </div>
+    <h3>Textos de revisão</h3>
     <div className="reading-list">
       {lessons.map(lesson => {
         const isMatoGrosso = lesson.groups === 'mt cmc-mt';
