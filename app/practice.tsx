@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { questions, type Question } from './practice-bank';
 import { materials } from './study-materials';
-import { topicLessons } from './topic-lessons';
+import { topicLessons as baseLessons } from './topic-lessons';
+import { extraLessons } from './topic-lessons-extra';
 import { readings } from './study-readings';
 import { mtGeography, mtTimeline } from './mt-lessons';
 import { readingExercises } from './reading-exercises';
@@ -37,6 +38,8 @@ function MatoGrossoLesson() {
 type Group = { id: string; title: string; category: string; topics: { id: string; text: string }[] };
 type Mode = 'quick' | 'custom' | 'full';
 type Item = { question: Question; order: number[]; section: string; weight: number };
+const topicLessons: Record<string, (typeof baseLessons)[string]> = { ...extraLessons, ...baseLessons };
+
 type Props = { camara: boolean; groups: Group[] };
 
 function shuffle<T>(items: T[]) {

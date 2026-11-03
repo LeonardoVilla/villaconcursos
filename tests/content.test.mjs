@@ -40,3 +40,22 @@ test('Edital e documentos complementares estão disponíveis no projeto',()=>{
  const file=new URL('../public/fontes/'+name+'.pdf',import.meta.url);assert.ok(existsSync(file));assert.equal(readFileSync(file).toString('ascii',0,4),'%PDF');
  }
 });
+test('Todo tópico do edital (SEMA e Câmara) tem aula vinculada e cada matéria tem banco mínimo de questões',async()=>{
+ const {readdirSync}=await import('node:fs');
+ const dir=new URL('../app/',import.meta.url);
+ const files=['topic-lessons.ts',...readdirSync(dir).filter(f=>/^lessons-.*\.ts$/.test(f))];
+ const keys=new Set();
+ for(const f of files)for(const m of readFileSync(new URL(f,dir),'utf8').matchAll(/^  '([^']+)': (?:\{|L\()/gm))keys.add(m[1]);
+ const cmc=JSON.parse(readFileSync(new URL('camara-data.json',dir),'utf8'));
+ const missing=[...data.groups,...cmc].flatMap(g=>g.topics).filter(t=>!keys.has(t.id)).map(t=>t.id);
+ assert.deepEqual(missing,[]);
+ const bank=['practice-bank.ts','practice-extra-a.ts','practice-extra-b.ts','practice-extra-c.ts'].map(f=>readFileSync(new URL(f,dir),'utf8')).join('\n');
+ const counts={};
+ for(const m of bank.matchAll(/(?:add\(|\[)'([^']+)', '[^']+', `([\s\S]*?)`/g)){
+  const n=m[2].trim().split('\n').length;
+  for(const g of m[1].split(' '))counts[g]=(counts[g]||0)+n;
+ }
+ for(const g of [...data.groups,...cmc]){
+  if(g.id==='trans0'||g.id==='trans1'||g.id==='trans2'||g.id==='trans4'||g.id==='trans5'||g.id==='trans7'||!g.id.startsWith('trans')) assert.ok((counts[g.id]||0)>=10,g.id+' tem '+(counts[g.id]||0)+' questões');
+ }
+});

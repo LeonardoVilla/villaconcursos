@@ -1,3 +1,6 @@
+import { rowsA } from './practice-extra-a';
+import { rowsB } from './practice-extra-b';
+import { rowsC } from './practice-extra-c';
 export type Question = {
   id: string;
   groups: string[];
@@ -240,6 +243,8 @@ add('trans3', 'Estatística aplicada', `
 Qual é a mediana de 2, 3, 7, 10 e 100?|7|3|10|24,4|100|A mediana é a observação central na lista ordenada.
 Qual medida é mais sensível a um valor extremo entre média e mediana?|Média aritmética|Mediana|As duas sempre na mesma proporção|Nenhuma|A posição central|A média usa a magnitude de todos os valores, incluindo extremos.
 `);
+
+for (const [groups, topic, rows] of [...rowsA, ...rowsB, ...rowsC]) add(groups, topic, rows);
 
 export { questions };
 
