@@ -23,20 +23,21 @@ function shuffle<T>(items: T[]) {
 export function StudyLibrary({ groups, camara, initialGroup = '' }: Props & { initialGroup?: string }) {
   const [group, setGroup] = useState(initialGroup);
   const eligible = new Set(groups.map(item => item.id));
+  const activeGroup = eligible.has(group) ? group : '';
   const available = materials.filter(item => item.groups.split(' ').some(id => eligible.has(id)));
-  const selected = available.filter(item => !group || item.groups.split(' ').includes(group));
-  const lessons = readings.filter(item => item.groups.split(' ').some(id => group ? id === group : eligible.has(id)));
+  const selected = available.filter(item => !activeGroup || item.groups.split(' ').includes(activeGroup));
+  const lessons = readings.filter(item => item.groups.split(' ').some(id => activeGroup ? id === activeGroup : eligible.has(id)));
   return <section className="card practice-card">
     <h2>Materiais do edital</h2>
     <p className="subtext">Leia os textos de revisão aqui no app e use as referências para aprofundar o estudo.</p>
     <label className="practice-field">Matéria
-      <select value={group} onChange={event => setGroup(event.target.value)}>
+      <select value={activeGroup} onChange={event => setGroup(event.target.value)}>
         <option value="">Todas as matérias</option>
         {groups.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
       </select>
     </label>
     <div className="practice-review">
-      {lessons.map(lesson => <details key={lesson.title} open={Boolean(group)}>
+      {lessons.map(lesson => <details key={lesson.title} open={Boolean(activeGroup)}>
         <summary>{lesson.title}</summary>
         {lesson.text.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
       </details>)}
