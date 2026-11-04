@@ -25,6 +25,7 @@ npm test
 | Edital e documentos complementares estão disponíveis | PDFs em `public/fontes` |
 | Todo tópico tem aula e cada matéria tem banco mínimo de questões | 100% de aulas; pelo menos 10 questões por matéria dos grupos comuns, de TI e de Direito, e dos transversais trans0, 1, 2, 4, 5 e 7 |
 | Cada matéria tem texto de revisão e referência | Sem matéria vazia em Materiais |
+| Cada pílula de áudio tem um MP3 real | Nenhuma pílula aponta para arquivo ausente |
 
 ## O que os testes não cobrem
 

@@ -4,7 +4,7 @@ Lista do que ainda falta ou merece atenção.
 
 ## Conteúdo
 
-- [ ] **Áudios:** cobrir mais matérias, em especial História e Geografia de Mato Grosso, Português, ética, atualidades e as matérias da Câmara. Veja [Áudios](../conteudo/audios.md).
+- [ ] **Áudios:** cobrir mais matérias. História e Geografia de Mato Grosso já têm faixas. Faltam Português, ética, atualidades e as matérias da Câmara. Veja [Áudios](../conteudo/audios.md).
 - [ ] **Conferir normas estaduais ambientais** contra o texto oficial (Lei 9.502/2011, 9.612/2011, 9.096/2009, 12.829/2025 e Decreto 1.436/2022, entre outras).
 - [ ] **Ler a LC 609/2026 inteira.** Só o trecho que alterou a LC 235/2011 foi lido.
 - [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.

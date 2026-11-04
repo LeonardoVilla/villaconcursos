@@ -72,3 +72,13 @@ test('Cada matéria dos editais tem texto de revisão e referência de estudo',(
   assert.ok(links.has(g.id)||noLinkOk.has(g.id),'Sem link de referência: '+g.id);
  }
 });
+
+test('Cada pílula de áudio tem um MP3 real em public/audio',()=>{
+ const roteiros=JSON.parse(readFileSync(new URL('../scripts/audio/roteiros.json',import.meta.url),'utf8'));
+ const stems=[...roteiros.map(r=>r.stem),...data.pills.map(p=>p.stem)];
+ for(const stem of stems){
+  const url=new URL('../public/audio/'+stem+'.mp3',import.meta.url);
+  assert.ok(existsSync(url),'MP3 ausente: '+stem);
+  assert.ok(readFileSync(url).length>100000,'MP3 pequeno demais: '+stem);
+ }
+});

@@ -2,7 +2,7 @@
 
 ## Situação atual
 
-Há **oito faixas MP3** em `public/audio`, com narração neural em português do Brasil:
+Há **doze faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
 
 | Faixa | Perfil | Tema |
 |---|---|---|
@@ -14,31 +14,57 @@ Há **oito faixas MP3** em `public/audio`, com narração neural em português d
 | `direito-transversais` | Direito (SEMA) | Conteúdos transversais |
 | `cmc-juridico` | Direito (Câmara) | Mapa de Direito para Analista Legislativo |
 | `cmc-discursiva` | Direito (Câmara) | Como planejar a discursiva |
+| `mt-historia-1` | Todos | História de MT: da mineração à Guerra da Tríplice Aliança |
+| `mt-historia-2` | Todos | História de MT: da República à divisão do estado |
+| `mt-geografia-1` | Todos | Geografia de MT: território, relevo, clima e águas |
+| `mt-geografia-2` | Todos | Geografia de MT: economia, população e gestão ambiental |
 
-As pílulas de TI da SEMA ficam em `app/data.json` (`pills`). As de Direito, da SEMA e da Câmara, estão em `app/dashboard.tsx` (`lawPills` e `camaraLawPills`). Cada pílula tem `stem`, que é o nome do arquivo sem extensão, `profile` (`ti` ou `direito`), título e texto da transcrição.
+As quatro faixas de Mato Grosso aparecem nos dois perfis (TI e Direito) e nos dois concursos, porque a matéria é comum. Elas duram de 1,5 a 2 minutos cada.
 
-Os quatro arquivos `.wav` em `public/audio` são versões anteriores. O app só toca os `.mp3`; os WAV são usados apenas por um teste que confere se são arquivos de áudio válidos.
+## De onde vêm as pílulas
+
+| Origem | Faixas |
+|---|---|
+| `app/data.json` (`pills`) | As quatro de TI da SEMA |
+| `app/dashboard.tsx` (`lawPills`, `camaraLawPills`) | As de Direito |
+| `scripts/audio/roteiros.json` | As de Mato Grosso. O arquivo `app/mt-pills.ts` as coloca nos dois perfis |
+
+Cada pílula tem `stem` (nome do arquivo sem extensão), `profile` (`ti` ou `direito`), título e o texto da transcrição.
+
+Os quatro arquivos `.wav` em `public/audio` são versões anteriores. O app só toca os `.mp3`.
 
 ## Lacunas
 
-Não há áudio para as matérias comuns nem para boa parte do edital. Faltam, por exemplo:
+Ainda não há áudio para:
 
-- História e geografia de Mato Grosso
 - Língua Portuguesa
 - Ética e legislação específica
 - Atualidades
 - Matérias comuns e de TI da Câmara (rede, banco, segurança, lógica)
 - Transversais ambientais da SEMA
 
+## Gerar as faixas
+
+O script usa o `edge-tts` e a voz `pt-BR-FranciscaNeural`, a mesma das faixas anteriores:
+
+```sh
+pip install edge-tts
+python scripts/audio/gerar_audio.py                 # gera as que faltam
+python scripts/audio/gerar_audio.py mt-historia-1   # regera uma faixa
+```
+
+O formato de saída é MP3 mono de 24 kHz, igual ao das faixas já publicadas.
+
 ## Como adicionar uma pílula
 
 1. Escreva o roteiro (de 1 a 3 minutos de fala, em frases curtas e sem siglas soltas).
-2. Gere o MP3 em português do Brasil com um motor de voz neural e salve em `public/audio/<stem>.mp3`.
-3. Acrescente a entrada em `pills` (`data.json`) ou em `lawPills`/`camaraLawPills` (`dashboard.tsx`), com o mesmo `stem`.
-4. Teste no app e confira a pronúncia de siglas e números de lei.
+2. Acrescente `{ "stem", "title", "text" }` em `scripts/audio/roteiros.json`, para matérias comuns aos dois perfis. Para uma pílula de um perfil só, use `pills` (`data.json`) ou `lawPills`/`camaraLawPills` (`dashboard.tsx`).
+3. Rode `python scripts/audio/gerar_audio.py` para gerar o MP3 em `public/audio/<stem>.mp3`.
+4. Rode `npm test`: o teste falha se uma pílula não tiver MP3.
+5. Teste no app e confira a pronúncia de siglas e números de lei.
 
 !!! note "Voz"
-    A voz atual foi aprovada. Para novas faixas, mantenha a mesma voz para o app soar consistente.
+    A voz foi aprovada. O script já usa a mesma voz, para as faixas novas soarem como as antigas.
 
 ## Pronúncia
 
