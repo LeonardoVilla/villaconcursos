@@ -9,7 +9,7 @@ Lista do que ainda falta ou merece atenção.
 - [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.
 - [ ] **Exercícios de leitura:** só parte dos textos de revisão tem exercício.
 - [ ] **Banco de respostas** para a prova discursiva.
-- [ ] **Ampliar o banco de questões.** O banco tem cerca de 570 questões. Português já tem 93 (a SEMA e a Câmara compartilham essas questões). Faltam mais questões nos transversais da SEMA (trans0, 2, 4 e 5, com 10 cada) e em outras matérias com menos de 20. Ampliar com questões geradas por IA e revisadas.
+- [ ] **Ampliar o banco de questões.** O banco tem cerca de 650 questões. Português tem 93 e os transversais da SEMA de administração, economia, direitos humanos e políticas públicas têm 30 cada. Faltam mais questões em matérias com menos de 20 (por exemplo, Ética, Atualidades e Informática da Câmara). Ampliar com questões geradas por IA e revisadas.
 
 ## Segurança
 

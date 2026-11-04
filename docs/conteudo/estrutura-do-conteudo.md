@@ -63,7 +63,7 @@ Os arquivos `lessons-*.ts` usam o helper `L` para escrever menos:
 
 ## Banco de questões
 
-As questões ficam em `practice-bank.ts` (banco original) e em `practice-extra-a.ts`, `-b.ts`, `-c.ts` e `-d.ts`. Cada linha segue o formato:
+As questões ficam em `practice-bank.ts` (banco original) e em `practice-extra-a.ts`, `-b.ts`, `-c.ts`, `-d.ts` e `-e.ts`. Cada linha segue o formato:
 
 ```
 enunciado|resposta correta|errada 1|errada 2|errada 3|errada 4|explicação
