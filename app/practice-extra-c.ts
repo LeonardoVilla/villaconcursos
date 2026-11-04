@@ -26,6 +26,13 @@ O parecer prévio do Tribunal de Contas sobre as contas do prefeito só deixa de
 Exoneração, em regra, é:|Desligamento sem caráter punitivo|Pena disciplinar|Aposentadoria|Licença|Promoção|Demissão é pena.
 Compete ao município legislar sobre:|Assuntos de interesse local|Direito penal|Direito civil|Direito processual|Moeda|Art. 30, I.
 A Mesa Diretora da Câmara é responsável por:|Direção dos trabalhos legislativos e serviços administrativos|Julgar crimes|Elaborar leis estaduais|Sancionar leis|Fiscalizar eleições|Estude as atribuições no Regimento.
+Na LC 93/2003, o prazo para tomar posse após a publicação do ato de provimento é de:|30 dias, prorrogáveis uma vez por igual período|15 dias, sem prorrogação|60 dias, prorrogáveis duas vezes|10 dias|90 dias|LC 93/2003, art. 24, § 2º.
+Segundo a LC 93/2003, o estágio probatório dura:|3 anos|2 anos|1 ano|5 anos|18 meses|Art. 28. O servidor não aprovado é exonerado.
+Pela LC 93/2003, configura abandono de cargo a ausência intencional por mais de:|30 dias consecutivos|15 dias consecutivos|60 dias interpolados|90 dias|10 dias|Art. 149. A inassiduidade habitual é de 60 dias interpolados em 12 meses (art. 150).
+Na Lei Orgânica de Cuiabá, o veto só é rejeitado por:|Maioria absoluta dos Vereadores, em votação nominal|Maioria simples, em votação secreta|Dois terços dos Vereadores|Decisão do Presidente|Referendo popular|Art. 29, § 5º.
+Pela Lei Orgânica de Cuiabá, o silêncio do Prefeito após 15 dias úteis do recebimento do projeto importa em:|Sanção tácita|Veto tácito|Arquivamento|Nova votação|Promulgação pela Mesa|Art. 29, § 1º.
+No Regimento Interno da Câmara de Cuiabá, a alteração do próprio Regimento exige:|Voto favorável de dois terços dos membros|Maioria simples|Maioria absoluta|Voto do Presidente|Referendo|Art. 177, XIII, da Resolução 08/2016.
+Segundo a Lei Orgânica de Cuiabá, perde o mandato o Vereador que deixar de comparecer, em cada sessão legislativa, a:|Um terço das sessões ordinárias|Metade das sessões|Dez sessões|Todas as sessões extraordinárias|Um quarto das sessões|Art. 20, IV.
 `],
 ['cmc-etica', 'Ética e filosofia', `
 A passagem do mito ao logos é marca do nascimento da:|Filosofia|Religião|Ciência moderna|Política|Arte|Na Grécia antiga.
@@ -108,7 +115,7 @@ O POLOCENTRO incentivou:|A ocupação do Cerrado|A mineração do ouro|A pesca|A
 A instituição que adaptou a soja ao Cerrado:|Embrapa|Petrobras|BNDES|Sudene|Incra|Pesquisa agropecuária.
 O Planalto dos Parecis:|É divisor de águas|É planície alagável|É deserto|É litoral|É mar|Entre as bacias Amazônica e Platina.
 MT faz fronteira internacional com:|Bolívia|Paraguai|Peru|Argentina|Colômbia|A oeste.
-Quantos municípios tem MT?|141|120|98|200|150|Capital Cuiabá.
+O estado de Mato Grosso reúne os biomas:|Amazônia, Cerrado e Pantanal|Caatinga, Mata Atlântica e Pampa|Pampa e Pantanal|Mata Atlântica e Cerrado|Caatinga e Amazônia|Os três biomas ocorrem no território do estado.
 Mais de 80% da população de MT vive:|Em cidades|No campo|Em aldeias|No Pantanal|Em reservas|Alta urbanização.
 O maior rebanho bovino do Brasil está em:|Mato Grosso|Rio Grande do Sul|Bahia|Ceará|Amazonas|Líder em pecuária bovina.
 `],
