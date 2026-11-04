@@ -39,7 +39,7 @@ npm test
 | Cada matéria tem texto de revisão e referência | Sem matéria vazia em Materiais |
 | Cada pílula de áudio tem um MP3 real | Nenhuma pílula aponta para arquivo ausente |
 | Todo roteiro de áudio tem categoria | A lista de pílulas agrupa sem item solto |
-| Cada questão tem enunciado único | O identificador estável do histórico de erros não colide |
+| Cada questão é única (enunciado e alternativas) | O identificador estável do histórico de erros não colide |
 
 ## O que os testes não cobrem
 

@@ -14,7 +14,7 @@ Cada concurso tem edital, plano de estudos, pílulas de áudio, aulas e progress
 | Checklist do edital | Todos os tópicos, por perfil, com marcação de concluído e notas |
 | Aulas por tópico | 100% dos tópicos dos dois editais têm aula, questão de revisão e fontes |
 | Textos de revisão | Leitura geral por matéria, com referências de estudo |
-| Banco de questões | Cerca de 490 questões, quiz com correção, simulado por tópicos e simulado completo |
+| Banco de questões | Cerca de 570 questões, quiz com correção, simulado por tópicos e simulado completo |
 | Revisão de erros | Histórico por questão, modo Revisar erros e pontos fracos por tópico, sincronizados com a conta |
 | Explicação por IA | Botão "explicar com IA" nas questões, com modelos configuráveis e limite diário |
 | Plano diário | Quatro blocos de 30 minutos, cronômetro e contagem regressiva para a prova |

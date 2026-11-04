@@ -1,6 +1,7 @@
 import { rowsA } from './practice-extra-a';
 import { rowsB } from './practice-extra-b';
 import { rowsC } from './practice-extra-c';
+import { rowsD } from './practice-extra-d';
 export type Question = {
   id: string;
   groups: string[];
@@ -12,12 +13,12 @@ export type Question = {
 };
 
 const questions: Question[] = [];
-// Identificador estável: depende do enunciado, e não da posição no banco. Assim o histórico de acertos
+// Identificador estável: depende do enunciado e das alternativas, e não da posição no banco. Assim o histórico de acertos
 // e erros guardado no progresso continua valendo quando novas questões são acrescentadas.
-function stableId(prompt: string) {
+function stableId(text: string) {
   let hash = 2166136261;
-  for (let i = 0; i < prompt.length; i++) {
-    hash ^= prompt.charCodeAt(i);
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
     hash = Math.imul(hash, 16777619);
   }
   return 'q' + (hash >>> 0).toString(36);
@@ -27,7 +28,7 @@ function add(groups: string, topic: string, rows: string) {
   for (const row of rows.trim().split('\n')) {
     const [prompt, answer, wrong1, wrong2, wrong3, wrong4, explanation] = row.trim().split('|');
     questions.push({
-      id: stableId(prompt), groups: groups.split(' '), topic, prompt,
+      id: stableId([prompt, answer, wrong1, wrong2, wrong3, wrong4].join('|')), groups: groups.split(' '), topic, prompt,
       options: [answer, wrong1, wrong2, wrong3, wrong4], explanation,
     });
   }
@@ -254,7 +255,7 @@ Qual é a mediana de 2, 3, 7, 10 e 100?|7|3|10|24,4|100|A mediana é a observaç
 Qual medida é mais sensível a um valor extremo entre média e mediana?|Média aritmética|Mediana|As duas sempre na mesma proporção|Nenhuma|A posição central|A média usa a magnitude de todos os valores, incluindo extremos.
 `);
 
-for (const [groups, topic, rows] of [...rowsA, ...rowsB, ...rowsC]) add(groups, topic, rows);
+for (const [groups, topic, rows] of [...rowsA, ...rowsB, ...rowsC, ...rowsD]) add(groups, topic, rows);
 
 export { questions };
 

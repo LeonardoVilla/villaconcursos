@@ -23,6 +23,9 @@ Se o `id` já existir em `topic-lessons.ts`, a aula dele prevalece sobre a de `l
 !!! tip "Boas questões"
     Use alternativas plausíveis, mesmo comprimento aproximado e uma explicação que cite o artigo da norma.
 
+!!! tip "Revisão por IA antes de publicar"
+    Para conferir um lote de questões, mande cada uma a um modelo diferente do que a escreveu e peça que verifique três coisas: se o gabarito está certo, se outra alternativa também seria aceitável (ambiguidade) e se a explicação é verdadeira. As 78 questões de Português adicionadas em novembro de 2026 passaram por esse processo com o `gpt-5.4`, que apontou, por exemplo, uma regência errada e três ambiguidades, todas corrigidas. A revisão por IA reduz erros, mas não substitui a sua leitura.
+
 ## Novo texto de revisão ou referência
 
 Acrescente a entrada em `study-readings-extra.ts` ou `study-materials.ts`. Para a referência, teste o link antes (veja abaixo).

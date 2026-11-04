@@ -18,7 +18,7 @@ type Progress = {
 type QuizStat = { r: number; w: number; last: 'r' | 'w'; ts: number }; // acertos, erros, último resultado e data
 ```
 
-O histórico `quiz` é opcional: progressos antigos continuam válidos. A chave é o identificador da questão, calculado por um hash do enunciado (`stableId`, em `practice-bank.ts`), e não pela posição no banco, então acrescentar questões novas não apaga o histórico. Por isso os enunciados precisam ser únicos, e um teste verifica isso.
+O histórico `quiz` é opcional: progressos antigos continuam válidos. A chave é o identificador da questão, calculado por um hash do enunciado e das alternativas (`stableId`, em `practice-bank.ts`), e não pela posição no banco, então acrescentar questões novas não apaga o histórico. Mudar o texto de uma questão muda o identificador e zera o histórico dela. Por isso as questões precisam ser únicas, e um teste verifica isso.
 
 O dashboard valida o formato com `isProgress` antes de aceitar dados locais, do banco ou de um backup.
 
