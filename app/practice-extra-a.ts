@@ -26,6 +26,12 @@ O que são “créditos de carbono”?|Certificados de redução ou remoção de
 `],
 ['leg', 'Legislação estadual de Mato Grosso', `
 A LC 112/2002 institui:|O Código de Ética Funcional do servidor civil de MT|O Estatuto do servidor|O Código Estadual do Meio Ambiente|A lei de licitações|O regimento da Assembleia|A LC 112/2002 é o código de ética funcional.
+Quantos servidores efetivos compõem a Comissão de Ética prevista na LC 112/2002?|3 servidores efetivos e respectivos suplentes|5 servidores|7 servidores|2 servidores|1 servidor|Art. 6º.
+Na LC 112/2002, o servidor oficiado pela Comissão de Ética tem para se manifestar o prazo de:|5 dias|10 dias|15 dias|30 dias|48 horas|Art. 8º, § 1º. Depois das diligências, são 3 dias (§ 4º).
+A censura ética da LC 112/2002 se aplica ao servidor que:|Já deixou o cargo, emprego ou função|Está em estágio probatório|Foi demitido por abandono|Está de licença|Ocupa cargo em comissão|Art. 9º, II. A advertência vale para quem está no exercício.
+A cominação aplicada pela Comissão de Ética fica transcrita na ficha funcional por:|5 anos|1 ano|2 anos|10 anos|Prazo indeterminado|Art. 9º, parágrafo único.
+Quando a conduta ou a reincidência ensejar penalidade, a Comissão de Ética deve:|Encaminhar a decisão à autoridade competente para instaurar o processo administrativo disciplinar|Aplicar demissão|Arquivar o caso|Julgar o processo disciplinar|Aplicar multa|Art. 10 da LC 112/2002.
+É vedado ao servidor, segundo a LC 112/2002:|Apresentar-se embriagado no serviço ou fora dele|Participar de cursos|Comunicar irregularidades|Resistir a pressões indevidas|Manter-se atualizado|Art. 5º, XIII. As demais alternativas são deveres.
 A LC 04/1990 é:|O Estatuto dos Servidores Públicos do Estado|O Código Ambiental|A Lei Orgânica|A lei de improbidade|O Código Tributário|Dispõe sobre o regime jurídico dos servidores estaduais.
 A LC 38/1995 é:|O Código Estadual do Meio Ambiente|O Estatuto dos servidores|A Política de Educação Ambiental|A Lei de Recursos Hídricos|O Código Florestal|Institui a política estadual de meio ambiente.
 A exoneração difere da demissão porque:|Não tem caráter punitivo|É sempre uma pena|Exige processo disciplinar|Impede novo concurso|Cassa a aposentadoria|Demissão é pena; exoneração não.
@@ -146,5 +152,7 @@ A revisão do processo sancionador permite:|Fatos novos sem agravar a sanção|A
 Delegação de competência é:|Transferência parcial a outro órgão ou agente|Fusão de órgãos|Demissão|Avocação|Revogação|Pode ser revogada a qualquer tempo.
 Avocação é:|Chamar para si competência de subordinado|Delegar|Anular|Suspender|Impedir|Excepcional e temporária.
 A lei federal 9.784/1999 é aplicada subsidiariamente a estados e municípios, segundo a Súmula:|633 do STJ|13 do STF|473 do STF|346 do STF|7 do STJ|Aplica-se na ausência de lei local.
+Pela Lei Estadual 7.692/2002, o prazo máximo para decidir requerimentos apresentados à Administração estadual, se outro não for legalmente estabelecido, é de:|120 dias|30 dias|60 dias|10 dias|365 dias|Art. 37. Passado o prazo sem decisão, o interessado pode considerar o requerimento rejeitado.
+Segundo a Lei Estadual 7.692/2002, quando existe norma específica com prazo próprio:|O prazo da norma específica prevalece|Prevalece sempre o da Lei 7.692|Aplica-se o prazo mais longo|Os prazos se somam|Aplica-se o prazo da lei federal|Art. 3º.
 `],
 ];
