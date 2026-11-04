@@ -1,0 +1,56 @@
+site_name: Trilha SEMA · Documentação técnica
+site_description: Documentação técnica do app de estudos Trilha (SEMA-MT e Câmara de Cuiabá).
+repo_url: https://github.com/LeonardoVilla/villaconcursos
+repo_name: LeonardoVilla/villaconcursos
+docs_dir: docs
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+nav:
+  - Início: index.md
+  - Visão geral:
+      - Arquitetura: visao-geral/arquitetura.md
+      - Fluxo de dados: visao-geral/fluxo-de-dados.md
+  - Guia:
+      - Instalação e execução: guia/instalacao.md
+      - Variáveis de ambiente: guia/variaveis-de-ambiente.md
+      - Autenticação com Google: guia/autenticacao.md
+      - Banco e sincronização: guia/banco-e-sincronizacao.md
+      - Publicação: guia/deploy.md
+  - Conteúdo:
+      - Estrutura do conteúdo: conteudo/estrutura-do-conteudo.md
+      - Como adicionar conteúdo: conteudo/como-adicionar-conteudo.md
+      - Verificação de fontes: conteudo/verificacao-de-fontes.md
+      - Áudios: conteudo/audios.md
+  - Qualidade:
+      - Testes: qualidade/testes.md
+  - Referência:
+      - API: referencia/api.md
+      - Mapa de arquivos: referencia/arquivos.md
+      - Pendências: referencia/pendencias.md

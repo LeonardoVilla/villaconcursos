@@ -6,3 +6,4 @@ node_modules/
 !.env.example
 .neon
 .next-run.log
+site/

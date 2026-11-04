@@ -1,0 +1,27 @@
+# Pendências
+
+Lista do que ainda falta ou merece atenção.
+
+## Conteúdo
+
+- [ ] **Áudios:** cobrir mais matérias, em especial História e Geografia de Mato Grosso, Português, ética, atualidades e as matérias da Câmara. Veja [Áudios](../conteudo/audios.md).
+- [ ] **Conferir normas estaduais ambientais** contra o texto oficial (Lei 9.502/2011, 9.612/2011, 9.096/2009, 12.829/2025 e Decreto 1.436/2022, entre outras).
+- [ ] **Ler a LC 609/2026 inteira.** Só o trecho que alterou a LC 235/2011 foi lido.
+- [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.
+- [ ] **Exercícios de leitura:** só parte dos textos de revisão tem exercício.
+- [ ] **Banco de respostas** para a prova discursiva.
+- [ ] **Ampliar o banco de questões** nas matérias com poucas questões.
+
+## Plataforma
+
+- [ ] Atualizar o `README.md`: ele ainda diz que não há banco nem sincronização.
+- [ ] Remover os WAV antigos de `public/audio` para aliviar o repositório.
+- [ ] Publicar na Vercel, com as variáveis de ambiente, e cadastrar a URL pública no Google.
+- [ ] Teste de ponta a ponta da sincronização em dois aparelhos.
+- [ ] Publicar esta documentação (por exemplo, no GitHub Pages) e criar um workflow para isso, se desejado.
+
+## Riscos conhecidos
+
+- Gravação por *last write wins*: edição simultânea em dois aparelhos pode perder alterações.
+- O compute gratuito do Neon hiberna, e a primeira consulta pode demorar.
+- Arquivos em `public/` são públicos, mesmo com login ativo.

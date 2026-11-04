@@ -1,10 +1,12 @@
 # Trilha SEMA — TI e Direito
 
+> Documentação técnica completa em `docs/` (MkDocs). Para ler: `pip install -r requirements-docs.txt` e `mkdocs serve`.
+
 O seletor de concurso alterna entre **SEMA-MT 2026** e **Câmara de Cuiabá 2026**. Cada concurso tem edital, plano, pílulas e progresso próprios, com as áreas de TI e Direito. Na Câmara, Direito corresponde à preparação para Analista Legislativo, sem especialidade jurídica no edital. As marcações da SEMA permanecem na chave original do navegador; backups antigos continuam sendo reconhecidos como SEMA-MT.
 
-Aplicativo em Next.js e React para o concurso SEMA-MT 2026, preparado para publicar na Vercel. Dois perfis locais: TI (Perfil 2) e Direito (Perfil 5). Não usa serviços pagos, chaves de API ou banco de dados.
+Aplicativo em Next.js e React para o concurso SEMA-MT 2026, preparado para publicar na Vercel. Dois perfis locais: TI (Perfil 2) e Direito (Perfil 5). Sem login, não precisa de chaves nem de banco: o progresso fica no navegador. Com login Google e banco Neon Postgres, o progresso sincroniza entre aparelhos.
 
-O login opcional com Google está implementado. Para criar as credenciais OAuth e ativá-lo na Vercel, siga `LOGIN-GOOGLE.md`. A ativação exige credenciais próprias do Google e um segredo de sessão. Até a configuração ser concluída e `AUTH_ENABLED=true`, o app mantém o acesso anterior. O login não sincroniza o progresso em nuvem.
+O login opcional com Google está implementado. Para criar as credenciais OAuth e ativá-lo na Vercel, siga `LOGIN-GOOGLE.md`. A ativação exige credenciais próprias do Google e um segredo de sessão. Até a configuração ser concluída e `AUTH_ENABLED=true`, o app mantém o acesso anterior. Com `DATABASE_URL` configurada, o login também sincroniza o progresso (veja `docs/guia/banco-e-sincronizacao.md`).
 
 ## Executar
 
@@ -50,7 +52,7 @@ A publicação requer autenticação na sua conta Vercel. Documentação: https:
 
 ## Persistência e limites
 
-O progresso fica em `localStorage`, sob a chave `sema-estudos-v1`, no navegador e endereço em que o app foi aberto. Os perfis não são contas com senha. Não existe sincronização automática entre aparelhos ou entre o endereço local e o endereço publicado. Exporte e importe o backup para transferir o progresso. Limpar dados do navegador apaga o progresso local.
+O progresso fica em `localStorage`, sob a chave `sema-estudos-v1`, no navegador e endereço em que o app foi aberto. Os perfis não são contas com senha. Sem login e banco, não há sincronização entre aparelhos; com eles, o progresso da conta é sincronizado. Exporte e importe o backup para transferir o progresso. Limpar dados do navegador apaga o progresso local.
 
 Na importação, os dois perfis são substituídos após confirmação. Por isso, exporte um backup antes. Em aparelhos separados, evite sobrescrever alterações novas com um backup antigo.
 
