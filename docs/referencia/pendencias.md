@@ -4,7 +4,7 @@ Lista do que ainda falta ou merece atenção.
 
 ## Conteúdo
 
-- [ ] **Áudios:** cobrir mais matérias. História e Geografia de Mato Grosso e Português já têm faixas. Ética e legislação da SEMA também. Atualidades também. Faltam as matérias comuns e de TI da Câmara e os transversais da SEMA. O áudio de Atualidades precisa de atualização perto da prova. Quando houver muitas faixas, agrupar a lista por tópico. Veja [Áudios](../conteudo/audios.md).
+- [ ] **Áudios:** cobrir mais matérias. História e Geografia de Mato Grosso e Português já têm faixas. Ética e legislação da SEMA também. Atualidades também. TI da Câmara também. Faltam as matérias comuns da Câmara e os transversais da SEMA. O áudio de Atualidades precisa de atualização perto da prova. Quando houver muitas faixas, agrupar a lista por tópico. Veja [Áudios](../conteudo/audios.md).
 - [ ] **Conferir** a Lei 9.612/2011 (águas subterrâneas) e o Decreto 1.436/2022 contra o texto oficial.
 - [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.
 - [ ] **Exercícios de leitura:** só parte dos textos de revisão tem exercício.

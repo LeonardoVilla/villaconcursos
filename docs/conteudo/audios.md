@@ -2,7 +2,7 @@
 
 ## Situação atual
 
-Há **vinte e duas faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
+Há **vinte e sete faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
 
 | Faixa | Perfil | Tema |
 |---|---|---|
@@ -28,6 +28,11 @@ Há **vinte e duas faixas MP3** em `public/audio`, todas com a voz neural `pt-BR
 | `leg-estatuto-lc04` | SEMA | Estatuto dos Servidores de MT (LC 04/1990) |
 | `leg-ambiental-lc38` | SEMA | Código Estadual do Meio Ambiente (LC 38/1995) |
 | `atualidades-1` | SEMA | Atualidades: como estudar e temas de maior incidência |
+| `cmc-ti-fundamentos` | Câmara, TI | Arquitetura, algoritmos, POO e engenharia de software |
+| `cmc-ti-web-banco` | Câmara, TI | Desenvolvimento web, APIs REST e banco de dados |
+| `cmc-ti-redes-so-seguranca` | Câmara, TI | Redes, Windows e Linux e segurança da informação |
+| `cmc-ti-governanca-contratacao` | Câmara, TI | Governança, contratação (Lei 14.133), LGPD e LAI |
+| `cmc-ti-devops-bi-suporte` | Câmara, TI | Git, CI/CD, contêineres, BI e suporte técnico |
 
 As faixas de Mato Grosso e de Português aparecem nos dois perfis (TI e Direito) e nos dois concursos, porque as matérias são comuns. As de Ética, legislação e Atualidades aparecem nos dois perfis, mas só no concurso da SEMA, porque a matéria é só desse edital. Elas duram de 1,5 a 2 minutos cada.
 
@@ -37,9 +42,9 @@ As faixas de Mato Grosso e de Português aparecem nos dois perfis (TI e Direito)
 |---|---|
 | `app/data.json` (`pills`) | As quatro de TI da SEMA |
 | `app/dashboard.tsx` (`lawPills`, `camaraLawPills`) | As de Direito |
-| `scripts/audio/roteiros*.json` | Mato Grosso (`roteiros.json`), Português (`roteiros-portugues.json`) e Ética e legislação da SEMA (`roteiros-sema-comum.json`) e Atualidades (`roteiros-atualidades.json`). O arquivo `app/common-pills.ts` as coloca nos dois perfis |
+| `scripts/audio/roteiros*.json` | Mato Grosso (`roteiros.json`), Português (`roteiros-portugues.json`) e Ética e legislação da SEMA (`roteiros-sema-comum.json`) Atualidades (`roteiros-atualidades.json`) e TI da Câmara (`roteiros-camara-ti.json`). O arquivo `app/common-pills.ts` as coloca nos dois perfis |
 
-Cada pílula tem `stem` (nome do arquivo sem extensão), `profile` (`ti` ou `direito`), título e o texto da transcrição. Nos roteiros, o campo opcional `contest` (`sema` ou `camara`) limita a pílula a um concurso. Sem ele, a pílula vale para os dois.
+Cada pílula tem `stem` (nome do arquivo sem extensão), `profile` (`ti` ou `direito`), título e o texto da transcrição. Nos roteiros, o campo opcional `contest` (`sema` ou `camara`) limita a pílula a um concurso, e o campo opcional `profile` (`ti` ou `direito`) limita a um perfil. Sem eles, a pílula vale para os dois concursos e os dois perfis.
 
 Os quatro arquivos `.wav` em `public/audio` são versões anteriores. O app só toca os `.mp3`.
 
@@ -47,7 +52,7 @@ Os quatro arquivos `.wav` em `public/audio` são versões anteriores. O app só 
 
 Ainda não há áudio para:
 
-- Matérias comuns e de TI da Câmara (rede, banco, segurança, lógica)
+- Matérias comuns da Câmara (lógica, informática, ética e filosofia, relações interpessoais, administração pública e legislação)
 - Transversais ambientais da SEMA
 
 ## Gerar as faixas
