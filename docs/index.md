@@ -16,7 +16,7 @@ Cada concurso tem edital, plano de estudos, pílulas de áudio, aulas e progress
 | Textos de revisão | Leitura geral por matéria, com referências de estudo |
 | Banco de questões | Mais de 600 questões, quiz com correção, simulado por tópicos e simulado completo |
 | Plano diário | Quatro blocos de 30 minutos, cronômetro e contagem regressiva para a prova |
-| Pílulas de áudio | Trinta e cinco faixas MP3 com narração neural em português do Brasil |
+| Pílulas de áudio | Quarenta e uma faixas MP3 com narração neural em português do Brasil |
 | Progresso na nuvem | Sincronização entre aparelhos com login Google e banco Neon Postgres |
 
 ## Stack
