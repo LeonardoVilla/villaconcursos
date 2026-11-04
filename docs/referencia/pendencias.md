@@ -5,11 +5,11 @@ Lista do que ainda falta ou merece atenção.
 ## Conteúdo
 
 - [ ] **Áudios:** todas as matérias têm faixa. Falta atualizar Atualidades perto da prova, conferir números de leis e prazos dos roteiros de Direito e, se desejado, criar faixas de questões comentadas. Veja [Áudios](../conteudo/audios.md).
-- [ ] **Conferir** a Lei 9.612/2011 (águas subterrâneas), o Decreto 1.436/2022, a Resolução CONAMA 9/1987 e os decretos federais citados contra o texto oficial.
+- [ ] **Conferir** a Lei 9.612/2011 (águas subterrâneas), o Decreto 1.436/2022, o Decreto 1.436/2022 e outros decretos ambientais citados contra o texto oficial.
 - [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.
 - [ ] **Exercícios de leitura:** só parte dos textos de revisão tem exercício.
 - [ ] **Banco de respostas** para a prova discursiva.
-- [ ] **Ampliar o banco de questões.** O banco tem cerca de 690 questões. Português tem 93 e os transversais da SEMA de administração, economia, direitos humanos e políticas públicas têm 30 cada. Faltam mais questões em matérias com menos de 20 (por exemplo, Ética, Atualidades e Informática da Câmara). Ampliar com questões geradas por IA e revisadas.
+- [ ] **Ampliar o banco de questões.** O banco tem cerca de 700 questões. Português tem 93 e os transversais da SEMA de administração, economia, direitos humanos e políticas públicas têm 30 cada. Faltam mais questões em matérias com menos de 20 (por exemplo, Ética, Atualidades e Informática da Câmara). Ampliar com questões geradas por IA e revisadas.
 
 ## Segurança
 
