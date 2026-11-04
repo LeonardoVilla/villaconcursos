@@ -5,7 +5,7 @@ Lista do que ainda falta ou merece atenção.
 ## Conteúdo
 
 - [ ] **Áudios:** todas as matérias têm faixa. Falta atualizar Atualidades perto da prova, conferir números de leis e prazos dos roteiros de Direito e, se desejado, criar faixas de questões comentadas. Veja [Áudios](../conteudo/audios.md).
-- [ ] **Conferir** a Lei 9.612/2011 (águas subterrâneas) e o Decreto 1.436/2022 contra o texto oficial.
+- [ ] **Conferir** a Lei 9.612/2011 (águas subterrâneas), o Decreto 1.436/2022, as resoluções CONAMA e os decretos federais citados contra o texto oficial.
 - [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.
 - [ ] **Exercícios de leitura:** só parte dos textos de revisão tem exercício.
 - [ ] **Banco de respostas** para a prova discursiva.
