@@ -24,6 +24,10 @@ A aba **Materiais** reúne quatro camadas, todas vinculadas a uma matéria ou a 
 
 Além delas: `mt-lessons.ts` guarda a linha do tempo e a geografia de Mato Grosso usadas na aba de materiais.
 
+### Linha do tempo de Mato Grosso
+
+Na matéria de História e Geografia de Mato Grosso, a aba de materiais mostra a linha do tempo de duas formas: uma versão interativa (`MatoGrossoTimeline`, em `practice.tsx`), com a lista de eventos à direita e o detalhe do evento escolhido à esquerda, e a lista corrida abaixo dela. As duas leem `mtTimeline`. Para acrescentar um evento, inclua `{ date, title, text }` em `mt-lessons.ts`. Em telas estreitas, a lista de eventos aparece acima do detalhe.
+
 ## Aula por tópico
 
 ```ts

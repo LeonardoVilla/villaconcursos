@@ -12,6 +12,32 @@ import { mtGeography, mtTimeline } from './mt-lessons';
 import { readingExercises } from './reading-exercises';
 const readings = [...baseReadings, ...readingsExtra];
 
+function MatoGrossoTimeline() {
+  const [index, setIndex] = useState(0);
+  const event = mtTimeline[index];
+  const last = mtTimeline.length - 1;
+  return <div className="mt-tl">
+    <article className="mt-tl-detail" aria-live="polite">
+      <span className="mt-date">{event.date}</span>
+      <h4>{event.title}</h4>
+      <p>{event.text}</p>
+      <div className="mt-tl-nav">
+        <button type="button" onClick={() => setIndex(index - 1)} disabled={index === 0}>Anterior</button>
+        <span>{index + 1} de {mtTimeline.length}</span>
+        <button type="button" onClick={() => setIndex(index + 1)} disabled={index === last}>Próximo</button>
+      </div>
+    </article>
+    <ol className="mt-tl-list" aria-label="Eventos da história de Mato Grosso">
+      {mtTimeline.map((item, i) => <li key={item.date}>
+        <button type="button" className={i === index ? 'active' : ''} aria-current={i === index ? 'step' : undefined} onClick={() => setIndex(i)}>
+          <span className="mt-tl-dot" aria-hidden="true" />
+          <span><strong>{item.title}</strong><small>{item.date}</small></span>
+        </button>
+      </li>)}
+    </ol>
+  </div>;
+}
+
 function MatoGrossoLesson() {
   return <>
     <nav className="reading-jumps" aria-label="Seções da leitura de Mato Grosso">
@@ -20,6 +46,8 @@ function MatoGrossoLesson() {
       <a href="#mt-revisao">Revisão</a>
     </nav>
     <h3 id="mt-historia">História de Mato Grosso</h3>
+    <p className="subtext">Toque em um evento para ler o detalhe. Abaixo, a mesma linha do tempo em lista corrida.</p>
+    <MatoGrossoTimeline />
     <ol className="mt-timeline">
       {mtTimeline.map(event => <li key={event.date}>
         <span className="mt-date">{event.date}</span>

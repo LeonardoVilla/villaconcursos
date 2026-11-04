@@ -68,3 +68,26 @@
   .practice-modes button, .practice-actions button, .practice-card .primary { min-height: 44px; font-size: 15px; }
   .transcript p { font-size: 17px; line-height: 1.7; }
 }
+
+.mt-tl { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(240px, 1fr); gap: 20px; margin: 12px 0 22px; align-items: start; }
+.mt-tl-detail { background: #f3f7f2; border: 1px solid #dfe8dc; border-radius: 12px; padding: 20px; min-height: 260px; }
+.mt-tl-detail h4 { font-size: 22px; margin: 6px 0 12px; line-height: 1.3; }
+.mt-tl-detail p { margin: 0 0 18px; }
+.mt-tl-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 1px solid #dfe8dc; padding-top: 14px; font-size: 14px; color: #5d6f64; }
+.mt-tl-nav button { min-height: 44px; padding: 8px 16px; border-radius: 8px; background: #39795b; color: #fff; font-size: 15px; }
+.mt-tl-nav button:disabled { background: #c9d5cc; color: #6f7f75; cursor: default; opacity: 1; }
+.mt-tl-list { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
+.mt-tl-list::before { content: ''; position: absolute; left: 21px; top: 12px; bottom: 12px; width: 2px; background: #d3ddd5; }
+.mt-tl-list li { position: relative; }
+.mt-tl-list button { display: flex; gap: 14px; align-items: flex-start; width: 100%; text-align: left; background: none; padding: 10px 8px; border-radius: 10px; color: #4c5f54; min-height: 48px; }
+.mt-tl-list button strong { display: block; font-size: 16px; line-height: 1.35; color: inherit; }
+.mt-tl-list button small { display: block; font-size: 14px; color: #6d7d73; margin-top: 3px; }
+.mt-tl-list button:hover { background: #f1f5f0; }
+.mt-tl-list button.active { background: #e8f1ea; color: #1e4430; }
+.mt-tl-dot { position: relative; z-index: 1; flex: 0 0 auto; width: 28px; height: 28px; margin-top: 1px; border-radius: 50%; background: #fff; border: 2px solid #b7c6bb; }
+.mt-tl-list button.active .mt-tl-dot { background: #39795b; border-color: #39795b; box-shadow: 0 0 0 4px #cfe3d5; }
+@media (max-width: 760px) {
+  .mt-tl { grid-template-columns: 1fr; }
+  .mt-tl-list { order: -1; }
+  .mt-tl-detail { min-height: 0; }
+}
