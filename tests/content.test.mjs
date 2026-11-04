@@ -94,7 +94,7 @@ test('Todo roteiro de áudio tem categoria para agrupar a lista',()=>{
 });
 
 test('Cada questão é única (enunciado e alternativas), para o histórico de erros usar um identificador estável',()=>{
- const arquivos=['practice-bank.ts','practice-extra-a.ts','practice-extra-b.ts','practice-extra-c.ts','practice-extra-d.ts','practice-extra-e.ts'];
+ const arquivos=['practice-bank.ts','practice-extra-a.ts','practice-extra-b.ts','practice-extra-c.ts','practice-extra-d.ts','practice-extra-e.ts','practice-extra-f.ts'];
  const prompts=[];
  for(const f of arquivos){
   for(const linha of readFileSync(new URL('../app/'+f,import.meta.url),'utf8').split('\n')){
@@ -102,7 +102,7 @@ test('Cada questão é única (enunciado e alternativas), para o histórico de e
    if(partes.length===7&&partes[0].length>10) prompts.push(partes.slice(0,6).join('|'));
   }
  }
- assert.ok(prompts.length>630,'poucas questões lidas: '+prompts.length);
+ assert.ok(prompts.length>660,'poucas questões lidas: '+prompts.length);
  const repetidos=prompts.filter((p,i)=>prompts.indexOf(p)!==i);
  assert.deepEqual(repetidos,[],'Questões repetidas: '+repetidos.slice(0,3).join(' || '));
 });

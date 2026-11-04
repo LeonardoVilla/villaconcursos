@@ -15,6 +15,7 @@ O conteúdo jurídico foi escrito em duas etapas. Primeiro, a partir do conhecim
 | LC 235/2011 (Plano de Cargos) | Site da Câmara | Inclui o Analista Legislativo – TI da LC 609/2026 e suas 33 atribuições |
 | LC 112/2002 (Código de Ética, MT) | Assembleia Legislativa de MT | Texto integral |
 | LC 38/1995 (Código Ambiental, MT) | Sefaz-MT, consolidada até a LC 830/2025 | O art. 19 (licenças) foi revogado pela LC 592/2017 |
+| Resoluções CONAMA 1/1986, 237/1997, 420/2009, 430/2011 e 506/2024 | DOU (506) e cópias que reproduzem o texto publicado | Artigos, prazos e valores das aulas conferidos em novembro de 2026. Corrigidos: a 506 revoga só parte da 491/2018, e a 430 exige respeito às metas do enquadramento (art. 5º) |
 | Lei 7.692/2002 (Processo administrativo, MT) | Cópia de terceiros | Texto possivelmente desatualizado, veja abaixo |
 | LC 04/1990 (Estatuto, MT) | Texto original, na Unemat | Anterior a várias alterações, veja abaixo |
 | LC 582/2017 (Mudanças Climáticas, MT) | Imprensa Oficial (IOMAT) | Texto original. A LC 777/2023 incluiu o art. 6-A |
@@ -44,7 +45,7 @@ Li o texto das leis federais abaixo e conferi os números usados nas aulas, nos 
 | Lei 9.605/1998 | Responsabilidade da pessoa jurídica (art. 3º) |
 | Lei 6.938/1981 | Responsabilidade objetiva do poluidor (art. 14, § 1º) |
 
-Ainda não conferi nesta rodada: as resoluções CONAMA (1/1986, 9/1987, 237/1997, 420, 430 e 506) e os decretos federais (6.514/2008, 8.437/2015, 9.578/2018), porque não estão no Planalto como lei. Também não conferi o texto do Código Florestal além do art. 12.
+Ainda não conferi nesta rodada: a resolução CONAMA 9/1987 e os decretos federais (6.514/2008, 8.437/2015, 9.578/2018), porque não estão no Planalto como lei. Também não conferi o texto do Código Florestal além do art. 12.
 
 ## Com ressalvas
 
@@ -57,7 +58,7 @@ Ainda não conferi nesta rodada: as resoluções CONAMA (1/1986, 9/1987, 237/199
 - **Lei 9.612/2011 (águas subterrâneas, MT):** só consegui confirmar a data (12/09/2011) e a exigência de outorga da SEMA por fontes secundárias. A aula avisa isso.
 - **Decreto 1.436/2022** e outros decretos e resoluções ambientais citados nas aulas de Direito Ambiental.
 - **LC 609/2026:** li o que ela inseriu na LC 235/2011 pelo texto compilado, que é a parte do cargo de Analista Legislativo – TI. Não li a lei isolada.
-- Resoluções CONAMA e decretos federais citados nas aulas de Direito Ambiental, que não estão entre as leis conferidas acima.
+- Decretos federais citados nas aulas de Direito Ambiental, que não estão entre as leis conferidas acima.
 
 ## Links
 

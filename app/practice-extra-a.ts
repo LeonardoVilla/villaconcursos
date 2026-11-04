@@ -93,7 +93,7 @@ Cadeia de comando refere-se a:|Hierarquia|Contratos|Orçamento|Protocolo|Invent�
 `],
 ['trans1', 'Poluição e controle ambiental', `
 Poluentes secundários da atmosfera são:|Formados por reações, como o ozônio troposférico|Emitidos diretamente|Só vulcânicos|Sempre sólidos|Inexistentes|O ozônio troposférico forma-se de NOx e COVs com luz solar.
-A Resolução CONAMA 506/2024 trata de:|Padrões de qualidade do ar|Efluentes|Solo|Resíduos|Licenciamento|Substitui a CONAMA 491/2018.
+A Resolução CONAMA 506/2024 trata de:|Padrões de qualidade do ar|Efluentes|Solo|Resíduos|Licenciamento|Revoga parte da CONAMA 491/2018.
 DBO mede:|Oxigênio consumido na degradação da matéria orgânica|Sólidos totais|pH|Temperatura|Cor|Quanto maior, mais poluição orgânica.
 A CONAMA 430/2011 dispõe sobre:|Condições e padrões de lançamento de efluentes|Qualidade do solo|Ar|EIA|Fauna|Complementa a 357/2005.
 Faixa de pH admitida no lançamento de efluentes:|5 a 9|1 a 4|10 a 14|0 a 2|6,5 a 6,6|Prevista na Resolução 430/2011.
