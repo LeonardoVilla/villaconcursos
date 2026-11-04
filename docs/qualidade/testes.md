@@ -14,6 +14,18 @@ npm test
 | Modo restrito bloqueia conta fora da lista, inclusive lista vazia | Lista vazia nega todos |
 | Google precisa confirmar o e-mail, mesmo no modo público | `email_verified` é obrigatório |
 
+## `tests/ai-policy.test.mjs`
+
+| Teste | O que garante |
+|---|---|
+| Padrões de modelo | Sem variáveis, usa `gpt-5.4-nano` e a reserva `deepseek-flash` |
+| Troca por variáveis | Provedor e modelo mudam só pelo ambiente |
+| Provedor sem chave ou desconhecido | É descartado, e não há candidatos repetidos |
+| Limite diário | Padrão de 30, teto de 200 |
+| Corpo da requisição | Raciocínio só nas famílias que o aceitam, tokens certos por provedor |
+| Prompt de explicação | Traz o gabarito, a escolha do aluno e a regra de não inventar |
+| Entrada da rota | Rejeita identificadores e alternativas inválidos |
+
 ## `tests/content.test.mjs`
 
 | Teste | O que garante |
@@ -32,7 +44,7 @@ npm test
 ## O que os testes não cobrem
 
 - Fluxo de OAuth real (precisa de credenciais e consentimento).
-- A rota `/api/progress` com banco (verificada manualmente: `401` sem login e gravação condicional no Postgres).
+- As rotas `/api/progress` e `/api/ai/explain` com banco e provedores reais. Foram verificadas manualmente, com uma sessão local assinada, nos casos `401`, `400`, `404` e `200`.
 - A correção jurídica do conteúdo. Veja [Verificação de fontes](../conteudo/verificacao-de-fontes.md).
 
 ## Validação completa

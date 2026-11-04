@@ -29,6 +29,28 @@ Grava o progresso. Corpo JSON:
 
 A identidade vem sempre da sessão do servidor. O cliente não escolhe o e-mail.
 
+## `POST /api/ai/explain`
+
+Pede uma explicação de IA para uma questão do banco. Corpo JSON:
+
+```json
+{ "questionId": "q1abc", "chosen": 1 }
+```
+
+`chosen` é o índice da alternativa marcada (`0` é a correta) ou `null`.
+
+| Resposta | Significado |
+|---|---|
+| `200` | `{ "text": "...", "model": "gpt-5.4-nano", "remaining": 29 }` |
+| `400` `BadPayload` | Identificador ou alternativa inválidos |
+| `401` `Unauthorized` | Sem sessão válida |
+| `404` `UnknownQuestion` | Questão não existe |
+| `413` `TooLarge` | Corpo maior que 2 KB |
+| `429` `LimitReached` | Limite diário atingido (`limit` no corpo) |
+| `503` `AiUnavailable` | Sem chave configurada ou provedores indisponíveis. O uso reservado é devolvido |
+
+O cliente não envia texto livre. O servidor monta o prompt a partir do banco de questões.
+
 ## `/api/auth/*`
 
 Rotas do NextAuth (login, callback, sessão e logout). Respondem `503` quando o login está desativado ou com credenciais incompletas.

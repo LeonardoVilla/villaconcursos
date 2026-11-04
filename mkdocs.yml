@@ -42,6 +42,7 @@ nav:
       - Variáveis de ambiente: guia/variaveis-de-ambiente.md
       - Autenticação com Google: guia/autenticacao.md
       - Banco e sincronização: guia/banco-e-sincronizacao.md
+      - IA no app: guia/ia.md
       - Publicação: guia/deploy.md
   - Conteúdo:
       - Estrutura do conteúdo: conteudo/estrutura-do-conteudo.md

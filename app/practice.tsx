@@ -12,6 +12,47 @@ import { mtGeography, mtTimeline } from './mt-lessons';
 import { readingExercises } from './reading-exercises';
 const readings = [...baseReadings, ...readingsExtra];
 
+function ExplainWithAi({ questionId, chosen }: { questionId: string; chosen: number | null }) {
+  const [state, setState] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
+  const [text, setText] = useState('');
+  const [message, setMessage] = useState('');
+  async function ask() {
+    setState('loading');
+    setMessage('');
+    try {
+      const response = await fetch('/api/ai/explain', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ questionId, chosen }),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setMessage(response.status === 429
+          ? 'Você usou todas as explicações de hoje. Volte amanhã.'
+          : response.status === 401 ? 'Entre com sua conta para usar a IA.'
+          : 'A IA não está disponível agora. Tente de novo em instantes.');
+        setState('error');
+        return;
+      }
+      setText(String(data.text || ''));
+      setMessage(typeof data.remaining === 'number' ? data.remaining + ' explicações restantes hoje.' : '');
+      setState('done');
+    } catch {
+      setMessage('Não foi possível falar com a IA. Verifique a conexão.');
+      setState('error');
+    }
+  }
+  return <div className="ai-explain">
+    {state !== 'done' && <button type="button" onClick={ask} disabled={state === 'loading'}>{state === 'loading' ? 'Pensando…' : 'Não entendi: explicar com IA'}</button>}
+    {state === 'error' && <p className="login-error" role="alert">{message}</p>}
+    {state === 'done' && <div role="status">
+      <p><strong>Explicação da IA</strong></p>
+      {text.split('\n').filter(Boolean).map((line, i) => <p key={i}>{line}</p>)}
+      <small>Gerada por IA como apoio. Confira sempre no texto da lei ou do edital. {message}</small>
+    </div>}
+  </div>;
+}
+
 function MatoGrossoTimeline() {
   const [index, setIndex] = useState(0);
   const event = mtTimeline[index];
@@ -71,7 +112,7 @@ export type QuizStat = { r: number; w: number; last: 'r' | 'w'; ts: number };
 type Item = { question: Question; order: number[]; section: string; weight: number };
 const topicLessons: Record<string, (typeof baseLessons)[string]> = { ...extraLessons, ...baseLessons };
 
-type Props = { camara: boolean; groups: Group[]; quiz?: Record<string, QuizStat>; onAnswer?: (id: string, correct: boolean) => void };
+type Props = { camara: boolean; groups: Group[]; quiz?: Record<string, QuizStat>; onAnswer?: (id: string, correct: boolean) => void; aiEnabled?: boolean };
 
 function shuffle<T>(items: T[]) {
   const copy = [...items];
@@ -167,7 +208,7 @@ export function StudyLibrary({ groups, camara, initialGroup = '' }: Props & { in
   </section>;
 }
 
-export default function Practice({ camara, groups, quiz = {}, onAnswer }: Props) {
+export default function Practice({ camara, groups, quiz = {}, onAnswer, aiEnabled = false }: Props) {
   const [mode, setMode] = useState<Mode>('quick');
   const [selected, setSelected] = useState<string[]>([]);
   const [quantity, setQuantity] = useState(5);
@@ -326,6 +367,7 @@ export default function Practice({ camara, groups, quiz = {}, onAnswer }: Props)
         <p><strong>Sua resposta</strong> {question.options[answers[question.id]] ?? 'Em branco'}</p>
         <p><strong>Gabarito</strong> {question.options[0]}</p>
         <p>{question.explanation}</p>
+        {aiEnabled && <ExplainWithAi key={question.id} questionId={question.id} chosen={answers[question.id] ?? null} />}
       </details>)}
     </div>
   </section>;
@@ -365,6 +407,7 @@ export default function Practice({ camara, groups, quiz = {}, onAnswer }: Props)
       </label>)}
     </fieldset>
     {showCorrection && <div className="notice subtle" role="status"><strong>{chosen === 0 ? 'Correto. ' : 'Gabarito: ' + current.question.options[0] + '. '}</strong>{current.question.explanation}</div>}
+    {showCorrection && aiEnabled && <ExplainWithAi key={current.question.id} questionId={current.question.id} chosen={chosen ?? null} />}
     <div className="practice-actions">
       <button disabled={!index} onClick={() => setIndex(index - 1)}>Anterior</button>
       <button disabled={index === items.length - 1} onClick={() => setIndex(index + 1)}>Próxima</button>

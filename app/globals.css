@@ -103,3 +103,10 @@
 
 .practice-stats { background: #f3f7f2; border: 1px solid #dfe8dc; border-radius: 10px; padding: 12px 14px; margin: 4px 0 16px; font-size: 15px; }
 .practice-stats p { margin: 6px 0 0; }
+
+.ai-explain { margin: 12px 0 4px; }
+.ai-explain button { min-height: 44px; padding: 8px 16px; border-radius: 8px; background: #eef3fb; color: #25456f; font-size: 15px; border: 1px solid #cfdcf0; }
+.ai-explain button:disabled { opacity: .6; cursor: wait; }
+.ai-explain > div { background: #f6f8fc; border: 1px solid #dbe4f3; border-radius: 10px; padding: 12px 14px; }
+.ai-explain > div p { margin: 6px 0; font-size: 15px; line-height: 1.6; }
+.ai-explain small { color: #5d6c82; font-size: 13px; }

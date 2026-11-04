@@ -1,18 +1,9 @@
-import { getServerSession } from 'next-auth';
-import { authOptions } from '../../../lib/auth';
-import { authEnabled, googleConfigured, emailAllowed } from '../../../lib/auth-policy.mjs';
+import { identify } from '../../../lib/session';
 import { sql } from '../../../lib/db';
 
 export const dynamic = 'force-dynamic';
 const MAX_BYTES = 256 * 1024;
 const contests = new Set(['sema', 'camara']);
-
-async function identify() {
-  if (!authEnabled() || !googleConfigured()) return null;
-  const session = await getServerSession(authOptions);
-  const email = session?.user?.email?.trim().toLowerCase();
-  return email && emailAllowed(email) ? email : null;
-}
 
 export async function GET(req: Request) {
   const email = await identify();

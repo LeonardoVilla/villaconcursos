@@ -33,6 +33,19 @@ node -e "console.log(require('node:crypto').randomBytes(32).toString('base64'))"
 
 O comando `neon env pull` preenche essas três variáveis em `.env.local`.
 
+## IA (opcional)
+
+| Variável | Obrigatória | Descrição |
+|---|---|---|
+| `OPENAI_API_KEY` | Para usar a OpenAI | Chave da API. Só no servidor |
+| `DEEPSEEK_API_KEY` | Para usar o DeepSeek | Chave da API. Só no servidor |
+| `AI_EXPLAIN_PROVIDER`, `AI_EXPLAIN_MODEL` | Não | Provedor (`openai` ou `deepseek`) e modelo para explicar questões. Padrão: `openai` e `gpt-5.4-nano` |
+| `AI_ESSAY_PROVIDER`, `AI_ESSAY_MODEL` | Não | Para a correção da discursiva. Padrão: `openai` e `gpt-5.4-mini` |
+| `AI_FALLBACK_PROVIDER`, `AI_FALLBACK_MODEL` | Não | Reserva se o principal falhar. Padrão: `deepseek` e `deepseek-flash` |
+| `AI_DAILY_LIMIT` | Não | Usos de IA por pessoa por dia. Padrão: 30 |
+
+Veja [IA no app](ia.md). Sem nenhuma chave, o botão de explicação responde que a IA está indisponível, e o resto do app funciona normalmente.
+
 ## Comportamento sem configuração
 
 - Sem `AUTH_ENABLED=true`, o app abre direto e não sincroniza.

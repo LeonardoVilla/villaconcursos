@@ -11,6 +11,12 @@ Lista do que ainda falta ou merece atenção.
 - [ ] **Banco de respostas** para a prova discursiva.
 - [ ] **Ampliar o banco de questões** nas matérias com poucas questões.
 
+## IA
+
+- [ ] Correção da discursiva com IA (as variáveis `AI_ESSAY_*` já estão previstas).
+- [ ] Geração de questões novas para os tópicos de maior erro, com revisão antes de entrar no banco.
+- [ ] Cadastrar `OPENAI_API_KEY`, `DEEPSEEK_API_KEY` e `AI_*` na Vercel e fazer um Redeploy.
+
 ## Plataforma
 
 - [ ] Atualizar o `README.md`: ele ainda diz que não há banco nem sincronização.

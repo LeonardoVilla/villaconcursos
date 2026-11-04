@@ -8,10 +8,13 @@ Navegador
  ├─ app/dashboard.tsx (cliente)  interface, plano e progresso
  │    ├─ app/practice.tsx        aulas, materiais, quiz e simulados
  │    └─ localStorage            cópia local do progresso (funciona offline)
- └─ /api/progress                lê e grava o progresso no Neon (só com login)
+ ├─ /api/progress                lê e grava o progresso no Neon (só com login)
+ └─ /api/ai/explain              explica questões com IA (só com login, com limite diário)
 
 Servidor Next.js
  ├─ lib/auth.ts + lib/auth-policy.mjs   NextAuth, Google e lista de e-mails
+ ├─ lib/session.ts                      identifica o usuário da sessão
+ ├─ lib/ai-policy.mjs                   modelos, limite e prompt da IA (testado)
  └─ lib/db.ts                           conexão com o Neon
 
 Neon Postgres

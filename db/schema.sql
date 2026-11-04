@@ -5,3 +5,10 @@ CREATE TABLE IF NOT EXISTS study_progress (
   updated_at bigint      NOT NULL,
   PRIMARY KEY (email, contest)
 );
+
+CREATE TABLE IF NOT EXISTS ai_usage (
+  email text    NOT NULL,
+  day   date    NOT NULL,
+  count integer NOT NULL DEFAULT 0,
+  PRIMARY KEY (email, day)
+);

@@ -38,6 +38,8 @@ CREATE TABLE IF NOT EXISTS study_progress (
 | `data` | O objeto de progresso (veja [Fluxo de dados](../visao-geral/fluxo-de-dados.md)) |
 | `updated_at` | Milissegundos desde 1970 da última alteração |
 
+O mesmo arquivo cria a tabela `ai_usage`, que controla o limite diário de uso de IA (veja [IA no app](ia.md)).
+
 Para aplicar o esquema, execute o SQL no console do Neon ou por um script que use `DATABASE_URL_UNPOOLED`.
 
 ## Como a gravação se protege
