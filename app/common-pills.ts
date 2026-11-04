@@ -5,6 +5,7 @@ import atualidades from '../scripts/audio/roteiros-atualidades.json';
 import camaraTi from '../scripts/audio/roteiros-camara-ti.json';
 import camaraComum from '../scripts/audio/roteiros-camara-comum.json';
 import semaTransversais from '../scripts/audio/roteiros-sema-transversais.json';
+import direitoAmbiental from '../scripts/audio/roteiros-direito-ambiental.json';
 
 type Roteiro = {
   stem: string; title: string; text: string; category?: string;
@@ -13,7 +14,7 @@ type Roteiro = {
 };
 
 // Pílulas geradas a partir de scripts/audio/roteiros*.json, as mesmas fontes usadas para criar os MP3.
-export const commonPills = ([...mato, ...portugues, ...semaComum, ...atualidades, ...camaraTi, ...camaraComum, ...semaTransversais] as Roteiro[]).flatMap(item =>
+export const commonPills = ([...mato, ...portugues, ...semaComum, ...atualidades, ...camaraTi, ...camaraComum, ...semaTransversais, ...direitoAmbiental] as Roteiro[]).flatMap(item =>
   (item.profile ? [item.profile] : (['ti', 'direito'] as const)).map(profile => ({
     stem: item.stem, title: item.title, profile: profile as string, text: item.text, contest: item.contest as string | undefined, category: item.category,
   })),
