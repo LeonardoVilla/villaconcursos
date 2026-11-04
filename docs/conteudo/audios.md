@@ -2,7 +2,7 @@
 
 ## Situação atual
 
-Há **cinquenta e quatro faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
+Há **sessenta e três faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
 
 | Faixa | Perfil | Tema |
 |---|---|---|
@@ -60,6 +60,15 @@ Há **cinquenta e quatro faixas MP3** em `public/audio`, todas com a voz neural 
 | `dir-adm-1-atos-poderes` | SEMA, Direito | Princípios, atos administrativos, organização e poderes |
 | `dir-adm-2-servicos-responsabilidade` | SEMA, Direito | Serviços públicos, responsabilidade civil, bens públicos e servidores |
 | `dir-adm-3-licitacao-processo-improbidade` | SEMA, Direito | Licitações e contratos, processo administrativo e improbidade |
+| `dir-civil-1-pessoas-fatos` | SEMA, Direito | Direito Civil: lei, pessoas, fatos jurídicos, prescrição e decadência |
+| `dir-civil-2-bens-obrigacoes-contratos` | SEMA, Direito | Direito Civil: bens, obrigações, contratos, registros e fundações |
+| `dir-proc-1-principios-competencia-partes` | SEMA, Direito | Processo Civil: princípios, competência, sujeitos e atos |
+| `dir-proc-2-conhecimento-execucao` | SEMA, Direito | Processo Civil: conhecimento, cumprimento de sentença, execução e procedimentos especiais |
+| `dir-proc-3-recursos-precedentes-especiais` | SEMA, Direito | Processo Civil: recursos, precedentes, juizados e ações coletivas |
+| `cmc-jur-1-principios-atos-poderes` | Câmara, Direito | Princípios, Administração, atos administrativos e poderes |
+| `cmc-jur-2-licitacao-agentes-controle` | Câmara, Direito | Licitação, contratos, agentes, serviços, controle, improbidade e bens |
+| `cmc-jur-3-constitucional-municipios` | Câmara, Direito | Direitos fundamentais e organização dos Municípios |
+| `cmc-jur-4-gestao-politicas-governanca` | Câmara, Direito | Políticas públicas, planejamento, governança e gestão por resultados |
 
 As faixas de Mato Grosso e de Português aparecem nos dois perfis (TI e Direito) e nos dois concursos, porque as matérias são comuns. As de Ética, legislação e Atualidades aparecem nos dois perfis, mas só no concurso da SEMA, porque a matéria é só desse edital. Elas duram de 1,5 a 2 minutos cada.
 
@@ -69,7 +78,7 @@ As faixas de Mato Grosso e de Português aparecem nos dois perfis (TI e Direito)
 |---|---|
 | `app/data.json` (`pills`) | As quatro de TI da SEMA |
 | `app/dashboard.tsx` (`lawPills`, `camaraLawPills`) | As de Direito |
-| `scripts/audio/roteiros*.json` | Mato Grosso (`roteiros.json`), Português (`roteiros-portugues.json`) e Ética e legislação da SEMA (`roteiros-sema-comum.json`) Atualidades (`roteiros-atualidades.json`) TI da Câmara (`roteiros-camara-ti.json`) matérias comuns da Câmara (`roteiros-camara-comum.json`) transversais da SEMA (`roteiros-sema-transversais.json`) Direito Ambiental (`roteiros-direito-ambiental.json`) e Direito Constitucional e Administrativo (`roteiros-direito-publico.json`). O arquivo `app/common-pills.ts` as coloca nos dois perfis |
+| `scripts/audio/roteiros*.json` | Mato Grosso (`roteiros.json`), Português (`roteiros-portugues.json`) e Ética e legislação da SEMA (`roteiros-sema-comum.json`) Atualidades (`roteiros-atualidades.json`) TI da Câmara (`roteiros-camara-ti.json`) matérias comuns da Câmara (`roteiros-camara-comum.json`) transversais da SEMA (`roteiros-sema-transversais.json`) Direito Ambiental (`roteiros-direito-ambiental.json`) Direito Constitucional e Administrativo (`roteiros-direito-publico.json`), Direito Civil e Processo Civil (`roteiros-direito-privado.json`) e Direito da Câmara (`roteiros-camara-juridico.json`). O arquivo `app/common-pills.ts` as coloca nos dois perfis |
 
 Cada pílula tem `stem` (nome do arquivo sem extensão), `profile` (`ti` ou `direito`), título e o texto da transcrição. Nos roteiros, o campo opcional `contest` (`sema` ou `camara`) limita a pílula a um concurso, e o campo opcional `profile` (`ti` ou `direito`) limita a um perfil. Sem eles, a pílula vale para os dois concursos e os dois perfis.
 
@@ -79,18 +88,17 @@ Os quatro arquivos `.wav` em `public/audio` são versões anteriores. O app só 
 
 A lista da aba Pílulas é agrupada por tópico, com uma busca por título e grupos que abrem e fecham. Cada grupo mostra quantas faixas já foram ouvidas. Os tópicos são:
 
-Língua Portuguesa, História e Geografia de Mato Grosso, Raciocínio lógico, Informática, Ética e filosofia, Relações interpessoais, Administração pública, Legislação, Atualidades, Transversais, Direito Constitucional, Direito Administrativo, Direito Ambiental, Direito e Tecnologia da Informação.
+Língua Portuguesa, História e Geografia de Mato Grosso, Raciocínio lógico, Informática, Ética e filosofia, Relações interpessoais, Administração pública, Legislação, Atualidades, Transversais, Direito Constitucional, Direito Administrativo, Direito Civil, Direito Processual Civil, Direito Ambiental, Direito e Tecnologia da Informação.
 
 Cada roteiro tem o campo `category`, e as pílulas de `data.json` e de `dashboard.tsx` também. A ordem dos grupos está em `categoryOrder`, em `app/dashboard.tsx`. O teste falha se um roteiro ficar sem categoria.
 
 ## Lacunas
 
-Todos os grandes grupos de matéria têm ao menos uma faixa. O que ainda pode crescer:
+Todas as matérias dos dois editais têm áudio. O que ainda pode crescer ou precisa de cuidado:
 
-- Direito Civil e Processo Civil (SEMA), hoje cobertos só pelo roteiro geral de Direito.
-- Os roteiros de Direito Ambiental, Constitucional e Administrativo citam numeração de leis e decretos que não foram todos conferidos contra o texto oficial (veja [Verificação de fontes](verificacao-de-fontes.md)).
-- Direito e Administração Pública da Câmara, hoje coberto pelo mapa de Direito e pela pílula de administração pública.
 - Atualizar `atualidades-1` perto da prova.
+- Os roteiros de Direito (Ambiental, Constitucional, Administrativo, Civil e Processo Civil) citam números de leis, artigos e prazos que não foram todos conferidos contra o texto oficial (veja [Verificação de fontes](verificacao-de-fontes.md)).
+- Faixas de revisão e de resolução de questões comentadas, que não existem ainda.
 
 ## Gerar as faixas
 

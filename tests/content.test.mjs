@@ -74,7 +74,7 @@ test('Cada matéria dos editais tem texto de revisão e referência de estudo',(
 });
 
 test('Cada pílula de áudio tem um MP3 real em public/audio',()=>{
- const roteiros=['roteiros.json','roteiros-portugues.json','roteiros-sema-comum.json','roteiros-atualidades.json','roteiros-camara-ti.json','roteiros-camara-comum.json','roteiros-sema-transversais.json','roteiros-direito-ambiental.json','roteiros-direito-publico.json'].flatMap(f=>JSON.parse(readFileSync(new URL('../scripts/audio/'+f,import.meta.url),'utf8')));
+ const roteiros=['roteiros.json','roteiros-portugues.json','roteiros-sema-comum.json','roteiros-atualidades.json','roteiros-camara-ti.json','roteiros-camara-comum.json','roteiros-sema-transversais.json','roteiros-direito-ambiental.json','roteiros-direito-publico.json','roteiros-direito-privado.json','roteiros-camara-juridico.json'].flatMap(f=>JSON.parse(readFileSync(new URL('../scripts/audio/'+f,import.meta.url),'utf8')));
  const stems=[...roteiros.map(r=>r.stem),...data.pills.map(p=>p.stem)];
  for(const stem of stems){
   const url=new URL('../public/audio/'+stem+'.mp3',import.meta.url);
@@ -84,7 +84,7 @@ test('Cada pílula de áudio tem um MP3 real em public/audio',()=>{
 });
 
 test('Todo roteiro de áudio tem categoria para agrupar a lista',()=>{
- const arquivos=['roteiros.json','roteiros-portugues.json','roteiros-sema-comum.json','roteiros-atualidades.json','roteiros-camara-ti.json','roteiros-camara-comum.json','roteiros-sema-transversais.json','roteiros-direito-ambiental.json','roteiros-direito-publico.json'];
+ const arquivos=['roteiros.json','roteiros-portugues.json','roteiros-sema-comum.json','roteiros-atualidades.json','roteiros-camara-ti.json','roteiros-camara-comum.json','roteiros-sema-transversais.json','roteiros-direito-ambiental.json','roteiros-direito-publico.json','roteiros-direito-privado.json','roteiros-camara-juridico.json'];
  for(const f of arquivos){
   for(const r of JSON.parse(readFileSync(new URL('../scripts/audio/'+f,import.meta.url),'utf8'))){
    assert.ok(r.category&&r.category!=='Outros','Sem categoria: '+r.stem);
