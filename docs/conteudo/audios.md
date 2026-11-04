@@ -2,7 +2,7 @@
 
 ## Situação atual
 
-Há **quarenta e oito faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
+Há **cinquenta e quatro faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
 
 | Faixa | Perfil | Tema |
 |---|---|---|
@@ -54,6 +54,12 @@ Há **quarenta e oito faixas MP3** em `public/audio`, todas com a voz neural `pt
 | `dir-amb-5-licenciamento-biodiversidade` | SEMA, Direito | EIA/RIMA, audiência pública, patrimônio genético e fauna |
 | `dir-amb-6-servicos-clima-pesca` | SEMA, Direito | Serviços ambientais, clima e pesca em Mato Grosso |
 | `dir-amb-7-saneamento-educacao-dados` | SEMA, Direito | Saneamento, educação ambiental, convenções, LAI e LGPD |
+| `dir-const-1-controle-federacao` | SEMA, Direito | Poder constituinte, controle de constitucionalidade e federação |
+| `dir-const-2-poderes-administracao` | SEMA, Direito | Legislativo, Judiciário, funções essenciais e Administração Pública |
+| `dir-const-3-direitos-fundamentais` | SEMA, Direito | Direitos fundamentais, remédios, direitos sociais, educação e ciência |
+| `dir-adm-1-atos-poderes` | SEMA, Direito | Princípios, atos administrativos, organização e poderes |
+| `dir-adm-2-servicos-responsabilidade` | SEMA, Direito | Serviços públicos, responsabilidade civil, bens públicos e servidores |
+| `dir-adm-3-licitacao-processo-improbidade` | SEMA, Direito | Licitações e contratos, processo administrativo e improbidade |
 
 As faixas de Mato Grosso e de Português aparecem nos dois perfis (TI e Direito) e nos dois concursos, porque as matérias são comuns. As de Ética, legislação e Atualidades aparecem nos dois perfis, mas só no concurso da SEMA, porque a matéria é só desse edital. Elas duram de 1,5 a 2 minutos cada.
 
@@ -63,7 +69,7 @@ As faixas de Mato Grosso e de Português aparecem nos dois perfis (TI e Direito)
 |---|---|
 | `app/data.json` (`pills`) | As quatro de TI da SEMA |
 | `app/dashboard.tsx` (`lawPills`, `camaraLawPills`) | As de Direito |
-| `scripts/audio/roteiros*.json` | Mato Grosso (`roteiros.json`), Português (`roteiros-portugues.json`) e Ética e legislação da SEMA (`roteiros-sema-comum.json`) Atualidades (`roteiros-atualidades.json`) TI da Câmara (`roteiros-camara-ti.json`) matérias comuns da Câmara (`roteiros-camara-comum.json`) transversais da SEMA (`roteiros-sema-transversais.json`) e Direito Ambiental (`roteiros-direito-ambiental.json`). O arquivo `app/common-pills.ts` as coloca nos dois perfis |
+| `scripts/audio/roteiros*.json` | Mato Grosso (`roteiros.json`), Português (`roteiros-portugues.json`) e Ética e legislação da SEMA (`roteiros-sema-comum.json`) Atualidades (`roteiros-atualidades.json`) TI da Câmara (`roteiros-camara-ti.json`) matérias comuns da Câmara (`roteiros-camara-comum.json`) transversais da SEMA (`roteiros-sema-transversais.json`) Direito Ambiental (`roteiros-direito-ambiental.json`) e Direito Constitucional e Administrativo (`roteiros-direito-publico.json`). O arquivo `app/common-pills.ts` as coloca nos dois perfis |
 
 Cada pílula tem `stem` (nome do arquivo sem extensão), `profile` (`ti` ou `direito`), título e o texto da transcrição. Nos roteiros, o campo opcional `contest` (`sema` ou `camara`) limita a pílula a um concurso, e o campo opcional `profile` (`ti` ou `direito`) limita a um perfil. Sem eles, a pílula vale para os dois concursos e os dois perfis.
 
@@ -73,7 +79,7 @@ Os quatro arquivos `.wav` em `public/audio` são versões anteriores. O app só 
 
 A lista da aba Pílulas é agrupada por tópico, com uma busca por título e grupos que abrem e fecham. Cada grupo mostra quantas faixas já foram ouvidas. Os tópicos são:
 
-Língua Portuguesa, História e Geografia de Mato Grosso, Raciocínio lógico, Informática, Ética e filosofia, Relações interpessoais, Administração pública, Legislação, Atualidades, Transversais, Direito Ambiental, Direito e Tecnologia da Informação.
+Língua Portuguesa, História e Geografia de Mato Grosso, Raciocínio lógico, Informática, Ética e filosofia, Relações interpessoais, Administração pública, Legislação, Atualidades, Transversais, Direito Constitucional, Direito Administrativo, Direito Ambiental, Direito e Tecnologia da Informação.
 
 Cada roteiro tem o campo `category`, e as pílulas de `data.json` e de `dashboard.tsx` também. A ordem dos grupos está em `categoryOrder`, em `app/dashboard.tsx`. O teste falha se um roteiro ficar sem categoria.
 
@@ -81,8 +87,8 @@ Cada roteiro tem o campo `category`, e as pílulas de `data.json` e de `dashboar
 
 Todos os grandes grupos de matéria têm ao menos uma faixa. O que ainda pode crescer:
 
-- Direito Constitucional, Administrativo, Civil e Processo Civil (SEMA), hoje cobertos só pelo roteiro geral de Direito.
-- Os roteiros de Direito Ambiental citam numeração de leis e decretos que não foram todos conferidos contra o texto oficial (veja [Verificação de fontes](verificacao-de-fontes.md)).
+- Direito Civil e Processo Civil (SEMA), hoje cobertos só pelo roteiro geral de Direito.
+- Os roteiros de Direito Ambiental, Constitucional e Administrativo citam numeração de leis e decretos que não foram todos conferidos contra o texto oficial (veja [Verificação de fontes](verificacao-de-fontes.md)).
 - Direito e Administração Pública da Câmara, hoje coberto pelo mapa de Direito e pela pílula de administração pública.
 - Atualizar `atualidades-1` perto da prova.
 

@@ -4,7 +4,7 @@ Lista do que ainda falta ou merece atenção.
 
 ## Conteúdo
 
-- [ ] **Áudios:** ampliar Direito Constitucional, Administrativo, Civil e Processo Civil da SEMA, e Direito da Câmara. O áudio de Atualidades precisa de atualização perto da prova. Veja [Áudios](../conteudo/audios.md).
+- [ ] **Áudios:** ampliar Direito Civil e Processo Civil da SEMA e o Direito da Câmara. O áudio de Atualidades precisa de atualização perto da prova. Veja [Áudios](../conteudo/audios.md).
 - [ ] **Conferir** a Lei 9.612/2011 (águas subterrâneas) e o Decreto 1.436/2022 contra o texto oficial.
 - [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.
 - [ ] **Exercícios de leitura:** só parte dos textos de revisão tem exercício.
