@@ -74,7 +74,7 @@ test('Cada matéria dos editais tem texto de revisão e referência de estudo',(
 });
 
 test('Cada pílula de áudio tem um MP3 real em public/audio',()=>{
- const roteiros=JSON.parse(readFileSync(new URL('../scripts/audio/roteiros.json',import.meta.url),'utf8'));
+ const roteiros=['roteiros.json','roteiros-portugues.json'].flatMap(f=>JSON.parse(readFileSync(new URL('../scripts/audio/'+f,import.meta.url),'utf8')));
  const stems=[...roteiros.map(r=>r.stem),...data.pills.map(p=>p.stem)];
  for(const stem of stems){
   const url=new URL('../public/audio/'+stem+'.mp3',import.meta.url);
