@@ -15,6 +15,7 @@ Cada concurso tem edital, plano de estudos, pílulas de áudio, aulas e progress
 | Aulas por tópico | 100% dos tópicos dos dois editais têm aula, questão de revisão e fontes |
 | Textos de revisão | Leitura geral por matéria, com referências de estudo |
 | Banco de questões | Mais de 600 questões, quiz com correção, simulado por tópicos e simulado completo |
+| Revisão de erros | Histórico por questão, modo Revisar erros e pontos fracos por tópico, sincronizados com a conta |
 | Plano diário | Quatro blocos de 30 minutos, cronômetro e contagem regressiva para a prova |
 | Pílulas de áudio | Sessenta e três faixas MP3 com narração neural em português do Brasil |
 | Progresso na nuvem | Sincronização entre aparelhos com login Google e banco Neon Postgres |

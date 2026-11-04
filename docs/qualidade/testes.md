@@ -26,6 +26,8 @@ npm test
 | Todo tópico tem aula e cada matéria tem banco mínimo de questões | 100% de aulas; pelo menos 10 questões por matéria dos grupos comuns, de TI e de Direito, e dos transversais trans0, 1, 2, 4, 5 e 7 |
 | Cada matéria tem texto de revisão e referência | Sem matéria vazia em Materiais |
 | Cada pílula de áudio tem um MP3 real | Nenhuma pílula aponta para arquivo ausente |
+| Todo roteiro de áudio tem categoria | A lista de pílulas agrupa sem item solto |
+| Cada questão tem enunciado único | O identificador estável do histórico de erros não colide |
 
 ## O que os testes não cobrem
 

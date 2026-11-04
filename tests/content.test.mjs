@@ -92,3 +92,17 @@ test('Todo roteiro de áudio tem categoria para agrupar a lista',()=>{
  }
  for(const p of data.pills) assert.ok(p.category,'Pílula sem categoria: '+p.stem);
 });
+
+test('Cada questão tem enunciado único, para o histórico de erros usar um identificador estável',()=>{
+ const arquivos=['practice-bank.ts','practice-extra-a.ts','practice-extra-b.ts','practice-extra-c.ts'];
+ const prompts=[];
+ for(const f of arquivos){
+  for(const linha of readFileSync(new URL('../app/'+f,import.meta.url),'utf8').split('\n')){
+   const partes=linha.trim().split('|');
+   if(partes.length===7&&partes[0].length>10) prompts.push(partes[0]);
+  }
+ }
+ assert.ok(prompts.length>400,'poucas questões lidas: '+prompts.length);
+ const repetidos=prompts.filter((p,i)=>prompts.indexOf(p)!==i);
+ assert.deepEqual(repetidos,[],'Enunciados repetidos: '+repetidos.slice(0,3).join(' || '));
+});

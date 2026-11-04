@@ -12,12 +12,22 @@ export type Question = {
 };
 
 const questions: Question[] = [];
+// Identificador estável: depende do enunciado, e não da posição no banco. Assim o histórico de acertos
+// e erros guardado no progresso continua valendo quando novas questões são acrescentadas.
+function stableId(prompt: string) {
+  let hash = 2166136261;
+  for (let i = 0; i < prompt.length; i++) {
+    hash ^= prompt.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return 'q' + (hash >>> 0).toString(36);
+}
 // Each authored row starts with the correct answer. The player shuffles the choices.
 function add(groups: string, topic: string, rows: string) {
   for (const row of rows.trim().split('\n')) {
     const [prompt, answer, wrong1, wrong2, wrong3, wrong4, explanation] = row.trim().split('|');
     questions.push({
-      id: 'q' + questions.length, groups: groups.split(' '), topic, prompt,
+      id: stableId(prompt), groups: groups.split(' '), topic, prompt,
       options: [answer, wrong1, wrong2, wrong3, wrong4], explanation,
     });
   }

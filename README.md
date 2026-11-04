@@ -48,6 +48,7 @@ A publicação requer autenticação na sua conta Vercel. Documentação: https:
 - Biblioteca de materiais por edital e cargo, com indicações de estudo e links oficiais das bancas.
 - Aula por tópico para 100% dos itens do edital da SEMA-MT e da Câmara de Cuiabá, com questão de revisão comentada e fontes.
 - Quiz com correção imediata, simulado por tópicos e simulado completo com 70 questões objetivas, pontuação por banca e proposta de discursiva para autoavaliação. As questões são autorais e o banco inicial cobre parte dos tópicos de cada edital.
+- Histórico de acertos e erros por questão, com o modo **Revisar erros** e a lista de pontos fracos por tópico.
 - Exportação e importação manual de backup dos dois perfis.
 
 ## Persistência e limites

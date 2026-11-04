@@ -100,3 +100,6 @@
 .pill-group > summary small { font-size: 13px; color: #6d7f72; white-space: nowrap; }
 .pill-group[open] > summary { border-bottom: 1px solid #e6ece4; }
 .pill-group .track { border-bottom: 1px solid #edf1e9; }
+
+.practice-stats { background: #f3f7f2; border: 1px solid #dfe8dc; border-radius: 10px; padding: 12px 14px; margin: 4px 0 16px; font-size: 15px; }
+.practice-stats p { margin: 6px 0 0; }

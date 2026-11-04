@@ -12,9 +12,13 @@ type Progress = {
     topics: Record<string, Entry>;     // tópicos do edital marcados
     sessions: Record<string, boolean>; // blocos diários, chave "AAAA-MM-DD-n"
     heard: Record<string, boolean>;    // pílulas de áudio ouvidas
+    quiz?: Record<string, QuizStat>;   // histórico de acertos e erros por questão
   }>;
 };
+type QuizStat = { r: number; w: number; last: 'r' | 'w'; ts: number }; // acertos, erros, último resultado e data
 ```
+
+O histórico `quiz` é opcional: progressos antigos continuam válidos. A chave é o identificador da questão, calculado por um hash do enunciado (`stableId`, em `practice-bank.ts`), e não pela posição no banco, então acrescentar questões novas não apaga o histórico. Por isso os enunciados precisam ser únicos, e um teste verifica isso.
 
 O dashboard valida o formato com `isProgress` antes de aceitar dados locais, do banco ou de um backup.
 

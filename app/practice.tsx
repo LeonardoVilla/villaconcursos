@@ -66,11 +66,12 @@ function MatoGrossoLesson() {
 }
 
 type Group = { id: string; title: string; category: string; topics: { id: string; text: string }[] };
-type Mode = 'quick' | 'custom' | 'full';
+type Mode = 'quick' | 'custom' | 'full' | 'review';
+export type QuizStat = { r: number; w: number; last: 'r' | 'w'; ts: number };
 type Item = { question: Question; order: number[]; section: string; weight: number };
 const topicLessons: Record<string, (typeof baseLessons)[string]> = { ...extraLessons, ...baseLessons };
 
-type Props = { camara: boolean; groups: Group[] };
+type Props = { camara: boolean; groups: Group[]; quiz?: Record<string, QuizStat>; onAnswer?: (id: string, correct: boolean) => void };
 
 function shuffle<T>(items: T[]) {
   const copy = [...items];
@@ -166,7 +167,7 @@ export function StudyLibrary({ groups, camara, initialGroup = '' }: Props & { in
   </section>;
 }
 
-export default function Practice({ camara, groups }: Props) {
+export default function Practice({ camara, groups, quiz = {}, onAnswer }: Props) {
   const [mode, setMode] = useState<Mode>('quick');
   const [selected, setSelected] = useState<string[]>([]);
   const [quantity, setQuantity] = useState(5);
@@ -188,6 +189,16 @@ export default function Practice({ camara, groups }: Props) {
   const pool = questions.filter(question => question.groups.some(id => groupIds.has(id)));
   const topicNames = [...new Set(pool.map(question => question.topic))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
   const filtered = pool.filter(question => !selected.length || selected.includes(question.topic));
+  const wrongPool = pool.filter(question => quiz[question.id]?.last === 'w');
+  const attempted = pool.filter(question => quiz[question.id]);
+  const rights = attempted.reduce((sum, question) => sum + quiz[question.id].r, 0);
+  const wrongs = attempted.reduce((sum, question) => sum + quiz[question.id].w, 0);
+  const weakTopics = topicNames.map(topic => {
+    const list = attempted.filter(question => question.topic === topic);
+    const r = list.reduce((sum, question) => sum + quiz[question.id].r, 0);
+    const w = list.reduce((sum, question) => sum + quiz[question.id].w, 0);
+    return { topic, r, w, rate: r + w ? w / (r + w) : 0 };
+  }).filter(entry => entry.r + entry.w >= 2 && entry.w > 0).sort((a, b) => b.rate - a.rate).slice(0, 3);
   const specificIds = groups.filter(group => group.category !== 'comum' || group.id === 'cmc-leg').map(group => group.id);
   const sections = camara
     ? [
@@ -225,11 +236,16 @@ export default function Practice({ camara, groups }: Props) {
       }
       sections.forEach(section => next.push(...(bySection.get(section.label) ?? [])));
     } else {
-      if (!Number.isInteger(quantity) || quantity < 1 || quantity > filtered.length) {
-        setError('Escolha uma quantidade entre 1 e ' + filtered.length + '.');
+      const base = mode === 'review' ? wrongPool : filtered;
+      if (!base.length) {
+        setError('Você ainda não tem questões para revisar. Responda ao quiz para o app registrar seus erros.');
         return;
       }
-      next.push(...shuffle(filtered).slice(0, quantity).map(question => item(question, question.topic, 1)));
+      if (!Number.isInteger(quantity) || quantity < 1 || quantity > base.length) {
+        setError('Escolha uma quantidade entre 1 e ' + base.length + '.');
+        return;
+      }
+      next.push(...shuffle(base).slice(0, quantity).map(question => item(question, question.topic, 1)));
     }
     setAnswers({});
     setEssay('');
@@ -248,14 +264,25 @@ export default function Practice({ camara, groups }: Props) {
     <h2>Quiz e simulados</h2>
     <p className="subtext">{pool.length} questões autorais para o cargo selecionado, com correção comentada.</p>
     <div className="practice-modes" role="group" aria-label="Modo de prática">
-      {([['quick','Quiz rápido'],['custom','Simulado por tópicos'],['full','Simulado completo']] as const).map(([value,label]) =>
-        <button key={value} aria-pressed={mode === value} onClick={() => {setMode(value); setError('');}}>{label}</button>)}
+      {([['quick','Quiz rápido'],['custom','Simulado por tópicos'],['full','Simulado completo'],['review','Revisar erros (' + wrongPool.length + ')']] as const).map(([value,label]) =>
+        <button key={value} aria-pressed={mode === value} onClick={() => {setMode(value); setError(''); if (value === 'review') setQuantity(Math.max(1, Math.min(10, wrongPool.length)));}}>{label}</button>)}
     </div>
+    {attempted.length > 0 && <div className="practice-stats" aria-label="Seu desempenho">
+      <strong>Seu desempenho</strong>
+      <p>{attempted.length} questões respondidas · {rights} acertos · {wrongs} erros · {Math.round(rights / Math.max(1, rights + wrongs) * 100)}% de acerto</p>
+      {weakTopics.length > 0 && <p>Pontos fracos: {weakTopics.map(entry => entry.topic + ' (' + Math.round(entry.rate * 100) + '% de erro)').join('; ')}.</p>}
+    </div>}
+    {mode === 'review' && <p className="subtext">{wrongPool.length ? 'Questões que você errou na última vez que respondeu. Ao acertar uma delas, ela sai desta lista.' : 'Nenhum erro registrado ainda. Faça um quiz e as questões erradas aparecem aqui.'}</p>}
     {mode === 'full' ? <div className="practice-details">
       <strong>Prova objetiva · 70 questões · {camara ? 'Selecon' : 'Cesgranrio'}</strong>
       <ul>{sections.map(section => <li key={section.label}>{section.label} · {section.count} questões de {format(section.weight)} ponto(s)</li>)}</ul>
       <p>Inclui uma proposta de discursiva do cargo, com roteiro de autoavaliação. A pontuação automática é da prova objetiva.</p>
-    </div> : <>
+    </div> : mode === 'review' ? <>
+      <label className="practice-field">Quantidade de questões
+        <input type="number" min={1} max={Math.max(1, wrongPool.length)} value={quantity || ''} onChange={event => {setQuantity(Number(event.target.value));setError('');}}/>
+      </label>
+      <p className="subtext">{wrongPool.length} questões para revisar.</p>
+    </> : <>
       <label className="practice-field">Quantidade de questões
         <input type="number" min={1} max={filtered.length} value={quantity || ''} onChange={event => {setQuantity(Number(event.target.value));setError('');}}/>
       </label>
@@ -272,7 +299,7 @@ export default function Practice({ camara, groups }: Props) {
       <p className="subtext">{filtered.length} questões disponíveis na seleção.</p>
     </>}
     {error && <p className="login-error" role="alert">{error}</p>}
-    <button className="primary" onClick={start}>Começar {mode === 'quick' ? 'quiz' : 'simulado'}</button>
+    <button className="primary" onClick={start}>Começar {mode === 'quick' ? 'quiz' : mode === 'review' ? 'revisão' : 'simulado'}</button>
   </section>;
 
   if (finished) return <section className="card practice-card">
@@ -304,7 +331,10 @@ export default function Practice({ camara, groups }: Props) {
   </section>;
 
   function finish() {
-    if (answered === items.length || confirm('Finalizar com questões em branco?')) setFinished(true);
+    if (answered === items.length || confirm('Finalizar com questões em branco?')) {
+      if (mode === 'custom' || mode === 'full') items.forEach(({question}) => { if (answers[question.id] !== undefined) onAnswer?.(question.id, answers[question.id] === 0); });
+      setFinished(true);
+    }
   }
 
   if (mode === 'full' && index === items.length) return <section className="card practice-card">
@@ -321,7 +351,7 @@ export default function Practice({ camara, groups }: Props) {
   </section>;
 
   const chosen = answers[current.question.id];
-  const showCorrection = mode === 'quick' && chosen !== undefined;
+  const showCorrection = (mode === 'quick' || mode === 'review') && chosen !== undefined;
   return <section className="card practice-card">
     <p className="eyebrow">{current.section} · {answered}/{items.length} respondidas</p>
     <h2>Questão {index + 1} de {items.length}</h2>
@@ -330,7 +360,7 @@ export default function Practice({ camara, groups }: Props) {
       {current.question.exhibit && <pre className="practice-exhibit">{current.question.exhibit}</pre>}
       {current.order.map((choice, letter) => <label key={choice} className={showCorrection && choice === 0 ? 'correct-choice' : ''}>
         <input type="radio" name="practice-answer" checked={chosen === choice} disabled={showCorrection}
-          onChange={() => setAnswers(previous => ({...previous, [current.question.id]:choice}))}/>
+          onChange={() => {setAnswers(previous => ({...previous, [current.question.id]:choice})); if (mode === 'quick' || mode === 'review') onAnswer?.(current.question.id, choice === 0);}}/>
         <span>{String.fromCharCode(65 + letter)}. {current.question.options[choice]}</span>
       </label>)}
     </fieldset>
