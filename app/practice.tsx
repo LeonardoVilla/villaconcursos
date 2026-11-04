@@ -6,9 +6,11 @@ import { questions, type Question } from './practice-bank';
 import { materials } from './study-materials';
 import { topicLessons as baseLessons } from './topic-lessons';
 import { extraLessons } from './topic-lessons-extra';
-import { readings } from './study-readings';
+import { readings as baseReadings } from './study-readings';
+import { readingsExtra } from './study-readings-extra';
 import { mtGeography, mtTimeline } from './mt-lessons';
 import { readingExercises } from './reading-exercises';
+const readings = [...baseReadings, ...readingsExtra];
 
 function MatoGrossoLesson() {
   return <>

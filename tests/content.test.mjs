@@ -59,3 +59,16 @@ test('Todo tópico do edital (SEMA e Câmara) tem aula vinculada e cada matéria
   if(g.id==='trans0'||g.id==='trans1'||g.id==='trans2'||g.id==='trans4'||g.id==='trans5'||g.id==='trans7'||!g.id.startsWith('trans')) assert.ok((counts[g.id]||0)>=10,g.id+' tem '+(counts[g.id]||0)+' questões');
  }
 });
+
+test('Cada matéria dos editais tem texto de revisão e referência de estudo',()=>{
+ const camara=JSON.parse(readFileSync(new URL('../app/camara-data.json',import.meta.url),'utf8'));
+ const ids=src=>new Set([...readFileSync(new URL('../app/'+src,import.meta.url),'utf8').matchAll(/groups:\s*'([^']*)'/g)].flatMap(m=>m[1].split(' ')));
+ const readings=new Set([...ids('study-readings.ts'),...ids('study-readings-extra.ts')]);
+ const links=ids('study-materials.ts');
+ // Matérias de leis locais ficam sem link próprio quando o texto oficial é conferido no portal da casa legislativa.
+ const noLinkOk=new Set(['atual','cmc-leg']);
+ for(const g of [...data.groups,...camara]){
+  assert.ok(readings.has(g.id),'Sem texto de revisão: '+g.id);
+  assert.ok(links.has(g.id)||noLinkOk.has(g.id),'Sem link de referência: '+g.id);
+ }
+});
