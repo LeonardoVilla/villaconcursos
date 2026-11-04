@@ -9,20 +9,25 @@ Lista do que ainda falta ou merece atenção.
 - [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.
 - [ ] **Exercícios de leitura:** só parte dos textos de revisão tem exercício.
 - [ ] **Banco de respostas** para a prova discursiva.
-- [ ] **Ampliar o banco de questões** nas matérias com poucas questões.
+- [ ] **Ampliar o banco de questões.** O banco tem 491 questões. Português tem só 15 (SEMA) e 15 (Câmara), e o simulado completo usa 15 de Português, então ele repete sempre as mesmas. Os transversais da SEMA (trans0, 2, 4 e 5) têm 10 cada. Ampliar com questões geradas por IA e revisadas.
+
+## Segurança
+
+- [ ] Trocar a senha do banco Neon (parte dela apareceu na saída de uma ferramenta) e rodar `neon env pull`.
+- [ ] Definir limite mensal de gasto nas contas da OpenAI e do DeepSeek.
+- [ ] Decidir se as variáveis de IA devem ficar só em Production na Vercel (hoje estão também em Preview).
 
 ## IA
 
 - [ ] Correção da discursiva com IA (as variáveis `AI_ESSAY_*` já estão previstas).
 - [ ] Geração de questões novas para os tópicos de maior erro, com revisão antes de entrar no banco.
-- [ ] Cadastrar `OPENAI_API_KEY`, `DEEPSEEK_API_KEY` e `AI_*` na Vercel e fazer um Redeploy.
 
 ## Plataforma
 
 - [ ] Atualizar o `README.md`: ele ainda diz que não há banco nem sincronização.
 - [ ] Remover os WAV antigos de `public/audio` para aliviar o repositório.
-- [ ] Publicar na Vercel, com as variáveis de ambiente, e cadastrar a URL pública no Google.
-- [ ] Teste de ponta a ponta da sincronização em dois aparelhos.
+- [ ] Instalar como aplicativo no celular (PWA, com manifest) e ouvir áudios offline.
+- [ ] Testes de interface no navegador (linha do tempo de MT, lista de áudios por tópico, revisão de erros e botão de IA foram verificados só por código).
 - [ ] Publicar esta documentação (por exemplo, no GitHub Pages) e criar um workflow para isso, se desejado.
 
 ## Riscos conhecidos
