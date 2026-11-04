@@ -24,7 +24,7 @@ Os comandos pressupõem Git autenticado e identidade de commit já configurada. 
 2. Autorize o acesso ao repositório escolhido e importe-o.
 3. Selecione o framework **Next.js**.
 4. Use a raiz do repositório como **Root Directory**, se enviou o conteúdo conforme acima.
-5. Mantenha os comandos padrão de instalação e build. Não há variáveis de ambiente obrigatórias.
+5. Mantenha os comandos padrão de instalação e build. Sem variáveis, o app abre sem login e sem sincronização. Para login e sincronização, cadastre as variáveis de `.env.example` em **Settings → Environment Variables** (veja `LOGIN-GOOGLE.md` e `docs/guia/banco-e-sincronizacao.md`). Para sincronizar o progresso, inclua `DATABASE_URL`.
 6. Selecione Node.js **22.x** nas configurações do projeto.
 7. Faça o primeiro deploy e confirme **main** como **Production Branch** nas configurações Git.
 
@@ -38,7 +38,14 @@ Os comandos pressupõem Git autenticado e identidade de commit já configurada. 
 
 ## Situação da entrega
 
-O código, o workflow e os arquivos estão preparados e o build local foi validado. A URL do repositório e a conexão GitHub/Vercel ainda precisam ser fornecidas/concluídas; este arquivo não indica que o app já foi publicado.
+O app está publicado em https://villaconcursos.vercel.app, com deploy automático a cada push na `main`. Para a sincronização do progresso funcionar em produção, confira estes itens:
+
+- `DATABASE_URL` cadastrada nas variáveis de ambiente da Vercel (Production).
+- `NEXTAUTH_URL` igual à URL pública, `NEXTAUTH_SECRET`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` e `AUTH_ALLOWED_EMAILS` cadastrados.
+- A URL pública e o redirecionamento `/api/auth/callback/google` cadastrados no console do Google.
+- Tabela `study_progress` criada no banco (veja `db/schema.sql`).
+
+Depois de alterar variáveis, faça um **Redeploy**: valores novos não afetam um deployment já publicado.
 
 Referências oficiais:
 
