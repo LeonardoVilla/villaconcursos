@@ -106,3 +106,11 @@ test('Cada questão é única (enunciado e alternativas), para o histórico de e
  const repetidos=prompts.filter((p,i)=>prompts.indexOf(p)!==i);
  assert.deepEqual(repetidos,[],'Questões repetidas: '+repetidos.slice(0,3).join(' || '));
 });
+
+test('Toda proposta de discursiva tem enunciado e roteiro, para as quatro combinações', () => {
+  const src = readFileSync(new URL('../app/essay-prompts.ts', import.meta.url), 'utf8');
+  for (const key of ['sema-ti', 'sema-direito', 'cmc-ti', 'cmc-direito']) {
+    assert.ok(src.includes("'" + key + "': {"), 'falta a proposta ' + key);
+  }
+  assert.equal((src.match(/^ +review: '/gm) || []).length, 4);
+});

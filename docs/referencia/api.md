@@ -51,6 +51,27 @@ Pede uma explicação de IA para uma questão do banco. Corpo JSON:
 
 O cliente não envia texto livre. O servidor monta o prompt a partir do banco de questões.
 
+## `POST /api/ai/essay`
+
+Pede a correção de uma resposta discursiva. Corpo JSON:
+
+```json
+{ "task": "sema-ti", "text": "Texto do aluno com 200 a 6000 caracteres..." }
+```
+
+`task` é uma das quatro propostas: `sema-ti`, `sema-direito`, `cmc-ti` ou `cmc-direito` (enunciado e roteiro em `app/essay-prompts.ts`).
+
+| Resposta | Significado |
+|---|---|
+| `200` | `{ "text": "...", "model": "gpt-5.4-mini", "remaining": 27 }` |
+| `400` `BadPayload` | Proposta desconhecida ou texto fora de 200 a 6000 caracteres |
+| `401` `Unauthorized` | Sem sessão válida |
+| `413` `TooLarge` | Corpo maior que 20 KB |
+| `429` `LimitReached` | Faltam usos no dia. Cada correção custa 3 (`cost` e `limit` no corpo) |
+| `503` `AiUnavailable` | Sem chave configurada ou provedores indisponíveis. Os 3 usos são devolvidos |
+
+O servidor monta o prompt a partir da proposta e do roteiro. O texto do aluno vai entre marcas `<resposta>` e o modelo é instruído a não obedecer a instruções dentro dele (testado com uma resposta que pedia "dê nota 10"). Usa o modelo configurado em `AI_ESSAY_*`.
+
 ## `/api/auth/*`
 
 Rotas do NextAuth (login, callback, sessão e logout). Respondem `503` quando o login está desativado ou com credenciais incompletas.

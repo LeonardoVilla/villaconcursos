@@ -8,12 +8,16 @@ O app usa modelos de linguagem de duas formas, e as duas passam pelo servidor. *
 
 O botão só aparece para quem está logado.
 
+**Corrigir a discursiva.** No simulado completo, a última etapa é a prova discursiva. Depois de escrever pelo menos 200 caracteres (o máximo é 6000), o botão **Corrigir com IA** devolve uma nota estimada de 0 a 10, os pontos fortes, o que faltou do roteiro, comentários de português e organização e uma sugestão de melhora. A nota é só para treino e não é a nota da banca. O botão aparece na página da discursiva e no resultado, e a correção fica visível no resultado.
+
+Cada correção conta como **3 usos** do limite diário, porque gasta mais tokens que uma explicação. Se a IA falhar, os 3 usos são devolvidos.
+
 ## Provedores e modelos
 
 | Variável | Para que serve | Padrão |
 |---|---|---|
 | `AI_EXPLAIN_PROVIDER` e `AI_EXPLAIN_MODEL` | Explicar questões | `openai` e `gpt-5.4-nano` |
-| `AI_ESSAY_PROVIDER` e `AI_ESSAY_MODEL` | Correção da discursiva (ainda não implementada) | `openai` e `gpt-5.4-mini` |
+| `AI_ESSAY_PROVIDER` e `AI_ESSAY_MODEL` | Correção da discursiva | `openai` e `gpt-5.4-mini` |
 | `AI_FALLBACK_PROVIDER` e `AI_FALLBACK_MODEL` | Reserva, se o primeiro falhar | `deepseek` e `deepseek-flash` |
 | `AI_DAILY_LIMIT` | Usos por pessoa por dia | `30` (de 1 a 200) |
 | `OPENAI_API_KEY`, `DEEPSEEK_API_KEY` | Chaves dos provedores | sem padrão |
@@ -62,5 +66,4 @@ CREATE TABLE IF NOT EXISTS ai_usage (
 
 ## Próximos usos possíveis
 
-- **Correção da discursiva**: o aluno escreve, e a IA compara com o roteiro do edital. As variáveis `AI_ESSAY_*` já estão previstas.
 - **Questões novas** para os tópicos de maior erro, com revisão humana antes de entrarem no banco.

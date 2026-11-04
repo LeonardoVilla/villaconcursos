@@ -1,42 +1,12 @@
 import { identify } from '../../../../lib/session';
-import { sql } from '../../../../lib/db';
+import { ask, reserve, refund } from '../../../../lib/ai-server';
 import { questions } from '../../../practice-bank';
-import { PROVIDERS, aiCandidates, dailyLimit, chatBody, explainMessages, parseExplainInput } from '../../../../lib/ai-policy.mjs';
+import { aiCandidates, dailyLimit, explainMessages, parseExplainInput } from '../../../../lib/ai-policy.mjs';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
 
 const byId = new Map(questions.map(question => [question.id, question]));
-const today = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'America/Cuiaba' }).format(new Date());
-
-/** Reserva um uso do dia. Devolve quantos restam, ou null se o limite já foi atingido. */
-async function reserve(email: string, limit: number) {
-  const rows = await sql()`
-    INSERT INTO ai_usage (email, day, count) VALUES (${email}, ${today()}, 1)
-    ON CONFLICT (email, day) DO UPDATE SET count = ai_usage.count + 1
-      WHERE ai_usage.count < ${limit}
-    RETURNING count`;
-  return rows.length ? limit - Number(rows[0].count) : null;
-}
-
-async function refund(email: string) {
-  await sql()`UPDATE ai_usage SET count = GREATEST(count - 1, 0) WHERE email = ${email} AND day = ${today()}`;
-}
-
-async function ask(provider: string, model: string, messages: { role: string; content: string }[]) {
-  const config = PROVIDERS[provider as keyof typeof PROVIDERS];
-  const response = await fetch(config.url, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', authorization: 'Bearer ' + process.env[config.keyEnv] },
-    body: JSON.stringify(chatBody(provider, model, messages)),
-    signal: AbortSignal.timeout(45000),
-  });
-  if (!response.ok) throw new Error('HTTP ' + response.status);
-  const data = await response.json();
-  const text = String(data?.choices?.[0]?.message?.content ?? '').trim();
-  if (!text) throw new Error('Resposta vazia');
-  return text;
-}
 
 export async function POST(req: Request) {
   const email = await identify();

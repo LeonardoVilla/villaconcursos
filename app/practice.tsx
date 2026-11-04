@@ -10,6 +10,7 @@ import { readings as baseReadings } from './study-readings';
 import { readingsExtra } from './study-readings-extra';
 import { mtGeography, mtTimeline } from './mt-lessons';
 import { readingExercises } from './reading-exercises';
+import { essayTasks, essayKey } from './essay-prompts';
 const readings = [...baseReadings, ...readingsExtra];
 
 function ExplainWithAi({ questionId, chosen }: { questionId: string; chosen: number | null }) {
@@ -49,6 +50,50 @@ function ExplainWithAi({ questionId, chosen }: { questionId: string; chosen: num
       <p><strong>Explicação da IA</strong></p>
       {text.split('\n').filter(Boolean).map((line, i) => <p key={i}>{line}</p>)}
       <small>Gerada por IA como apoio. Confira sempre no texto da lei ou do edital. {message}</small>
+    </div>}
+  </div>;
+}
+
+const ESSAY_MIN = 200;
+function CorrectEssayWithAi({ task, text, feedback, onFeedback }: { task: string; text: string; feedback: string; onFeedback: (value: string) => void }) {
+  const [state, setState] = useState<'idle' | 'loading' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+  const size = text.trim().length;
+  async function correct() {
+    setState('loading');
+    setMessage('');
+    try {
+      const response = await fetch('/api/ai/essay', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ task, text }),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setMessage(response.status === 429
+          ? 'Cada correção usa ' + (data.cost ?? 3) + ' dos seus usos diários de IA, e o limite de hoje acabou. Volte amanhã.'
+          : response.status === 401 ? 'Entre com sua conta para usar a IA.'
+          : response.status === 400 ? 'Escreva entre ' + ESSAY_MIN + ' e 6000 caracteres para corrigir.'
+          : 'A IA não está disponível agora. Tente de novo em instantes.');
+        setState('error');
+        return;
+      }
+      onFeedback(String(data.text || ''));
+      setMessage(typeof data.remaining === 'number' ? data.remaining + ' usos de IA restantes hoje.' : '');
+      setState('idle');
+    } catch {
+      setMessage('Não foi possível falar com a IA. Verifique a conexão.');
+      setState('error');
+    }
+  }
+  return <div className="ai-explain">
+    <button type="button" onClick={correct} disabled={state === 'loading' || size < ESSAY_MIN}>{state === 'loading' ? 'Corrigindo…' : feedback ? 'Corrigir de novo com IA' : 'Corrigir com IA'}</button>
+    {size < ESSAY_MIN && <p className="subtext">Escreva pelo menos {ESSAY_MIN} caracteres para pedir a correção ({size}/{ESSAY_MIN}). Cada correção conta como 3 usos de IA no dia.</p>}
+    {state === 'error' && <p className="login-error" role="alert">{message}</p>}
+    {feedback && <div role="status">
+      <p><strong>Correção da IA</strong></p>
+      {feedback.split(String.fromCharCode(10)).map(line => line.replace(/[*#]/g, '').trim()).filter(Boolean).map((line, i) => <p key={i}>{line}</p>)}
+      <small>Nota estimada por IA, só para treino. Não é a nota da banca. Confira sempre no texto da lei ou do edital. {message}</small>
     </div>}
   </div>;
 }
@@ -218,14 +263,10 @@ export default function Practice({ camara, groups, quiz = {}, onAnswer, aiEnable
   const [finished, setFinished] = useState(false);
   const [error, setError] = useState('');
   const [essay, setEssay] = useState('');
+  const [essayFeedback, setEssayFeedback] = useState('');
   const legal = groups.some(group => group.category === 'direito');
-  const written = camara
-    ? legal
-      ? {prompt:'A Câmara precisa contratar um serviço comum. Explique como a fase preparatória, a escolha da modalidade e a definição de critérios objetivos contribuem para uma contratação regular.', review:'Descreva a necessidade e o planejamento, indique o pregão para serviço comum nas condições legais e relacione critérios prévios com julgamento objetivo.'}
-      : {prompt:'A Câmara precisa implantar uma aplicação web que trata dados pessoais. Proponha medidas para autenticação, proteção de dados, cópias de segurança e resposta a incidentes.', review:'Explique controle de acesso e privilégio mínimo, medidas de proteção, cópias isoladas com testes de restauração e ações de contenção e recuperação.'}
-    : legal
-      ? {prompt:'Uma atividade potencialmente causadora de significativa degradação ambiental vai ser implantada. Explique a função do estudo prévio de impacto e a relação entre sanções e reparação do dano.', review:'Relacione o estudo prévio e a publicidade ao art. 225, § 1º, IV, da Constituição. Explique a independência entre obrigação de reparar e sanções administrativas e penais.'}
-      : {prompt:'Uma API de um órgão público é atualizada com frequência. Proponha um fluxo de CI/CD que preserve a segurança e permita recuperar a operação se a nova versão falhar.', review:'Descreva controle de versão, testes e verificações de segurança, gestão de segredos, implantação gradual, observabilidade e recuperação ou reversão.'};
+  const taskKey = essayKey(camara, legal);
+  const written = essayTasks[taskKey];
   const groupIds = new Set(groups.map(group => group.id));
   const pool = questions.filter(question => question.groups.some(id => groupIds.has(id)));
   const topicNames = [...new Set(pool.map(question => question.topic))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
@@ -290,6 +331,7 @@ export default function Practice({ camara, groups, quiz = {}, onAnswer, aiEnable
     }
     setAnswers({});
     setEssay('');
+    setEssayFeedback('');
     setIndex(0);
     setFinished(false);
     setItems(next);
@@ -359,6 +401,7 @@ export default function Practice({ camara, groups, quiz = {}, onAnswer, aiEnable
         <p>{written.prompt}</p>
         {essay.trim() && <p className="essay-response">{essay}</p>}
         <p>{written.review}</p>
+        {aiEnabled && <CorrectEssayWithAi task={taskKey} text={essay} feedback={essayFeedback} onFeedback={setEssayFeedback} />}
       </details>}
       {items.map(({question}, number) => <details key={question.id}>
         <summary>{number + 1}. {answers[question.id] === 0 ? 'Acerto' : answers[question.id] === undefined ? 'Em branco' : 'Erro'} · {question.topic}</summary>
@@ -386,6 +429,7 @@ export default function Practice({ camara, groups, quiz = {}, onAnswer, aiEnable
     <label className="essay-field">Sua resposta
       <textarea rows={12} value={essay} onChange={event => setEssay(event.target.value)}/>
     </label>
+    {aiEnabled && <CorrectEssayWithAi task={taskKey} text={essay} feedback={essayFeedback} onFeedback={setEssayFeedback} />}
     <div className="practice-actions">
       <button onClick={() => setIndex(index - 1)}>Voltar à última questão</button>
       <button className="primary" onClick={finish}>Finalizar</button>
