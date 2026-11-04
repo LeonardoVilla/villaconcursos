@@ -52,8 +52,24 @@ function ContestDashboard({storageKey='sema-estudos-v1',account,contest,setConte
  const [readingGroup,setReadingGroup]=useState('');
  const [tab,setTab]=useState('inicio');const [progress,setProgress]=useState<Progress>(empty);const [ready,setReady]=useState(false);const [message,setMessage]=useState('');const [search,setSearch]=useState('');const [filter,setFilter]=useState('todos');const [date,setDate]=useState('');const [open,setOpen]=useState('');
  const [seconds,setSeconds]=useState(1800);const [running,setRunning]=useState(false);const [selected,setSelected]=useState(0);const [voiceError,setVoiceError]=useState('');const [autoPlay,setAutoPlay]=useState(false);const audio=useRef<HTMLAudioElement>(null);const upload=useRef<HTMLInputElement>(null);const playNextTrack=useRef(false);
- useEffect(()=>{setDate(dayKey());try{const saved=localStorage.getItem(key);if(saved){const parsed=JSON.parse(saved);if(isProgress(parsed))setProgress(parsed);else setMessage('Backup local incompatível. Importe um backup válido.');}}catch{setMessage('Não foi possível ler o progresso salvo.');}setReady(true)},[]);
- useEffect(()=>{if(!ready)return;try{localStorage.setItem(key,JSON.stringify(progress))}catch{setMessage('Não foi possível salvar neste navegador. Exporte um backup.')}},[progress,ready]);
+ const synced=useRef(false);const pushTimer=useRef<ReturnType<typeof setTimeout>>(undefined);
+ const cloud=contest;
+ function pushCloud(data:Progress,updatedAt:number){return fetch('/api/progress',{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify({contest:cloud,data,updatedAt})}).then(r=>{if(!r.ok)throw Error()})}
+ useEffect(()=>{setDate(dayKey());let local:Progress|null=null;try{const saved=localStorage.getItem(key);if(saved){const parsed=JSON.parse(saved);if(isProgress(parsed)){local=parsed;setProgress(parsed)}else setMessage('Backup local incompatível. Importe um backup válido.');}}catch{setMessage('Não foi possível ler o progresso salvo.');}setReady(true);
+  if(!account)return;let cancelled=false;
+  (async()=>{try{const r=await fetch('/api/progress?contest='+cloud,{cache:'no-store'});if(!r.ok)throw Error();const remote=await r.json() as {data:unknown;updatedAt:number};let localTs=0;try{localTs=Number(localStorage.getItem(key+'-ts'))||0}catch{}
+   if(cancelled)return;
+   if(remote.data&&isProgress(remote.data)&&remote.updatedAt>localTs){setProgress(remote.data);try{localStorage.setItem(key+'-ts',String(remote.updatedAt))}catch{}}
+   else if(local&&localTs>remote.updatedAt){await pushCloud(local,localTs)}
+   else if(local&&!remote.data){const ts=Date.now();try{localStorage.setItem(key+'-ts',String(ts))}catch{}await pushCloud(local,ts)}
+   synced.current=true;
+  }catch{if(!cancelled)setMessage('Sincronização indisponível. O progresso continua salvo neste aparelho.')}})();
+  return()=>{cancelled=true};
+ },[]);
+ useEffect(()=>{if(!ready)return;try{localStorage.setItem(key,JSON.stringify(progress))}catch{setMessage('Não foi possível salvar neste navegador. Exporte um backup.')}
+  if(!account||!synced.current)return;const ts=Date.now();try{localStorage.setItem(key+'-ts',String(ts))}catch{}
+  clearTimeout(pushTimer.current);pushTimer.current=setTimeout(()=>{pushCloud(progress,ts).catch(()=>setMessage('Não foi possível sincronizar agora. Tentaremos na próxima alteração.'))},1000);
+ },[progress,ready]);
  useEffect(()=>{const id=setInterval(()=>setDate(dayKey()),60000);return()=>clearInterval(id)},[]);
  useEffect(()=>{if(!running)return;const end=Date.now()+seconds*1000;const id=setInterval(()=>{const remaining=Math.max(0,Math.ceil((end-Date.now())/1000));setSeconds(remaining);if(!remaining){setRunning(false);setMessage('Bloco concluído. Marque a sessão realizada.')}},250);return()=>clearInterval(id)},[running]); // Deadline-based clock tolerates background throttling.
  useEffect(() => {
