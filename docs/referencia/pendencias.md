@@ -5,8 +5,7 @@ Lista do que ainda falta ou merece atenção.
 ## Conteúdo
 
 - [ ] **Áudios:** cobrir mais matérias. História e Geografia de Mato Grosso e Português já têm faixas. Faltam ética, atualidades e as matérias da Câmara. Quando houver muitas faixas, agrupar a lista por tópico. Veja [Áudios](../conteudo/audios.md).
-- [ ] **Conferir normas estaduais ambientais** contra o texto oficial (Lei 9.502/2011, 9.612/2011, 9.096/2009, 12.829/2025 e Decreto 1.436/2022, entre outras).
-- [ ] **Ler a LC 609/2026 inteira.** Só o trecho que alterou a LC 235/2011 foi lido.
+- [ ] **Conferir** a Lei 9.612/2011 (águas subterrâneas) e o Decreto 1.436/2022 contra o texto oficial.
 - [ ] **Atualizar** as aulas da Lei 7.692/2002 e da LC 04/1990 com o texto consolidado.
 - [ ] **Exercícios de leitura:** só parte dos textos de revisão tem exercício.
 - [ ] **Banco de respostas** para a prova discursiva.

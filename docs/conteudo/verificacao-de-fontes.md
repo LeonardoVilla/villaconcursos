@@ -19,6 +19,9 @@ O conteúdo jurídico foi escrito em duas etapas. Primeiro, a partir do conhecim
 | LC 04/1990 (Estatuto, MT) | Texto original, na Unemat | Anterior a várias alterações, veja abaixo |
 | LC 582/2017 (Mudanças Climáticas, MT) | Imprensa Oficial (IOMAT) | Texto original. A LC 777/2023 incluiu o art. 6-A |
 | Lei 11.088/2020 (Recursos Hídricos, MT) | Assembleia Legislativa, texto compilado até 28/06/2021 | Texto integral |
+| Lei 9.502/2011 (SEUC, MT) | Assembleia Legislativa, redação atual | Grupos, categorias, gestão e criação de unidades |
+| Lei 12.829/2025 (Serviços Ambientais, MT) | Assembleia Legislativa | Texto integral. O art. 2º foi vetado |
+| Lei 9.096/2009 (Pesca, MT) | Assembleia Legislativa, com as Leis 12.197/2023 e 12.434/2024 | Regras de transporte e comercialização por 5 anos desde 1º/01/2024 |
 
 ## Com ressalvas
 
@@ -28,10 +31,10 @@ O conteúdo jurídico foi escrito em duas etapas. Primeiro, a partir do conhecim
 
 ## Ainda sem conferência contra o texto oficial
 
-Aulas de outras leis estaduais e federais foram escritas a partir de conhecimento geral e de leitura parcial. Em especial:
-
-- Leis estaduais ambientais citadas nas aulas de Direito Ambiental (por exemplo, Lei 9.502/2011, Lei 9.612/2011, Lei 9.096/2009, Lei 12.829/2025, Decreto 1.436/2022).
-- A LC 609/2026, lida só no trecho que ela inseriu na LC 235/2011.
+- **Lei 9.612/2011 (águas subterrâneas, MT):** só consegui confirmar a data (12/09/2011) e a exigência de outorga da SEMA por fontes secundárias. A aula avisa isso.
+- **Decreto 1.436/2022** e outros decretos e resoluções ambientais citados nas aulas de Direito Ambiental.
+- **LC 609/2026:** li o que ela inseriu na LC 235/2011 pelo texto compilado, que é a parte do cargo de Analista Legislativo – TI. Não li a lei isolada.
+- Leis federais: as aulas seguem o conhecimento geral e os textos do Planalto citados como fonte, sem leitura integral artigo por artigo.
 
 ## Links
 

@@ -54,6 +54,14 @@ Quem concede a outorga de águas estaduais em MT?|A SEMA-MT|A ANA|O IBAMA|O muni
 A educação ambiental no ensino formal deve ser:|Integrada, contínua e permanente|Disciplina específica obrigatória|Facultativa em todas as séries|Proibida|Só em faculdades|Lei 9.795/1999.
 O Decreto 8.437/2015 trata de:|Tipologias de licenciamento da União|Resíduos sólidos|Águas|Florestas|Ruído|Regulamenta o art. 7º, XIV, “h”, da LC 140.
 A Reserva Legal na Amazônia Legal, em área de floresta, é de:|80%|20%|35%|50%|10%|Art. 12 do Código Florestal.
+Segundo a Lei 9.502/2011, as unidades de conservação do SEUC são reunidas em quantos grupos?|Três: Proteção Integral, Uso Sustentável e Manejo Provisório|Dois: Proteção Integral e Uso Sustentável|Quatro grupos|Cinco grupos|Um grupo único|Art. 9º.
+Qual categoria integra o grupo de Uso Sustentável do SEUC?|Reserva de Desenvolvimento Sustentável (RDS)|Estação Ecológica|Reserva Biológica|Refúgio de Vida Silvestre|Monumento Natural|Art. 16. As demais alternativas são de Proteção Integral (art. 10).
+Pela Lei 9.502/2011, a visitação pública na Estação Ecológica é:|Proibida, exceto com objetivo educacional|Livre|Permitida para turismo comercial|Permitida mediante pagamento|Sem restrição no plano de manejo|Art. 11, § 2º.
+Para criar uma unidade de conservação, a Lei 9.502/2011 exige estudos técnicos e:|Consulta pública, com informações fornecidas com no mínimo 30 dias de antecedência|Apenas decreto do governador|Aprovação do Congresso|Plebiscito|Autorização do município|Art. 30 e § 1º.
+São princípios da Política Estadual dos Serviços Ambientais (Lei 12.829/2025):|Provedor-recebedor, usuário-pagador e desenvolvimento sustentável|Legalidade, impessoalidade e moralidade|Prevenção e precaução apenas|Poluidor-pagador apenas|Eficiência e publicidade|Art. 3º.
+A Lei 12.829/2025 institui a:|Política Estadual dos Serviços Ambientais (PESA)|Política Estadual de Mudanças Climáticas|Política Estadual de Recursos Hídricos|Política da Pesca|Código Estadual do Meio Ambiente|Art. 1º. A LC 582/2017 trata do clima, a Lei 11.088/2020 trata dos recursos hídricos e a LC 38/1995 é o Código Ambiental.
+Segundo a Lei 9.096/2009, o pescador profissional pode capturar por semana até:|125 kg|25 kg|50 kg|500 kg|Sem limite|Art. 21.
+O Conselho Estadual da Pesca (CEPESCA) é:|Órgão deliberativo de composição paritária que assessora o Executivo|Órgão de fiscalização da Polícia Militar|Câmara técnica do CONSEMA|Colônia de pescadores|Órgão federal|Art. 5º da Lei 9.096/2009.
 `],
 ['trans6', 'Clima, sustentabilidade e legislação ambiental', `
 A PNMA é a Lei:|6.938/1981|12.187/2009|12.651/2012|9.433/1997|15.190/2025|Institui o SISNAMA.
