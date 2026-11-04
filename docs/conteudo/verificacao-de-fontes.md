@@ -16,6 +16,7 @@ O conteúdo jurídico foi escrito em duas etapas. Primeiro, a partir do conhecim
 | LC 112/2002 (Código de Ética, MT) | Assembleia Legislativa de MT | Texto integral |
 | LC 38/1995 (Código Ambiental, MT) | Sefaz-MT, consolidada até a LC 830/2025 | O art. 19 (licenças) foi revogado pela LC 592/2017 |
 | Resoluções CONAMA 1/1986, 237/1997, 420/2009, 430/2011 e 506/2024 | DOU (506) e cópias que reproduzem o texto publicado | Artigos, prazos e valores das aulas conferidos em novembro de 2026. Corrigidos: a 506 revoga só parte da 491/2018, e a 430 exige respeito às metas do enquadramento (art. 5º) |
+| Resolução CONAMA 9/1987; Decretos 8.437/2015, 6.514/2008 (infrações, sanções e prescrição) e 9.578/2018; LC 140/2011 (art. 7º, XIV) | Texto da CONAMA 9 em cópia da CETESB; decretos e LC 140 no Planalto | Corrigido: o Decreto 8.437/2015 não lista aeroportos nem linhas de transmissão comuns, e a energia nuclear vem da própria LC 140. Acrescentados prazos da audiência pública (45 dias) e da prescrição (5 anos) |
 | Lei 7.692/2002 (Processo administrativo, MT) | Cópia de terceiros | Texto possivelmente desatualizado, veja abaixo |
 | LC 04/1990 (Estatuto, MT) | Texto original, na Unemat | Anterior a várias alterações, veja abaixo |
 | LC 582/2017 (Mudanças Climáticas, MT) | Imprensa Oficial (IOMAT) | Texto original. A LC 777/2023 incluiu o art. 6-A |
@@ -45,7 +46,7 @@ Li o texto das leis federais abaixo e conferi os números usados nas aulas, nos 
 | Lei 9.605/1998 | Responsabilidade da pessoa jurídica (art. 3º) |
 | Lei 6.938/1981 | Responsabilidade objetiva do poluidor (art. 14, § 1º) |
 
-Ainda não conferi nesta rodada: a resolução CONAMA 9/1987 e os decretos federais (6.514/2008, 8.437/2015, 9.578/2018), porque não estão no Planalto como lei. Também não conferi o texto do Código Florestal além do art. 12.
+Também não conferi o texto do Código Florestal além do art. 12.
 
 ## Com ressalvas
 
