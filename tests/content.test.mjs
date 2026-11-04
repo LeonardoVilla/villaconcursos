@@ -74,11 +74,21 @@ test('Cada matéria dos editais tem texto de revisão e referência de estudo',(
 });
 
 test('Cada pílula de áudio tem um MP3 real em public/audio',()=>{
- const roteiros=['roteiros.json','roteiros-portugues.json','roteiros-sema-comum.json','roteiros-atualidades.json','roteiros-camara-ti.json'].flatMap(f=>JSON.parse(readFileSync(new URL('../scripts/audio/'+f,import.meta.url),'utf8')));
+ const roteiros=['roteiros.json','roteiros-portugues.json','roteiros-sema-comum.json','roteiros-atualidades.json','roteiros-camara-ti.json','roteiros-camara-comum.json'].flatMap(f=>JSON.parse(readFileSync(new URL('../scripts/audio/'+f,import.meta.url),'utf8')));
  const stems=[...roteiros.map(r=>r.stem),...data.pills.map(p=>p.stem)];
  for(const stem of stems){
   const url=new URL('../public/audio/'+stem+'.mp3',import.meta.url);
   assert.ok(existsSync(url),'MP3 ausente: '+stem);
   assert.ok(readFileSync(url).length>100000,'MP3 pequeno demais: '+stem);
  }
+});
+
+test('Todo roteiro de áudio tem categoria para agrupar a lista',()=>{
+ const arquivos=['roteiros.json','roteiros-portugues.json','roteiros-sema-comum.json','roteiros-atualidades.json','roteiros-camara-ti.json','roteiros-camara-comum.json'];
+ for(const f of arquivos){
+  for(const r of JSON.parse(readFileSync(new URL('../scripts/audio/'+f,import.meta.url),'utf8'))){
+   assert.ok(r.category&&r.category!=='Outros','Sem categoria: '+r.stem);
+  }
+ }
+ for(const p of data.pills) assert.ok(p.category,'Pílula sem categoria: '+p.stem);
 });

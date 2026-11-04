@@ -2,7 +2,7 @@
 
 ## Situação atual
 
-Há **vinte e sete faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
+Há **trinta e cinco faixas MP3** em `public/audio`, todas com a voz neural `pt-BR-FranciscaNeural`:
 
 | Faixa | Perfil | Tema |
 |---|---|---|
@@ -33,6 +33,14 @@ Há **vinte e sete faixas MP3** em `public/audio`, todas com a voz neural `pt-BR
 | `cmc-ti-redes-so-seguranca` | Câmara, TI | Redes, Windows e Linux e segurança da informação |
 | `cmc-ti-governanca-contratacao` | Câmara, TI | Governança, contratação (Lei 14.133), LGPD e LAI |
 | `cmc-ti-devops-bi-suporte` | Câmara, TI | Git, CI/CD, contêineres, BI e suporte técnico |
+| `cmc-logica-1` | Câmara | Raciocínio lógico: conjuntos, proposições e equivalências |
+| `cmc-logica-2` | Câmara | Raciocínio lógico: argumentos, quantificadores, contagem e probabilidade |
+| `cmc-informatica` | Câmara | Noções de informática |
+| `cmc-etica-filosofia` | Câmara | Noções de ética e filosofia |
+| `cmc-relacoes-interpessoais` | Câmara | Relações interpessoais |
+| `cmc-administracao-publica` | Câmara | Noções de administração pública |
+| `cmc-legislacao-1` | Câmara | Lei Orgânica de Cuiabá e Regimento Interno |
+| `cmc-legislacao-2` | Câmara | Estatuto dos Servidores e Plano de Cargos |
 
 As faixas de Mato Grosso e de Português aparecem nos dois perfis (TI e Direito) e nos dois concursos, porque as matérias são comuns. As de Ética, legislação e Atualidades aparecem nos dois perfis, mas só no concurso da SEMA, porque a matéria é só desse edital. Elas duram de 1,5 a 2 minutos cada.
 
@@ -42,18 +50,23 @@ As faixas de Mato Grosso e de Português aparecem nos dois perfis (TI e Direito)
 |---|---|
 | `app/data.json` (`pills`) | As quatro de TI da SEMA |
 | `app/dashboard.tsx` (`lawPills`, `camaraLawPills`) | As de Direito |
-| `scripts/audio/roteiros*.json` | Mato Grosso (`roteiros.json`), Português (`roteiros-portugues.json`) e Ética e legislação da SEMA (`roteiros-sema-comum.json`) Atualidades (`roteiros-atualidades.json`) e TI da Câmara (`roteiros-camara-ti.json`). O arquivo `app/common-pills.ts` as coloca nos dois perfis |
+| `scripts/audio/roteiros*.json` | Mato Grosso (`roteiros.json`), Português (`roteiros-portugues.json`) e Ética e legislação da SEMA (`roteiros-sema-comum.json`) Atualidades (`roteiros-atualidades.json`) TI da Câmara (`roteiros-camara-ti.json`) e matérias comuns da Câmara (`roteiros-camara-comum.json`). O arquivo `app/common-pills.ts` as coloca nos dois perfis |
 
 Cada pílula tem `stem` (nome do arquivo sem extensão), `profile` (`ti` ou `direito`), título e o texto da transcrição. Nos roteiros, o campo opcional `contest` (`sema` ou `camara`) limita a pílula a um concurso, e o campo opcional `profile` (`ti` ou `direito`) limita a um perfil. Sem eles, a pílula vale para os dois concursos e os dois perfis.
 
 Os quatro arquivos `.wav` em `public/audio` são versões anteriores. O app só toca os `.mp3`.
 
+## Organização por tópicos
+
+A lista da aba Pílulas é agrupada por tópico, com uma busca por título e grupos que abrem e fecham. Cada grupo mostra quantas faixas já foram ouvidas. Os tópicos são:
+
+Língua Portuguesa, História e Geografia de Mato Grosso, Raciocínio lógico, Informática, Ética e filosofia, Relações interpessoais, Administração pública, Legislação, Atualidades, Direito e Tecnologia da Informação.
+
+Cada roteiro tem o campo `category`, e as pílulas de `data.json` e de `dashboard.tsx` também. A ordem dos grupos está em `categoryOrder`, em `app/dashboard.tsx`. O teste falha se um roteiro ficar sem categoria.
+
 ## Lacunas
 
-Ainda não há áudio para:
-
-- Matérias comuns da Câmara (lógica, informática, ética e filosofia, relações interpessoais, administração pública e legislação)
-- Transversais ambientais da SEMA
+Ainda não há áudio para os transversais ambientais da SEMA (poluição e controle ambiental, economia, estatística, direitos humanos, políticas públicas e processo administrativo).
 
 ## Gerar as faixas
 
@@ -70,7 +83,7 @@ O formato de saída é MP3 mono de 24 kHz, igual ao das faixas já publicadas.
 ## Como adicionar uma pílula
 
 1. Escreva o roteiro (de 1 a 3 minutos de fala, em frases curtas e sem siglas soltas).
-2. Acrescente `{ "stem", "title", "text" }` em um arquivo `scripts/audio/roteiros*.json` (ou crie um novo e importe-o em `app/common-pills.ts`), para matérias comuns aos dois perfis. Para uma pílula de um perfil só, use `pills` (`data.json`) ou `lawPills`/`camaraLawPills` (`dashboard.tsx`).
+2. Acrescente `{ "stem", "category", "title", "text" }` em um arquivo `scripts/audio/roteiros*.json` (ou crie um novo e importe-o em `app/common-pills.ts`), para matérias comuns aos dois perfis. Para uma pílula de um perfil só, use `pills` (`data.json`) ou `lawPills`/`camaraLawPills` (`dashboard.tsx`).
 3. Rode `python scripts/audio/gerar_audio.py` para gerar o MP3 em `public/audio/<stem>.mp3`.
 4. Rode `npm test`: o teste falha se uma pílula não tiver MP3.
 5. Teste no app e confira a pronúncia de siglas e números de lei.
@@ -81,7 +94,3 @@ O formato de saída é MP3 mono de 24 kHz, igual ao das faixas já publicadas.
 ## Pronúncia
 
 Escreva números e siglas como se fala, no roteiro: "Lei oito mil, quatrocentos e vinte e nove, de noventa e dois" em vez de "Lei 8.429/92". Revise a faixa gerada antes de publicar.
-
-## Organização futura
-
-Com mais faixas, a lista da aba Pílulas deve ser agrupada por tópico (por exemplo, Português, Mato Grosso, Direito, TI) para facilitar a busca. A ideia é acrescentar um campo `category` a cada roteiro e agrupar a lista por esse campo no player. Ainda não foi implementado.
