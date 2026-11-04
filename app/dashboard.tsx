@@ -79,7 +79,7 @@ function ContestDashboard({storageKey='sema-estudos-v1',account,contest,setConte
   audio.current?.play().catch(() => setVoiceError('Toque em reproduzir para continuar.'));
  }, [selected]);
  const state=progress.profiles[profile];const groups=(camara?camaraGroups:data.groups).filter(g=>g.category==='comum'||(profile==='ti'?g.category==='ti':['direito','transversal'].includes(g.category)));const topics=groups.flatMap(g=>g.topics);const done=topics.filter(t=>state.topics[t.id]?.done).length;const percent=topics.length?Math.round(done/topics.length*100):0;
- const pills=(camara&&profile==='direito'?[...camaraLawPills,...commonPills]:allPills).filter(p=>p.profile===profile);const pill=pills[selected]||pills[0];
+ const pills=(camara&&profile==='direito'?[...camaraLawPills,...commonPills]:allPills).filter(p=>p.profile===profile&&((p as {contest?:string}).contest??contest)===contest);const pill=pills[selected]||pills[0];
  const weekday=date?new Date(date+'T12:00:00').getDay():0;const schedule=(camara?camaraPlans:plans)[profile][(weekday+6)%7];const completed=schedule.filter((_,i)=>state.sessions[date+'-'+i]).length;
  const days=date?Math.max(0,Math.ceil((Date.parse('2026-12-13T00:00:00-04:00')-Date.parse(date+'T00:00:00-04:00'))/86400000)):40;
  function update(fn:(s:Progress['profiles'][Profile])=>void){setProgress(prev=>{const next=structuredClone(prev);fn(next.profiles[profile]);return next})}
